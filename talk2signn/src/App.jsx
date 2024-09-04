@@ -1,0 +1,25 @@
+import React from 'react';
+// Correct path to Welcome component
+import { HashRouter as Router, Routes, Route} from 'react-router-dom'
+import Welcome from './Pages/welcome'; 
+import AboutUs from './Pages/AboutUs'
+import Login from './Pages/Login'
+import SignUp from './Pages/SignUp'
+import EnterYTLink from './Pages/Enter-YT-Link'
+
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Welcome/>}/> 
+        <Route path="/AboutUs" element={<AboutUs/>}/>
+        <Route path="/Login" element={<Login/>}/> 
+        <Route path="/SignUp" element={<SignUp/>}/> 
+        <Route path="/Enter-YT-Link" element={<EnterYTLink/>}/> 
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;

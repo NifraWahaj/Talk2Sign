@@ -1,0 +1,157 @@
+
+/* for brand logo img */
+.logo img{
+    position: relative;
+    width:20vw;
+    margin-left: 30px;
+    cursor: pointer;
+}
+/* for nav items */
+.nav-link.btn {
+    color: black;
+    font-size:20px;
+    font-family: Roboto;
+    font-weight: 700;
+    background-color: transparent;
+    padding: 0.25em 1.5em !important;
+    margin: 15px;
+    display:inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+.nav-link.btn:hover{
+    color: #E2E2E2;
+    font-size:20px;
+    font-weight: 600;
+    padding: 0.25em 1.5em !important;
+    margin: 15px;
+    background-color: #C76D46;
+    border-radius: 25px;
+    border:solid 1px black;
+    display:inline-block;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+#mySidebar {
+    width: 380px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    background-color: white;
+    display: none; 
+}
+.sidebar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #eae5e5;
+    overflow-x: hidden;
+    z-index: 1000;
+    transition: 0.5s;
+    display: none;
+}
+.sidebar.open{
+    display: flex;
+}
+.closebtn-div{
+    position: relative;
+    top: 20px;
+    left: 80%;
+    
+}
+.container{
+    margin-top: 140px;
+    margin-left:40px;
+}
+.banner-area{
+    background-color: #F7F6F5;
+    margin: 10px;
+}
+.banner-area .container {
+    padding-bottom: 10px;
+}
+.info-area{
+    margin-bottom: 5%;
+}
+.info-area h1{
+    font-size: 45px;
+    font-weight: 700;
+    font-family: Roboto;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.info-area h6{
+  
+    margin-left: 20px;
+    color:#4B5563;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+}
+.banner-area{
+    margin:0%;
+}
+.banner-area .container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding-bottom: 3%;
+    padding-top: 2%;
+    margin-top: 4%;
+  }
+  
+  .banner-inner {
+    width: 100%;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .banner-content {
+    text-align: center;
+    margin: 0 15px; 
+    flex: 1;
+  }
+  
+  .banner-content h3 {
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight:normal;
+  }
+  
+  .banner-content p {
+    margin: 0 auto; 
+    max-width: 80%; 
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight:normal;
+    color: #4B5563;
+  }
+
+.banner-content img{
+position: relative;
+width: 120px;
+height: 80px;
+}
+
+  
+@media (min-width: 992px){
+    .sidebar {
+        display: none !important;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav-item {
+        margin: 0 10px;
+    }
+    .sidebar2 {
+        display: flex ;
+        flex-direction: row;
+    }
+}

@@ -1,0 +1,16 @@
+/* Styles for the active tab in the secondary navbar */
+.navbar-nav .nav-link.active {
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Additional styles for the secondary navbar */
+  .navbar-nav .nav-link {
+    margin-right: 15px;
+    color: black;
+    background-color: transparent;
+    transition: color 0.3s ease;
+  }
+  

@@ -14,10 +14,13 @@ const EnterYTLink = () => {
       <SecondNavBar />
 
       {/* Page Content */}
-      <div className="container mt-4">
-        <h1>Welcome to the Youtube</h1>
-        <p>This is a demo page with two navbars. The first navbar is a main navigation menu, and the second navbar is for additional options like "Audio/Text," "Upload," and "YouTube".</p>
+      <div className="page-wrapper">
+      <div className="container mt-4 centered-container shadow">
+        <h4>Enter Youtube Link</h4>
+        <input type="text" id="yt-link" name="yt-link" className="link-input" required placeholder="Enter Youtube link" />
+        <button type="submit" className="btn btn-primary">Enter</button>
       </div>
+    </div>
     </div>
   );
 };

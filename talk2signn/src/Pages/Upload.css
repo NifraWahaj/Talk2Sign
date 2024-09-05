@@ -1,0 +1,83 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+  background-color: #efeded;
+}
+.uploadPage-wrapper h4 {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.uploadPage-wrapper {
+    display: flex;
+    width: auto;
+    margin: 0% 3%;
+    
+  }
+  
+  .uploadContainer {
+    background-color: white; 
+    padding: 26px; 
+    border-radius: 8px; 
+    /* border: 2px dashed black; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    min-width: 1400px; 
+    max-width: 100%; 
+    height:500px
+   
+  }
+  .uploadContainer2{
+    background-color: white; 
+    padding: 26px; 
+     margin-left: 6%;   
+    border-radius: 8px; 
+    border: 2px dashed black;
+    /* Customize dashed border using SVG */
+  /* border-width: 2px;
+  border-style: solid; 
+  border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><line x1='0' y1='0' x2='0' y2='8' stroke='black' stroke-width='2' /></svg>") 1 1 round; */
+    min-width: 300px; 
+    max-width: 85%; 
+    height:270px;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+  }
+  .uploadPage-wrapper p{
+    font-family: Roboto;
+    margin-bottom: 20px;
+    color: #787879;
+    margin-top: 4%;
+    margin-left: 6%;
+  }
+  .uploadPage-wrapper p:nth-last-of-type(1){
+    margin-top: 2% !important;
+  }
+   .uploadPage-wrapper .uploadContainer2 p {
+    margin: 0 !important;
+    text-align: center !important; /* Center text */
+    margin-bottom: -60px !important; /* Add margin below the paragraph */
+  }
+  .uploadPage-wrapper .btn{
+    background-color:#C98C9A;
+    font-family: Roboto;
+    border-color: #C98C9A;
+    justify-self: center;
+    margin-top:7%;
+    width: 18%;
+    height:22%;
+    border-radius: 11px;
+    font-size:21px;
+    font-weight:500;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+}
+
+.uploadPage-wrapper .btn:hover{
+    background-color: #D24A69;
+    transform: scale(1.06);
+}
+  

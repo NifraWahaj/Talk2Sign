@@ -1,57 +1,56 @@
 /* Import the Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+body{
+  background-color: #FFFFFF;
+}
 .page-wrapper h4 {
-  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  font-family: 'Roboto', sans-serif; 
   font-weight: 500;
+  font-size: 25px;
 }
 
 .page-wrapper {
     display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* height: 100vh;  */
     width: auto;
-    /* margin-top: 10%;
-    margin-bottom: 10%;
-    margin-left: 20%;
-    margin-right: 20%; */
     margin: 8% 20%;
   }
   
   .centered-container {
-    background-color: white; /* Background color for contrast */
-    padding: 26px; /* Space around content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bottom and side shadow */
-    min-width: 800px; /* Minimum width */
-    max-width: 90%; /* Allow the width to adjust responsively up to 90% of the viewport */
-    /* text-align: center;  */
+    background-color: white; 
+    padding: 26px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    min-width: 800px; 
+    max-width: 90%; 
+   
   }
   .page-wrapper h4{
     font-family: Roboto;
     font-weight:bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 
   }
   .link-input {
     width: 80%;
-    padding: 13px 15px; /* Space inside the input */
-    margin-top: 10px; /* Space above the input */
-    font-size: 16px; /* Font size */
-    border: 2px solid #D1D5DB; /* Border styling */
-    border-radius: 5px; /* Rounded corners */
-    /* outline: none;  */
-    transition: border-color 0.4s ease-in-out; /* Smooth transition on border color */
+    padding: 13px 15px; 
+    margin-top: 10px; 
+    font-size: 16px;
+    border: 2px solid #D1D5DB; 
+    border-radius: 9px; 
+    outline: none; 
+    transition: border-color 0.4s ease-in-out; 
   }
   /* Placeholder text styling */
 .link-input::placeholder {
-    color: #c1c4c9; /* Custom color for the placeholder text */
-     /* Ensures the color appears as defined */
+    color: #c1c4c9;
+    font-size: 18px;
   }
   
   .link-input:focus {
-    border-color: #C98C9A; /* Border color on focus */
-    box-shadow: 0 0 5px #C98C9A; /* Shadow on focus */
+    border-color: #C98C9A;
+    box-shadow: 0 0 3px #C98C9A; 
   }
   
   .page-wrapper .btn{
@@ -59,15 +58,17 @@
     font-family: Roboto;
     border-color: #C98C9A;
     margin-left: 15px;
-    width: 15%;
-    height:48%;
-    font-size:20px;
+    margin-bottom: 5px;;
+    width: 16%;
+    height:46%;
+    border-radius: 11px;
+    font-size:21px;
     font-weight:500;
     transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
 }
 
 .page-wrapper .btn:hover{
     background-color: #D24A69;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
   

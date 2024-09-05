@@ -6,6 +6,7 @@ import AboutUs from './Pages/AboutUs'
 import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
 import EnterYTLink from './Pages/Enter-YT-Link'
+import Upload from './Pages/Upload'
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/Login" element={<Login/>}/> 
         <Route path="/SignUp" element={<SignUp/>}/> 
         <Route path="/Enter-YT-Link" element={<EnterYTLink/>}/> 
+        <Route path="/Upload" element={<Upload/>}/>
       </Routes>
     </Router>
   );

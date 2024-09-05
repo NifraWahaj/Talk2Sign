@@ -16,7 +16,7 @@ const EnterYTLink = () => {
       {/* Page Content */}
       <div className="page-wrapper">
       <div className="container mt-4 centered-container shadow">
-        <h4>Enter Youtube Link</h4>
+        <h4>Enter YouTube Link</h4>
         <input type="text" id="yt-link" name="yt-link" className="link-input" required placeholder="Enter Youtube link" />
         <button type="submit" className="btn btn-primary">Enter</button>
       </div>

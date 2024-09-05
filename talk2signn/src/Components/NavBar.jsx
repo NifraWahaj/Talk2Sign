@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
-import '../Pages/welcome.css'; // Correct path to the CSS file
+import '../Components/NavBar.css'; // Correct path to the CSS file
 
 const Navbar = () => {
   const openSidebar = () => {

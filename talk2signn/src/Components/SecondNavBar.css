@@ -1,16 +1,35 @@
-/* Styles for the active tab in the secondary navbar */
-.navbar-nav .nav-link.active {
-    background-color: blue;
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Additional styles for the secondary navbar */
-  .navbar-nav .nav-link {
-    margin-right: 15px;
-    color: black;
-    background-color: transparent;
-    transition: color 0.3s ease;
-  }
-  
+.secondnavbar {
+  display: flex;
+  justify-content: left;
+  background-color: #ffffff; 
+  padding: 10px 0;
+}
+
+.secondnavbar-button:nth-last-of-type(3){
+  margin-left: 45px;
+}
+.secondnavbar-button {
+ border:none;
+ background-color: #ffffff;
+  border-color: #ffffff;
+  padding: 7px 20px;
+  margin-left: 6px;
+  height: 41px;
+  width:180px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.secondnavbar-button.active {
+  background-color: #9AC5E5; 
+  color: #EEEFEF; 
+  border-radius: 8px;
+}
+
+.secondnavbar-button:hover {
+  background-color: #d8dbdc; 
+  color: #fff; 
+}

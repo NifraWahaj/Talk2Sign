@@ -1,0 +1,89 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+  background-color: #efeded;
+}
+
+.AudioTextPage-wrapper {
+    display: flex;
+    width: auto;
+    margin: 0% 3%;
+  }
+  
+  .AudioTextContainer {
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    min-width: 1400px; 
+    max-width: 100%; 
+    height:500px;
+    padding:3% 5%;
+   
+  }
+  .txtinput{
+    width:1300px;
+    height:300px;
+    padding-top: 19%;
+    padding-left: 1%;
+    border-radius: 9px;
+    margin-bottom: 2.4%;
+    border:solid 2px #c9cccc;
+  }
+    /* Placeholder text styling */
+.txtinput::placeholder {
+    color: #b0b1b1;
+    font-size: 18px;
+  }
+  
+  /* .txtinput:focus {
+    border-color: #C98C9A;
+    box-shadow: 0 0 3px #C98C9A; 
+  } */
+  .btn2 img{
+   height:24px;
+   width:23px;
+   margin-right: 6%;
+   font-weight: 700;
+  }
+  .btn1{
+    border:none;
+    background-color:#9AC5E5;
+    font-family: Roboto;
+    border-color: #9AC5E5;
+    justify-self: center;
+    width: 17%;
+    height:10%;
+    border-radius: 9px;
+    font-size:16px;
+    color:white;
+    margin-right:4%;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+  }
+  .btn1:hover {
+    background-color: #739bba;
+    transform: scale(1.06);
+  }
+  .btn2{
+    border:none;
+    background-color:#C98C9A;
+    font-family: Roboto;
+    justify-self: center;
+    width: 17%;
+    height:10%;
+    border-radius: 9px;
+    font-size:16px;
+    color:white;
+    margin-right:4%;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+  }
+  .btn2:hover {
+    background-color: #D24A69;
+    transform: scale(1.06);
+  }
+
+  p{
+    margin-top: 2%;
+    margin-left: 1%;
+    color: #787879;
+  }

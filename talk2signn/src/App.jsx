@@ -7,6 +7,8 @@ import Login from './Pages/Login'
 import SignUp from './Pages/SignUp'
 import EnterYTLink from './Pages/Enter-YT-Link'
 import Upload from './Pages/Upload'
+import AudioText from './Pages/Audio-Text'
+import AudioTexttoASL from './Pages/Text-Audio-to-ASL'
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
         <Route path="/SignUp" element={<SignUp/>}/> 
         <Route path="/Enter-YT-Link" element={<EnterYTLink/>}/> 
         <Route path="/Upload" element={<Upload/>}/>
+        <Route path="/Audio-Text" element={<AudioText/>}/>
+        <Route path="/Text-Audio-to-ASL" element={<AudioTexttoASL/>}/>
       </Routes>
     </Router>
   );

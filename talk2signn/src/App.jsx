@@ -9,6 +9,9 @@ import EnterYTLink from './Pages/Enter-YT-Link'
 import Upload from './Pages/Upload'
 import AudioText from './Pages/Audio-Text'
 import AudioTexttoASL from './Pages/Text-Audio-to-ASL'
+import ConfirmorCancelUpload from './Pages/Confirm-or-Cancel-Upload'
+import ConfirmorCancelUpload2 from './Pages/Confirm-or-Cancel-Upload2'
+import YtToASL from './Pages/Yt-to-ASL'
 
 
 function App() {
@@ -23,6 +26,10 @@ function App() {
         <Route path="/Upload" element={<Upload/>}/>
         <Route path="/Audio-Text" element={<AudioText/>}/>
         <Route path="/Text-Audio-to-ASL" element={<AudioTexttoASL/>}/>
+        <Route path="/Confirm-or-Cancel-Upload" element={<ConfirmorCancelUpload/>}/>
+        <Route path="/Confirm-or-Cancel-Upload2" element={<ConfirmorCancelUpload2/>}/>
+        <Route path="/Yt-to-ASL" element={<YtToASL/>}/>
+        
       </Routes>
     </Router>
   );

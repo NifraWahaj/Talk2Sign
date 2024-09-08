@@ -1,10 +1,15 @@
+.navbar {
+    background-color: #efeded !important; /* Blue color */
+}
 
 /* for brand logo img */
 .logo img{
     position: relative;
-    width:20vw;
+    width:18vw;
     margin-left: 30px;
     cursor: pointer;
+    margin-bottom:-6%;
+    margin-top: -6%;
 }
 /* for nav items */
 .nav-link.btn {

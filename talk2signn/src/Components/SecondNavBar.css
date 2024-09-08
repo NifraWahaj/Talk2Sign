@@ -2,7 +2,8 @@
   display: flex;
   justify-content: left;
   background-color: #ffffff; 
-  padding: 10px 0;
+  padding: 2px 0px;
+  border-radius: 30px; 
 }
 
 .secondnavbar-button:nth-last-of-type(3){

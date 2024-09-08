@@ -29,18 +29,18 @@ const SignUp = () => {
       <Navbar />
 
       {/* Sign Up Form */}
-      <div className="form-container">
+      <div className="SignUpform-container">
         <form className="signup-form">
           <h2>Sign Up</h2>
-          <div className="form-group">
+          <div className="SignUpform-group">
             <label htmlFor="username">Username:</label>
             <input type="text" id="username" name="username" required placeholder="Enter your username" />
           </div>
-          <div className="form-group">
+          <div className="SignUpform-group">
             <label htmlFor="email">Email:</label>
             <input type="email" id="email" name="email" required placeholder="Enter your email" />
           </div>
-          <div className="form-group">
+          <div className="SignUpform-group">
             <label htmlFor="password">Password:</label>
             <input type="password" id="password" name="password" required placeholder="Enter your password"/>
           </div>

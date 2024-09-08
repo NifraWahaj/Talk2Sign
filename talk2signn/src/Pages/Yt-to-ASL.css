@@ -1,0 +1,66 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  background-color: #efeded;
+}
+
+.YttoASLPage-wrapper {
+  display: flex;
+  width: auto;
+  margin: 0% 3%;
+}
+
+.YttoASLPageContainer {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 1400px;
+  max-width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column; 
+  gap: 2%;
+}
+
+.txtContainer {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 18px; 
+  margin-left: 2%;
+  width:70%;
+}
+.txtContainer p{
+   color: black;
+  }
+.YttoASLPageContent {
+  display: flex;
+  flex-direction: row; 
+  gap: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 430px;
+}
+
+.YttoASLPageContainer2 {
+  background-color: white;
+  margin-top: 0% !important;
+  border-radius: 8px;
+  border: 2px solid #c9cccc;
+  min-width: 950px;
+  max-width: 80%;
+  height: 400px;
+}
+
+.YttoASLPageContainer3 {
+  background-color: rgb(255, 255, 255);
+  margin-top: -4% !important;
+  border-radius: 8px;
+  border: 2px solid #c9cccc;
+  min-width: 275px;
+  max-width: 10%;
+  height: 480px;
+  position: relative;
+}

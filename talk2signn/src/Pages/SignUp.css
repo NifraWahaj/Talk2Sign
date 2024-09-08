@@ -3,10 +3,10 @@ body {
     font-family: Roboto;
     justify-content: center;
     align-items: center;
-    background-color: #f5f5f5;
+    background-color: #efeded;
   }
-  
-  .form-container {
+ 
+  .SignUpform-container {
     background-color: #fff;
     padding:20px;
     margin-left: 35%;
@@ -33,17 +33,17 @@ body {
 
   }
   
-  .form-group {
+  .SignUpform-group {
     margin-bottom: 15px;
   }
   
-  .form-group label {
+  .SignUpform-group label {
     display: block;
     margin-bottom: 5px;
     font-family: Roboto;
   }
   
-  .form-group input {
+  .SignUpform-group input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -89,7 +89,7 @@ body {
     color: #D24A69; 
   }
   
-  .form-group input::placeholder {
+  .SignUpform-group input::placeholder {
     color: #bab5b5;
     font-size: 14px; 
     opacity: 1; 

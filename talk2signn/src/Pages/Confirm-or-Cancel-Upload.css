@@ -1,0 +1,162 @@
+/* Import the Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body{
+  background-color: #efeded;
+}
+
+.ConfirmorCancelUploadContainer .txtContainer {
+    text-align: left;
+    width: 90%;
+    background-color: white;
+    margin-top: 2%; 
+  }
+  .ConfirmorCancelUploadContainer .txtContainer p{
+    font-family: Roboto;
+    margin-bottom: 20px;
+    color: #787879;
+    margin-top: 4%;
+    margin-left: 7%;
+    font-size: 16px;
+    font-weight: 100;
+    }
+.ConfirmorCancelUpload-wrapper {
+    width: auto;
+    margin: 0% 3%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Wrapper for the file upload and button containers */
+.uploadButtonWrapper {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    height: 400px;
+}
+
+/* Container for the content inside */
+.ConfirmorCancelUploadContainer {
+    margin-right: 20px; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 1400px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    padding: 16px;
+  }
+  .ConfirmorCancelUploadContainer2{
+    padding: 26px; 
+    margin-left: 8%;   
+    background-color: white;
+    border-radius: 8px;
+    border: 2px dashed #000000;
+    min-width: 550px; 
+    max-width: 65%; 
+    height:300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-items: center; 
+    margin-bottom:10%;
+  }
+  .ConfirmorCancelUpload-wrapper p{
+    font-family: Roboto;
+    margin-bottom: 20px;
+    color: #787879;
+    margin-top: 4%;
+    margin-left: 6%;
+  }
+  .ConfirmorCancelUpload-wrapper p:nth-last-of-type(1){
+    margin-top: 2% !important;
+  }
+   .ConfirmorCancelUpload-wrapper .uploadContainer2 p {
+    margin: 0 !important;
+    text-align: center !important; /* Center text */
+    margin-bottom: -60px !important; /* Add margin below the paragraph */
+  }
+  .ConfirmorCancelUpload-wrapper .btn{
+    background-color:#C98C9A;
+    font-family: Roboto;
+    border-color: #C98C9A;
+    justify-self: center;
+    width: 35%;
+    margin-bottom:2%;
+    height:43px;
+    margin-left:5%;
+    border-radius: 11px;
+    font-size:19px;
+    font-weight:500;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+}
+.ConfirmorCancelUpload-wrapper .btn:hover{
+    background-color: #D24A69;
+    transform: scale(1.06);
+}
+  
+
+.ConfirmorCancelUploadContainer .ButtonContainer {
+    background-color: white;
+    border-radius: 8px;
+    border: 2px solid #c9cccc;
+    width: 40%;
+    height: 120px;
+    padding:5px 0px 5px 30px;
+    margin-left: 3%;
+    margin-bottom: 19%;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  .txtContainer2 p{
+  color: #000000;
+  margin-bottom: 1%;
+  }
+  .ConfirmorCancelUploadContainer .ButtonContainer .btn1{
+    border:none;
+    background-color:#F36060;
+    font-family: Roboto;
+    border-color: #F36060;
+    justify-self: center;
+    width: 45%;
+    height:43px;
+    border-radius: 9px;
+    font-size:16px;
+    color:white;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+  }
+  .ConfirmorCancelUploadContainer .ButtonContainer .btn1:hover {
+    background-color: #e33d3d;
+    transform: scale(1.06);
+  }
+  .ConfirmorCancelUploadContainer .ButtonContainer .btn2{
+    border:none;
+    background-color:#9AC5E5;
+    font-family: Roboto;
+    border-color: #9AC5E5;
+    justify-self: center;
+    width: 45%;
+    height:43px;
+    border-radius: 9px;
+    font-size:16px;
+    color:white;
+    transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
+  }
+  .ConfirmorCancelUploadContainer .ButtonContainer .btn2:hover {
+    background-color: #739bba;
+    transform: scale(1.06);
+  }
+  .txtContainer3 {
+    color: #000000;
+    margin-top: -8%; /* Space above the text */
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 2%;
+    text-align: left;
+  }

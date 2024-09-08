@@ -60,10 +60,7 @@ body{
     margin-right:4%;
     transition: transform 0.5s ease-in-out, background-color 0.3s ease-in-out; 
   }
-  .btn1:hover {
-    background-color: #739bba;
-    transform: scale(1.06);
-  }
+ 
   .btn2{
     border:none;
     background-color:#C98C9A;

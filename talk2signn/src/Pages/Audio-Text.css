@@ -37,8 +37,8 @@ body{
   }
   
   /* .txtinput:focus {
-    border-color: #C98C9A;
-    box-shadow: 0 0 3px #C98C9A; 
+    border-color: #D24A69;
+    box-shadow: 0 0 3px #D24A69; 
   } */
   .btn2 img{
    height:24px;
@@ -63,7 +63,7 @@ body{
  
   .btn2{
     border:none;
-    background-color:#C98C9A;
+    background-color:#D24A69;
     font-family: Roboto;
     justify-self: center;
     width: 17%;

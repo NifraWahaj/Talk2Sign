@@ -29,9 +29,9 @@
     font-weight: 600;
     padding: 0.25em 1.5em !important;
     margin: 15px;
-    background-color: #C76D46;
+    background-color: #5CA7DE;
     border-radius: 25px;
-    border:solid 1px black;
+    border:solid 1px #5CA7DE;
     display:inline-block;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
 }

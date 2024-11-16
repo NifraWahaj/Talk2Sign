@@ -49,14 +49,14 @@ body {
   }
   
   .link-input:focus {
-    border-color: #C98C9A;
-    box-shadow: 0 0 3px #C98C9A; 
+    border-color: #D24A69;
+    box-shadow: 0 0 3px #D24A69; 
   }
   
   .page-wrapper .btn{
-    background-color:#C98C9A;
+    background-color:#D24A69;
     font-family: Roboto;
-    border-color: #C98C9A;
+    border-color: #D24A69;
     margin-left: 15px;
     margin-bottom: 5px;;
     width: 16%;

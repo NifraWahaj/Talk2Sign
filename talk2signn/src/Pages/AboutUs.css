@@ -1,3 +1,16 @@
+:root {
+  
+  --red-color:#D24A69;
+
+  --blue-color:#5CA7DE;
+
+  --hover-red-color:#BD2246;
+
+  --hover-blue-color:#146CAC;
+}
+
+/* var(--text-color); */
+
 body {
     background-color: #efeded;
   }

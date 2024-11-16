@@ -1,4 +1,17 @@
-body {
+:root {
+  
+    --red-color:#D24A69;
+  
+    --blue-color:#5CA7DE;
+  
+    --hover-red-color:#BD2246;
+  
+    --hover-blue-color:#146CAC;
+  }
+  
+  /* var(--text-color); */
+ 
+ body {
     background-color: #efeded;
   }
 .container{
@@ -29,7 +42,7 @@ body {
   }
   
   .info-content button {
-    background-color: #C98C9A;
+    background-color: var(--red-color);;
     border: none; 
     padding: 10px 20px;
     color: #fff; 
@@ -42,8 +55,8 @@ body {
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
   }
   .info-content button:hover {
-    background-color: #D24A69;
-    transform: scale(1.06);
+    background-color: var(--hover-red-color);
+    transform: scale(1.09);
   }
   
 @media (min-width: 992px){

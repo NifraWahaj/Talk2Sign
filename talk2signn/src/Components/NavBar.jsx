@@ -67,6 +67,9 @@ const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">Logout</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#"><src></src></a>
+            </li>
           </ul>
         </div>
       </div>

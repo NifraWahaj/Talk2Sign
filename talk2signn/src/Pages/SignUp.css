@@ -52,7 +52,7 @@ body {
   }
   
  .signup-form button {
-    background-color: #C98C9A;
+    background-color: #D24A69;
     border: none;
     padding: 10px;
     margin-top: 3%;
@@ -79,7 +79,7 @@ body {
   
   /* Styling for the "Login" link */
   .login-link {
-    color: #C98C9A; 
+    color: #D24A69; 
     text-decoration: none; 
     font-weight: bold;
     transition: color 0.3s ease; 

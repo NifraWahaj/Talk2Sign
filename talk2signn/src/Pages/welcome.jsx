@@ -15,7 +15,7 @@ const Welcome = () => {
           <div className="info-content">
             <h1>Welcome to Talk2Sign</h1>
             <h6>
-              Lorem ipsum dolor sit amet consectetur. Nibh sodales lectus tortor eget aliquam massa porttitor.
+            Bridging Communication with Seamless ASL Translation
             </h6>
             <div className="button-container">
               <button>Get Started</button>

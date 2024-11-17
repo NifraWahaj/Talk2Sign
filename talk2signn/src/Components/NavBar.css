@@ -1,3 +1,16 @@
+:root {
+  
+    --red-color:#D24A69;
+  
+    --blue-color:#5CA7DE;
+  
+    --hover-red-color:#BD2246;
+  
+    --hover-blue-color:#146CAC;
+  }
+  
+  
+  
 .navbar {
     background-color: #efeded !important; /* Blue color */
 }
@@ -21,6 +34,7 @@
     padding: 0.25em 1.5em !important;
     margin: 15px;
     display:inline-block;
+    border-radius: 25px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
   }
 .nav-link.btn:hover{
@@ -29,12 +43,54 @@
     font-weight: 600;
     padding: 0.25em 1.5em !important;
     margin: 15px;
-    background-color: #5CA7DE;
+    background-color: var(--blue-color);
     border-radius: 25px;
-    border:solid 1px #5CA7DE;
+    border:solid 1px var(--blue-color);
     display:inline-block;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
 }
+
+.nav-link.btn:active{
+    color: #E2E2E2;
+    font-size:20px;
+    font-weight: 600;
+    padding: 0.25em 1.5em !important;
+    margin: 15px;
+    background-color: var(--hover-blue-color);
+    border-radius: 25px;
+    border:solid 1px var(--hover-blue-color);
+    display:inline-block;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.profile-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red-color);
+    cursor: pointer;
+    margin-left: 12px;
+    margin-right: 10px;
+    margin-top: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; 
+  }
+  
+  .profile-button:hover {
+    background-color: var(--hover-red-color);
+    transform: scale(1.09);
+  }
+  
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
 
 #mySidebar {
     width: 380px;
@@ -65,3 +121,5 @@
     left: 80%;
     
 }
+
+

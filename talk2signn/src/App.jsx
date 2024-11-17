@@ -12,6 +12,8 @@ import AudioTexttoASL from './Pages/Text-Audio-to-ASL'
 import ConfirmorCancelUpload from './Pages/Confirm-or-Cancel-Upload'
 import ConfirmorCancelUpload2 from './Pages/Confirm-or-Cancel-Upload2'
 import YtToASL from './Pages/Yt-to-ASL'
+import ForgotPassword from './Pages/ForgotPassword'
+import Code from './Pages/Code'
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
         <Route path="/Confirm-or-Cancel-Upload" element={<ConfirmorCancelUpload/>}/>
         <Route path="/Confirm-or-Cancel-Upload2" element={<ConfirmorCancelUpload2/>}/>
         <Route path="/Yt-to-ASL" element={<YtToASL/>}/>
+        <Route path="/ForgotPassword" element={<ForgotPassword/>}/>
+        <Route path="/Code" element={<Code/>}/>
         
       </Routes>
     </Router>

@@ -45,6 +45,11 @@ const Navbar = () => {
               <li className="nav-item">
                 <button className="nav-link btn btn-light">Logout</button>
               </li>
+              <li className="nav-item">
+                <button className="profile-button">
+                  <img src="profile.svg" alt="Profile" className="profile-icon" />
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -66,9 +71,6 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">Logout</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#"><src></src></a>
             </li>
           </ul>
         </div>

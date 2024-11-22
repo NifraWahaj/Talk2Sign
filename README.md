@@ -10,7 +10,7 @@
    ```bash
    npm install
    ```
-2. Create a .env file in the root of the frontend directory with the required Firebase environment variables:
+2. Create a .env file in the source directory of the frontend with the required Firebase environment variables:
 
    ```bash
    REACT_APP_FIREBASE_API_KEY=your-api-key

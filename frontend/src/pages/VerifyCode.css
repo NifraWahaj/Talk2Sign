@@ -1,0 +1,85 @@
+/* Container styles */
+.verify-code-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.verify-code-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Text styles */
+.verify-code-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+.verify-code-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Input fields */
+.verify-code-inputs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.verify-code-input {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.verify-code-input:focus {
+  border-color: #5ca7de;
+  outline: none;
+  box-shadow: 0 0 5px rgba(92, 167, 222, 0.5);
+}
+
+/* Button styles */
+.verify-code-button {
+  width: 100%; /* Make the button take the full width of the container */
+  padding: 0.8rem;
+  background-color: #d24a69;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.verify-code-button:hover {
+  background-color: #a72644;
+}
+
+/* Footer text */
+.verify-code-footer {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.verify-code-link {
+  color: #d24a69;
+  text-decoration: none;
+}
+
+.verify-code-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,117 @@
+/* Container styles */
+.login-container {
+    max-width: 400px;
+    margin: 3rem auto; /* Matches spacing with Signup */
+    padding: 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title styles */
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: black;
+  }
+  
+  /* Form styles */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Input field styles */
+  .login-input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .login-input:focus {
+    border-color: #5ca7de;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 167, 222, 0.5);
+  }
+  
+  /* Forgot Password styles */
+  .login-forgot {
+    text-align: right; /* Align link to the right */
+    margin-bottom: 1rem;
+  }
+  
+  .forgot-password-link {
+    color: #d24a69;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  .forgot-password-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button styles */
+  .login-button {
+    padding: 0.8rem;
+    background-color: #d24a69;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .login-button:hover {
+    background-color: #a72644;
+  }
+  
+  /* Footer text */
+  .login-footer {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Link styles */
+  .login-link {
+    color: #d24a69;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 1.5rem;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  
+    .login-title {
+      font-size: 1.8rem;
+    }
+  
+    .login-input {
+      font-size: 0.9rem;
+    }
+  
+    .login-button {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+  
+    .forgot-password-link {
+      font-size: 0.85rem; /* Slightly smaller font for mobile */
+    }
+  }
+  

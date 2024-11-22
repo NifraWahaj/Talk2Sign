@@ -1,0 +1,37 @@
+/* Sub-navbar container */
+.sub-navbar {
+    display: flex;
+    justify-content: center; /* Center align the nav items */
+    gap: 1rem; /* Space between tabs */
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e6e6e6;
+    margin-top: 1rem;
+    padding: 0.5rem 0;
+  }
+  
+  /* Sub-navbar tabs */
+  .sub-nav-tab {
+    padding: 0.8rem 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none; /* Remove underline for links */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sub-nav-tab:hover {
+    background-color: #d24a69;
+    color: white;
+  }
+  
+  /* Active tab styling */
+  .active-sub-tab {
+    background-color: #5ca7de;
+    color: white;
+    font-weight: bold;
+  }
+  

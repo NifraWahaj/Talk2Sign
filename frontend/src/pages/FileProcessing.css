@@ -1,0 +1,87 @@
+.file-processing-page {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    padding: 0;
+    margin: 0;
+}
+
+.file-processing-container {
+    max-width: 90%; /* Increased max-width for wider container */
+    width: 100%; /* Ensure full width */
+    margin: 1rem 2rem 2rem 2rem; /* Similar to YouTube layout */
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-processing-mp4-container,
+.file-processing-text-avatar-container {
+    display: flex;
+    justify-content: space-between; /* Spread content evenly */
+    align-items: flex-start;
+    gap: 2rem; /* Maintain consistent spacing */
+    width: 100%; /* Full container width */
+}
+
+.file-processing-video-player {
+    flex: 2; /* Match width ratio with converted text */
+    background-color: #333;
+    color: white;
+    height: 30rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-processing-converted-text-container {
+    flex: 2; /* Match width with video player */
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ccc;
+    height: 29rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.file-processing-avatar-placeholder {
+    flex: 1;
+    background-color: #000;
+    color: white;
+    height: 33rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.file-processing-error-message {
+    color: red;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .file-processing-mp4-container,
+    .file-processing-text-avatar-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem; /* Reduce spacing for smaller screens */
+        align-items: center;
+    }
+
+    .file-processing-video-player,
+    .file-processing-converted-text-container,
+    .file-processing-avatar-placeholder {
+        width: 100%; /* Take full width */
+        height: 25rem; /* Adjust height for smaller screens */
+    }
+}

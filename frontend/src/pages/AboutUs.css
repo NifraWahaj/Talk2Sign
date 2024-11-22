@@ -1,0 +1,92 @@
+/* Container styles */
+.about-us-container {
+    max-width: 1300px; /* Increased width */
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: transparent;
+  }
+  
+  /* Grid layout */
+  .about-us-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem; /* Added more spacing */
+    align-items: center;
+  }
+  
+  .about-us-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-us-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Content styles */
+  .about-us-content {
+    text-align: left;
+  }
+  
+  .about-us-title {
+    font-size: 2.2rem; /* Slightly larger */
+    margin-bottom: 1rem;
+    color: #d24a69;
+  }
+  
+  .about-us-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  /* Features layout */
+  .about-us-features {
+    display: flex;
+    margin-top: 3rem;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .about-us-feature {
+    max-width: 180px; /* Slightly larger for readability */
+    text-align: center;
+  }
+  
+  .about-us-icon {
+    font-size: 3rem;
+    color: #d24a69;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-us-feature-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .about-us-feature-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .about-us-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-us-features {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-us-feature {
+      max-width: 200px;
+    }
+  }
+  

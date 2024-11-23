@@ -147,8 +147,11 @@
 
 .translator-instruction-text {
   padding-bottom: 0.5rem;
+  padding-top: 0rem;
   font-size: 0.9rem;
   color: #777;
+  text-align: left; /* Changed from center to left alignment */
+  width: 100%; /* Ensure it spans the container */
 }
 
 /* Responsive Adjustments */

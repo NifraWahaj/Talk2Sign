@@ -17,12 +17,18 @@
   }
   
   .upload-drop-area {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack the content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     border: 2px dashed #ccc;
     border-radius: 10px;
     padding: 2rem;
+    height: 22rem;
     margin: 1rem auto;
     text-align: center;
   }
+  
   
   .browse-button {
     background-color: #d24a69;

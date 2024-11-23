@@ -1,37 +1,78 @@
 /* Sub-navbar container */
 .sub-navbar {
-    display: flex;
-    justify-content: center; /* Center align the nav items */
-    gap: 1rem; /* Space between tabs */
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 2px solid #e6e6e6;
-    margin-top: 1rem;
-    padding: 0.5rem 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 2px solid #e6e6e6;
+  padding: 0.5rem 1rem;
+  position: relative; /* Ensure positioning for the hamburger menu */
+}
+
+/* Sub-navbar header */
+.sub-navbar-header {
+  display: none; /* Hide the hamburger menu by default */
+}
+
+/* Sub-navbar links */
+.sub-navbar-links {
+  display: flex;
+  justify-content: center; /* Center align the nav items */
+  gap: 1rem; /* Space between tabs */
+  transition: max-height 0.3s ease; /* Smooth toggle for collapsible menu */
+}
+
+.sub-nav-tab {
+  padding: 0.8rem 1.5rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none; /* Remove underline for links */
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-nav-tab:hover {
+  background-color: #d24a69;
+  color: white;
+}
+
+/* Active tab styling */
+.active-sub-tab {
+  background-color: #5ca7de;
+  color: white;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sub-navbar-header {
+    display: flex; /* Show the hamburger menu */
+    justify-content: flex-end;
   }
-  
-  /* Sub-navbar tabs */
-  .sub-nav-tab {
-    padding: 0.8rem 1.5rem;
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-    text-decoration: none; /* Remove underline for links */
-    background-color: transparent;
+
+  .hamburger-menu {
+    font-size: 1.5rem;
+    background: none;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
   }
-  
-  .sub-nav-tab:hover {
-    background-color: #d24a69;
-    color: white;
+
+  .sub-navbar-links {
+    display: none; /* Hide the links by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    width: 100%;
   }
-  
-  /* Active tab styling */
-  .active-sub-tab {
-    background-color: #5ca7de;
-    color: white;
-    font-weight: bold;
+
+  .sub-navbar-links.show {
+    display: flex; /* Show links when the menu is toggled */
   }
-  
+
+  .sub-nav-tab {
+    width: 100%; /* Full width for tabs on smaller screens */
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+}

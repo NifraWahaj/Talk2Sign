@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import "./FileProcessing.css";
 
 const FileProcessing = () => {
-  const [error, setError] = useState(null);
+
   const [activeTab, setActiveTab] = useState("Upload");
   const location = useLocation();
   const { file, type } = location.state || {};

@@ -1,33 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Landing.css"; // Import the CSS file
 
 const Landing = () => {
   return (
-    <div style={styles.container}>
-      <h1>Welcome to Talk2Sign</h1>
-      <p>Bridging Communication with Seamless ASL Translation</p>
-      <Link to="/signup" style={styles.button}>
+    <div className="landing-container">
+      <h1 className="landing-title">Welcome to Talk2Sign</h1>
+      <p className="landing-subtitle">
+        Bridging Communication with Seamless ASL Translation
+      </p>
+      <Link to="/signup" className="landing-button">
         Get Started
       </Link>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    textAlign: "center",
-    padding: "2rem",
-  },
-  button: {
-    display: "inline-block",
-    marginTop: "1rem",
-    padding: "0.8rem 1.5rem",
-    backgroundColor: "#D24A69",
-    color: "white",
-    textDecoration: "none",
-    borderRadius: "4px",
-    transition: "background-color 0.3s",
-  },
 };
 
 export default Landing;

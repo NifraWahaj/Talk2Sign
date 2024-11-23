@@ -1,0 +1,81 @@
+/* Main container */
+.landing-container {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Optional background color */
+    min-height: 100vh; /* Ensure the page takes the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Title */
+  .landing-title {
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 1rem;
+    color: #333; /* Dark text color */
+  }
+  
+  /* Subtitle */
+  .landing-subtitle {
+    font-size: 1.2rem;
+    color: #666; /* Lighter text color */
+    margin-bottom: 2rem;
+  }
+  
+  /* Button */
+  .landing-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #d24a69;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional button shadow */
+  }
+  
+  /* Hover and active states for button */
+  .landing-button:hover {
+    background-color: #a72644;
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .landing-button:active {
+    transform: scale(0.95); /* Button press effect */
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .landing-title {
+      font-size: 2rem;
+    }
+  
+    .landing-subtitle {
+      font-size: 1rem;
+    }
+  
+    .landing-button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    
+    .landing-title {
+      font-size: 1.8rem;
+    }
+  
+    .landing-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .landing-button {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+    }
+  }
+  

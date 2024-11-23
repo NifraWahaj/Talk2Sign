@@ -72,7 +72,9 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   resize: none;
+  padding: 0.8rem; /* Add padding inside the textarea */
 }
+
 
 .translator-converted-text {
   width: 100%;
@@ -150,9 +152,11 @@
   padding-top: 0rem;
   font-size: 0.9rem;
   color: #777;
-  text-align: left; /* Changed from center to left alignment */
+  text-align: left; /* Keep text left-aligned */
   width: 100%; /* Ensure it spans the container */
+  margin-top: 0rem; /* Reduce the gap from the content above */
 }
+
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

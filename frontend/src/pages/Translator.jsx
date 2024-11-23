@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Translator.css";
 import SubNavbar from "../components/SubNavbar";
 
@@ -8,7 +10,7 @@ const Translator = () => {
   const [inputText, setInputText] = useState("");
   const [isRecording, setIsRecording] = useState(false);
   const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
-  const [message, setMessage] = useState(""); // State for the message
+  const [isRecordingStopped, setIsRecordingStopped] = useState(false); // Tracks if recording is complete
 
   const [activeTab, setActiveTab] = useState("Audio/Text");
 
@@ -18,42 +20,58 @@ const Translator = () => {
   };
 
   const handleConvert = () => {
-    if (inputText.trim() === "") return; // Prevent conversion of empty text
-    setConvertedText(inputText); // Set converted text
+    if (inputText.trim() === "" && !isRecordingStopped) {
+      toast.error("Please type some text or record audio before converting.", {
+        position: "top-center",
+      });
+      return; // Prevent conversion if neither text nor recording exists
+    }
+
+    setConvertedText(
+      isRecordingStopped
+        ? "Converted content from audio recording will appear here." // Placeholder text for recording
+        : inputText
+    );
     setIsConverted(true); // Trigger converted view
-    setMessage(""); // Clear any existing message
+    setIsTextareaDisabled(true); // Keep textarea disabled after conversion
+    setIsRecordingStopped(false); // Reset recording flag
   };
 
   const handleStartRecording = () => {
     if (inputText.trim() !== "") {
-      setMessage("Cannot start recording while text exists. Clear the text first.");
-      return; // Prevent recording if text exists
+      // Show toast if text exists when clicking "Start Recording"
+      toast.warn("Cannot start recording while text exists. Clear the text first.", {
+        position: "top-center",
+      });
+      return; // Prevent recording
     }
     setIsRecording(true);
     setIsTextareaDisabled(true); // Disable textarea during recording
-    setMessage(""); // Clear any existing message
-    console.log("Recording started...");
+    toast.info("Recording started...", { position: "top-center" });
   };
 
   const handleStopRecording = () => {
     setIsRecording(false);
     setIsTextareaDisabled(true); // Keep textarea disabled after stopping
-    setMessage(""); // Clear any existing message
-    console.log("Recording stopped...");
+    setIsRecordingStopped(true); // Set recording as completed
   };
 
   const handleTextareaClick = () => {
     if (isRecording) {
-      setMessage("Cannot type while recording is in progress. Stop recording first.");
+      // Show toast if textarea is clicked while recording
+      toast.warn("Cannot type while recording is in progress. Stop recording first.", {
+        position: "top-center",
+      });
     }
   };
 
-  const handlePlay = () => {
-    console.log("Playing...");
-  };
-
-  const handlePause = () => {
-    console.log("Paused...");
+  const handleTextareaChange = (e) => {
+    const text = e.target.value;
+    setInputText(text);
+    if (text.trim() !== "") {
+      setIsRecording(false); // Stop recording if text is typed
+      setIsRecordingStopped(false); // Reset recording state
+    }
   };
 
   return (
@@ -76,9 +94,9 @@ const Translator = () => {
                 className="translator-text-input"
                 placeholder="Type your message"
                 value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
+                onChange={handleTextareaChange} // Handle typing
                 onClick={handleTextareaClick} // Trigger message if clicked during recording
-                disabled={isTextareaDisabled} // Use new state to control textarea
+                disabled={isTextareaDisabled} // Disable textarea during recording
               ></textarea>
             )}
 
@@ -86,10 +104,10 @@ const Translator = () => {
             <div className="translator-action-buttons">
               {isConverted ? (
                 <>
-                  <button className="translator-convert-button" onClick={handlePlay}>
+                  <button className="translator-convert-button" onClick={handleConvert}>
                     Play
                   </button>
-                  <button className="translator-record-button" onClick={handlePause}>
+                  <button className="translator-record-button" onClick={handleStopRecording}>
                     Pause
                   </button>
                 </>
@@ -113,7 +131,7 @@ const Translator = () => {
                     <button
                       className="translator-record-button"
                       onClick={handleStartRecording}
-                      disabled={inputText.trim() !== ""} // Disable if text exists
+                      disabled={inputText.trim() !== ""} // Disable Start Recording if text exists
                     >
                       Start Recording
                     </button>
@@ -131,15 +149,8 @@ const Translator = () => {
           )}
         </div>
 
-        {/* Message Display */}
-        {message && <div className="translator-message-box">{message}</div>}
-
-        {/* Instruction */}
-        {!isConverted && (
-          <p className="translator-instruction-text">
-            Only Text or Audio can be input at a single instance
-          </p>
-        )}
+        {/* Toast Container */}
+        <ToastContainer />
       </div>
     </div>
   );

@@ -32,12 +32,52 @@ const navigate = useNavigate();
     setError(null);
   };
 
-  const handleConvert = () => {
-    console.log("File is being converted:", selectedFile.name);
-    // Add your file conversion logic here
-    const type = selectedFile.type;
-    navigate("/file-processing", { state: { file: selectedFile, type } });
-  };
+
+  
+
+// frontend/src/pages/Upload.jsx
+// ... existing code ...
+
+const handleConvert = async () => {
+  if (!selectedFile) {
+    setError("No file selected.");
+    return;
+  }
+
+  console.log("File is being converted:", selectedFile.name);
+  const type = selectedFile.type;
+
+  if (type === "image/png" || type === "image/jpeg" || type === "image/jpg") {
+    try {
+      const formData = new FormData();
+      formData.append("file", selectedFile);
+
+      const response = await fetch("/api/extract-text", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to extract text from image");
+      }
+
+      const data = await response.json();
+      console.log("Extracted text:", data.text);
+
+      // Navigate to the new page with the extracted text
+      navigate("/extracted-text", { state: { extractedText: data.text } });
+    } catch (error) {
+      console.error("Error extracting text:", error);
+      setError("Failed to extract text from image.");
+    }
+  } else {
+    setError("Unsupported file type.");
+  }
+};
+
+// ... existing code ...
+
+
 
   return (
     <div className="upload-page">

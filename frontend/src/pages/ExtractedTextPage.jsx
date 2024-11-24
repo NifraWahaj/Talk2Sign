@@ -1,6 +1,6 @@
-// frontend/src/pages/ExtractedTextPage.jsx
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import './ExtractedTextPage.css'; // Import the new CSS file
 
 const ExtractedTextPage = () => {
   const location = useLocation();
@@ -8,12 +8,20 @@ const ExtractedTextPage = () => {
 
   return (
     <div className="extracted-text-page">
-      <h1>Extracted Text</h1>
-      {extractedText ? (
-        <p>{extractedText}</p>
-      ) : (
-        <p>No text extracted or an error occurred.</p>
-      )}
+     
+      <div className="extracted-text-container">
+
+      
+        {/* Text Holder */}
+        <div className="extracted-text-content">
+          {extractedText || "No text extracted or an error occurred."}
+        </div>
+
+        {/* Animation Placeholder */}
+        <div className="animation-placeholder">
+          <p className="placeholder-text">Avatar animation goes here</p>
+        </div>
+      </div>
     </div>
   );
 };

@@ -10,13 +10,13 @@
   border-bottom: 2px solid #e6e6e6;
   display: flex;
   justify-content: center;
-  gap: 1rem; /* Space between tabs */
+  gap: 1rem;
   margin-top: 1rem;
 }
 
 .sub-nav-tab {
   flex: 1;
-  max-width: 150px; /* Limit individual tab width */
+  max-width: 150px;
   padding: 0.8rem;
   text-align: center;
   font-size: 1rem;
@@ -72,13 +72,13 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   resize: none;
-  padding: 0.8rem; /* Add padding inside the textarea */
+  padding: 0.8rem;
+  overflow-y: hidden; /* Default behavior on larger screens */
 }
-
 
 .translator-converted-text {
   width: 100%;
-  height: 30rem;
+  height: 10rem;
   margin-bottom: 0.5rem;
   font-size: 1rem;
   background-color: #f9f9f9;
@@ -90,7 +90,7 @@
 .translator-avatar-placeholder {
   flex: 1;
   background-color: #000;
-  height: 33rem;
+  height: 33rem !important; /* Default height for larger screens */
   margin-bottom: 0.5rem;
   border-radius: 6px;
   display: flex;
@@ -152,13 +152,12 @@
   padding-top: 0rem;
   font-size: 0.9rem;
   color: #777;
-  text-align: left; /* Keep text left-aligned */
-  width: 100%; /* Ensure it spans the container */
-  margin-top: 0rem; /* Reduce the gap from the content above */
+  text-align: left;
+  width: 100%;
+  margin-top: 0rem;
 }
 
-
-/* Responsive Adjustments */
+/* Responsive Adjustments for Small Screens */
 @media (max-width: 768px) {
   .translator-content-wrapper {
     flex-direction: column;
@@ -168,6 +167,20 @@
   .translator-text-container,
   .translator-avatar-placeholder {
     width: 100%;
+  }
+
+  /* Adjust text box for smaller screens */
+  .translator-text-input {
+    min-height: 10rem; /* Smaller height for text box */
+    max-height: 15rem; /* Limit max height */
+    overflow-y: auto; /* Enable scrolling for larger text */
+  }
+
+  /* Make the avatar box equal in size to the text box */
+  .translator-avatar-placeholder {
+    height: 33rem !important; 
+    min-height: 33rem;
+    max-height: 33rem;
   }
 
   .translator-action-buttons {

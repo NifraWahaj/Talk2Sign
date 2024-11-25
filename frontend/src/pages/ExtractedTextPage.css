@@ -1,101 +1,138 @@
 /* General Page Styling */
 .extracted-text-page {
-    min-height: 100vh;
-    padding: 2rem;
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-  
-  /* Page Title */
-  .extracted-text-page h1 {
-    font-size: 2rem;
-    color: #5ca7de; /* Matches the primary button color from translator.css */
-    text-align: center;
-    border-bottom: 2px solid #e6e6e6;
-    padding-bottom: 0.5rem;
-    width: 100%;
-    max-width: 800px;
-  }
-  
-  /* Main Container for Content */
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+/* Page Title */
+.extracted-text-page h1 {
+  font-size: 2rem;
+  color: #5ca7de; /* Matches the primary button color from translator.css */
+  text-align: center;
+  border-bottom: 2px solid #e6e6e6;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Main Container for Content */
+.extracted-text-container {
+  max-width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Extracted Text Holder */
+.extracted-text-content {
+  flex: 2;
+  width: 100%;
+  height: 22rem;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding-left: 0.8rem; /* Set padding for the left */
+  padding-top: 0.8rem;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+/* Animation Placeholder */
+.animation-placeholder {
+  flex: 1;
+  background-color: #000;
+  height: 33rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.placeholder-text {
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+/* Action Buttons */
+.extracted-text-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.extracted-play-button,
+.extracted-pause-button {
+  flex: 1;
+  max-width: 200px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.extracted-play-button {
+  background-color: #5ca7de;
+  color: white;
+}
+
+.extracted-play-button:hover {
+  background-color: #2d6fa3;
+}
+
+.extracted-pause-button {
+  background-color: #d24a69;
+  color: white;
+}
+
+.extracted-pause-button:hover {
+  background-color: #a72644;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .extracted-text-container {
-    max-width: 90%;
-    padding: 0.8rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 100%;
-    padding: 2rem 2rem 2rem 2rem;
-    
+    flex-direction: column; /* Stack the boxes on smaller screens */
+    gap: 1rem;
   }
-  
-  /* Extracted Text Holder */
+
+ 
+
+  /* Adjust text box for smaller screens */
   .extracted-text-content {
-    flex: 2;
-    width: 94% !important;
-    height: 22rem; 
-    font-size: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 0.8rem;
-    overflow-y: auto; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 10rem; /* Smaller height for text box */
+    max-height: 15rem; /* Limit max height */
+    overflow-y: auto; /* Enable scrolling for larger text */
+    width: 97%;
   }
-  
-  /* Animation Placeholder */
+
+  /* Adjust animation box for smaller screens */
   .animation-placeholder {
-    flex: 1;
-    background-color: #000;
-    height: 33rem;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    
+    height: 33rem !important;
+    min-height: 33rem;
+    max-height: 33rem;
+    width: 100%;
   }
-  
-  .placeholder-text {
-    font-size: 1.5rem;
-    color: #fff;
-    text-align: center;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .extracted-text-container {
-      flex-direction: column; /* Stack the boxes on smaller screens */
-      gap: 1rem;
-    }
-  
-    .extracted-text-content,
-    .animation-placeholder {
-      width: 100%;
-    }
-  
-    /* Adjust text box for smaller screens */
-    .extracted-text-content {
-        min-height: 10rem; /* Smaller height for text box */
-        max-height: 15rem; /* Limit max height */
-        overflow-y: auto; /* Enable scrolling for larger text */
-    }
-  
-    /* Adjust animation box for smaller screens */
-    .animation-placeholder {
-        height: 33rem !important; 
-        min-height: 33rem;
-        max-height: 33rem;
-    }
-  }
-  
+}

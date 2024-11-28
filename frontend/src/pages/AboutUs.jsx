@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutUs.css";
 import { FaHandsHelping, FaAccessibleIcon, FaHeart } from "react-icons/fa"; // Icons
-import { ReactComponent as HeroImage } from "../assets/hero2.svg"; // Example vector (replace with a downloaded one)
+import hero2 from "../assets/hero2.svg";
 
 const AboutUs = () => {
   return (
@@ -9,7 +9,8 @@ const AboutUs = () => {
       <div className="about-us-grid">
         {/* Hero Image */}
         <div className="about-us-hero">
-          <HeroImage className="about-us-image" />
+        <img src={hero2} alt="Hero" className="about-us-image" />
+
         </div>
 
         {/* About Content */}

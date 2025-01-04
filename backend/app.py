@@ -5,6 +5,14 @@ import io
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return jsonify({'message': 'Welcome to the Text Extraction API!'})
+
+@app.route('/favicon.ico')
+def favicon():
+    return '', 204  # No Content response
+
 @app.route('/api/extract-text', methods=['POST'])
 def extract_text():
     if 'file' not in request.files:

@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import SubNavbar from "../components/SubNavbar";
 import "./Upload.css";
 import { useNavigate } from "react-router-dom";
-
+import Tesseract from "tesseract.js";
 
 const Upload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState("Upload");
 
+  const navigate = useNavigate();
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     console.log(`Active tab changed to: ${tab}`);
   };
-  // Inside Upload Component
-const navigate = useNavigate();
-
 
   const handleFileUpload = (file) => {
     const allowedFormats = ["video/mp4", "audio/mp3", "audio/mpeg", "image/png"];
@@ -32,52 +31,33 @@ const navigate = useNavigate();
     setError(null);
   };
 
-
-  
-
-// frontend/src/pages/Upload.jsx
-// ... existing code ...
-
-const handleConvert = async () => {
-  if (!selectedFile) {
-    setError("No file selected.");
-    return;
-  }
-
-  console.log("File is being converted:", selectedFile.name);
-  const type = selectedFile.type;
-
-  if (type === "image/png" || type === "image/jpeg" || type === "image/jpg") {
-    try {
-      const formData = new FormData();
-      formData.append("file", selectedFile);
-
-      const response = await fetch("/api/extract-text", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to extract text from image");
-      }
-
-      const data = await response.json();
-      console.log("Extracted text:", data.text);
-
-      // Navigate to the new page with the extracted text
-      navigate("/extracted-text", { state: { extractedText: data.text } });
-    } catch (error) {
-      console.error("Error extracting text:", error);
-      setError("Failed to extract text from image.");
+  const handleConvert = async () => {
+    if (!selectedFile) {
+      setError("No file selected.");
+      return;
     }
-  } else {
-    setError("Unsupported file type.");
-  }
-};
 
-// ... existing code ...
+    if (selectedFile.type.startsWith("image/")) {
+      console.log("Extracting text from image:", selectedFile.name);
+      try {
+        const { data: { text } } = await Tesseract.recognize(
+          selectedFile,
+          "eng",
+          {
+            logger: (m) => console.log(m), // Log progress
+          }
+        );
 
-
+        // Navigate to ExtractedTextPage with the extracted text
+        navigate("/extracted-text", { state: { extractedText: text } });
+      } catch (err) {
+        console.error("Error during OCR:", err);
+        setError("Failed to extract text from image.");
+      }
+    } else {
+      console.log("File is not an image; no OCR needed:", selectedFile.name);
+    }
+  };
 
   return (
     <div className="upload-page">

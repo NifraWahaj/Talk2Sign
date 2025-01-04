@@ -9,10 +9,10 @@ const FileProcessing = () => {
   const [activeTab, setActiveTab] = useState("Upload");
   const location = useLocation();
   const { file, type } = location.state || {};
-
+/*
   if (!file || !type) {
     return <p className="file-processing-error-message">No file was uploaded. Please upload a file first.</p>;
-  }
+  }*/
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);

@@ -1,77 +1,60 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "regenerator-runtime/runtime"; // Fix regeneratorRuntime error
 import "./Translator.css";
 import SubNavbar from "../components/SubNavbar";
+import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
 
 const Translator = () => {
   const [isConverted, setIsConverted] = useState(false);
   const [convertedText, setConvertedText] = useState("");
-  const [inputText, setInputText] = useState("");
-  const [isRecording, setIsRecording] = useState(false);
   const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
-  const [isRecordingStopped, setIsRecordingStopped] = useState(false); // Tracks if recording is complete
-
   const [activeTab, setActiveTab] = useState("Audio/Text");
+
+  const { transcript, listening, resetTranscript } = useSpeechRecognition();
+
+  // Check browser support
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    toast.error("Speech Recognition Whisper API is not supported in this browser.", {
+      position: "top-center",
+    });
+    console.error("Browser does not support speech recognition.");
+    return <p>Your browser does not support speech recognition.</p>;
+  }
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     console.log(`Active tab changed to: ${tab}`);
   };
 
-  const handleConvert = () => {
-    if (inputText.trim() === "" && !isRecordingStopped) {
-      toast.error("Please type some text or record audio before converting.", {
-        position: "top-center",
-      });
-      return; // Prevent conversion if neither text nor recording exists
-    }
-
-    setConvertedText(
-      isRecordingStopped
-        ? "Converted content from audio recording will appear here." // Placeholder text for recording
-        : inputText
-    );
-    setIsConverted(true); // Trigger converted view
-    setIsTextareaDisabled(true); // Keep textarea disabled after conversion
-    setIsRecordingStopped(false); // Reset recording flag
-  };
-
   const handleStartRecording = () => {
-    if (inputText.trim() !== "") {
-      // Show toast if text exists when clicking "Start Recording"
-      toast.warn("Cannot start recording while text exists. Clear the text first.", {
-        position: "top-center",
-      });
-      return; // Prevent recording
-    }
-    setIsRecording(true);
-    setIsTextareaDisabled(true); // Disable textarea during recording
+    console.log("Starting recording...");
+    resetTranscript(); // Clear previous transcription
+    SpeechRecognition.startListening({ continuous: true });
+    setIsTextareaDisabled(true);
     toast.info("Recording started...", { position: "top-center" });
   };
 
   const handleStopRecording = () => {
-    setIsRecording(false);
-    setIsTextareaDisabled(true); // Keep textarea disabled after stopping
-    setIsRecordingStopped(true); // Set recording as completed
+    console.log("Stopping recording...");
+    SpeechRecognition.stopListening();
+    setIsTextareaDisabled(false);
+    toast.info("Recording stopped.", { position: "top-center" });
+    console.log("Final transcript:", transcript);
   };
 
-  const handleTextareaClick = () => {
-    if (isRecording) {
-      // Show toast if textarea is clicked while recording
-      toast.warn("Cannot type while recording is in progress. Stop recording first.", {
+  const handleConvert = () => {
+    if (!transcript.trim()) {
+      toast.error("Please record audio or type some text before converting.", {
         position: "top-center",
       });
+      return;
     }
-  };
 
-  const handleTextareaChange = (e) => {
-    const text = e.target.value;
-    setInputText(text);
-    if (text.trim() !== "") {
-      setIsRecording(false); // Stop recording if text is typed
-      setIsRecordingStopped(false); // Reset recording state
-    }
+    setConvertedText(transcript);
+    setIsConverted(true);
+    console.log("Converted text:", transcript);
   };
 
   return (
@@ -92,11 +75,10 @@ const Translator = () => {
               <textarea
                 id="translator-input-text"
                 className="translator-text-input"
-                placeholder="Type your message"
-                value={inputText}
-                onChange={handleTextareaChange} // Handle typing
-                onClick={handleTextareaClick} // Trigger message if clicked during recording
-                disabled={isTextareaDisabled} // Disable textarea during recording
+                placeholder="Start recording or type your message"
+                value={transcript} // Display the transcription in textarea
+                readOnly // Make textarea read-only during transcription
+                disabled={isTextareaDisabled}
               ></textarea>
             )}
 
@@ -104,38 +86,33 @@ const Translator = () => {
             <div className="translator-action-buttons">
               {isConverted ? (
                 <>
-                  <button className="translator-convert-button" onClick={handleConvert}>
-                    Play
-                  </button>
-                  <button className="translator-record-button" onClick={handleStopRecording}>
-                    Pause
+                  <button className="translator-convert-button">
+                    Converted Output
                   </button>
                 </>
               ) : (
                 <>
-                  <button
-                    className="translator-convert-button"
-                    onClick={handleConvert}
-                    disabled={isRecording} // Disable Convert during recording
-                  >
-                    Convert
-                  </button>
-                  {isRecording ? (
+                  {listening ? (
                     <button
                       className="translator-record-button"
                       onClick={handleStopRecording}
                     >
-                      Stop
+                      Stop Recording
                     </button>
                   ) : (
                     <button
                       className="translator-record-button"
                       onClick={handleStartRecording}
-                      disabled={inputText.trim() !== ""} // Disable Start Recording if text exists
                     >
                       Start Recording
                     </button>
                   )}
+                  <button
+                    className="translator-convert-button"
+                    onClick={handleConvert}
+                  >
+                    Convert
+                  </button>
                 </>
               )}
             </div>

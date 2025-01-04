@@ -1,112 +1,153 @@
 /* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-  }
-  
-  /* Brand (logo) */
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-logo {
-    width: 140px;
-    height: auto;
-  }
-  
-  /* Hamburger menu (mobile only) */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Brand (logo) */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 140px;
+  height: auto;
+}
+
+/* Hamburger menu (mobile only) */
+.navbar-hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Navbar links (desktop) */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: black;
+  background-color: #f9f9f9; /* Match navbar background color */
+  cursor: pointer;
+  padding: 0.5rem 1.5rem; /* Adjust padding for button-like appearance */
+  border-radius: 25px; /* Makes the buttons rounded */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: 1px solid transparent; /* Optional: Add border for visual enhancement */
+}
+
+/* Remove the default active styling */
+.navbar-link.active {
+  background-color: transparent; /* Override active state background */
+  color: black; /* Keep text color black */
+}
+
+/* Hover effect */
+.navbar-link:hover {
+  background-color: #5ca7de; /* Hover background color */
+  color: white; /* Hover text color */
+}
+
+/* Profile icon on desktop */
+.navbar-profile-icon {
+  padding: 0; /* Remove padding from the Profile button */
+}
+
+.navbar-profile-icon:hover {
+  background-color: transparent; /* Remove background hover effect */
+}
+
+.navbar-profile-icon .profile-icon {
+  font-size: 1.8rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.navbar-profile-icon:hover .profile-icon {
+  color: #5ca7de; /* Change icon color on hover */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
   .navbar-hamburger {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: block; /* Show hamburger menu */
   }
-  
-  /* Navbar links (desktop) */
+
   .navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: auto;
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .navbar-links.navbar-open {
+    display: flex; /* Show links when hamburger is clicked */
+  }
+
   .navbar-link {
-    text-decoration: none;
-    color: black;
-    padding: 0.5rem 1.5rem; /* Adjust padding for button-like appearance */
-    border-radius: 25px; /* Makes the buttons rounded */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border: 1px solid transparent; /* Optional: Add border for visual enhancement */
+    text-align: center;
+    width: 100%;
+    border-radius: 25px; /* Rounded buttons on mobile as well */
   }
-  
-  /* Remove the default active styling */
-  .navbar-link.active {
-    background-color: transparent; /* Override active state background */
-    color: black; /* Keep text color black */
-  }
-  
-  /* Hover effect */
-  .navbar-link:hover {
-    background-color: #5ca7de; /* Hover background color */
-    color: white; /* Hover text color */
-  }
-  
-  /* Profile icon on desktop */
+
   .navbar-profile-icon {
-    padding: 0; /* Remove padding from the Profile button */
+    display: none; /* Hide profile icon on mobile */
   }
-  
-  .navbar-profile-icon:hover {
-    background-color: transparent; /* Remove background hover effect */
-  }
-  
-  .navbar-profile-icon .profile-icon {
-    font-size: 1.8rem;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-profile-icon:hover .profile-icon {
-    color: #5ca7de; /* Change icon color on hover */
-  }
-  
-  /* Responsive styles for mobile */
-  @media (max-width: 768px) {
-    .navbar-hamburger {
-      display: block; /* Show hamburger menu */
-    }
-  
-    .navbar-links {
-      display: none; /* Hidden by default on mobile */
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: white;
-      width: 100%;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-  
-    .navbar-links.navbar-open {
-      display: flex; /* Show links when hamburger is clicked */
-    }
-  
-    .navbar-link {
-      text-align: center;
-      width: 100%;
-      border-radius: 25px; /* Rounded buttons on mobile as well */
-    }
-  
-    .navbar-profile-icon {
-      display: none; /* Hide profile icon on mobile */
-    }
-  }
-  
+}
+
+
+.logout-button {
+  background: none;
+  border: none;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #d24a69; /* Change to your theme color */
+  color: white;
+}
+
+/* Convert Button Styling */
+.navbar-link {
+text-decoration: none;
+color: black;
+padding: 0.5rem 1.5rem; /* Adjust padding for button-like appearance */
+border-radius: 25px; /* Makes the button rounded */
+transition: background-color 0.3s ease, color 0.3s ease;
+border: 1px solid transparent; /* Transparent border for cleaner appearance */
+font-size: 1rem;
+cursor: pointer;
+background-color: none;
+}
+
+/* Hover effect for the Convert Button */
+.navbar-link:hover {
+background-color: #5ca7de; /* Hover background color */
+color: white; /* Hover text color */
+border-color: #5ca7de; /* Add border to match hover background */
+}
+
+
+

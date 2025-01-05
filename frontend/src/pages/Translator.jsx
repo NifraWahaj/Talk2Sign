@@ -45,16 +45,16 @@ const Translator = () => {
   };
 
   const handleConvert = () => {
-    if (!transcript.trim()) {
+    if (!transcript.trim() && !convertedText.trim()) {
       toast.error("Please record audio or type some text before converting.", {
         position: "top-center",
       });
       return;
     }
 
-    setConvertedText(transcript);
+    setConvertedText(transcript || convertedText);
     setIsConverted(true);
-    console.log("Converted text:", transcript);
+    console.log("Converted text:", transcript || convertedText);
   };
 
   return (
@@ -76,9 +76,10 @@ const Translator = () => {
                 id="translator-input-text"
                 className="translator-text-input"
                 placeholder="Start recording or type your message"
-                value={transcript} // Display the transcription in textarea
-                readOnly // Make textarea read-only during transcription
-                disabled={isTextareaDisabled}
+                value={listening ? transcript : convertedText} // Show transcription during recording
+                readOnly={listening} // Make read-only only during transcription
+                disabled={isTextareaDisabled} // Disable when recording
+                onChange={(e) => setConvertedText(e.target.value)} // Allow typing
               ></textarea>
             )}
 

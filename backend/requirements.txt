@@ -1,4 +1,6 @@
-Flask==2.3.2
-Pillow==11.0.0
-pytesseract==0.3.10
+Flask==2.3.3
+Pillow==11.1.0
+pytesseract==0.3.11
 python-dotenv==1.0.1
+requests==2.31.1  # Updated version
+flask-cors==4.0.1  # Updated version

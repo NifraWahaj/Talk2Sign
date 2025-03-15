@@ -36,32 +36,49 @@ const Upload = () => {
       setError("No file selected.");
       return;
     }
-  
+
     setIsProcessing(true);
     const formData = new FormData();
     formData.append("file", selectedFile);
-  
+
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/extract-text", {
-        method: "POST",
-        body: formData,
-      });
-  
-      if (!response.ok) {
-        throw new Error("Failed to process the image.");
+      let response, data;
+
+      if (selectedFile.type.startsWith("image/")) {
+        // Image Processing with Google Cloud Vision
+        response = await fetch("http://127.0.0.1:5000/api/extract-text", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) throw new Error("Failed to process the image.");
+
+        data = await response.json();
+        navigate("/extracted-text", { state: { extractedText: data.extracted_text || "No text extracted." } });
+
+      } else if (selectedFile.type.startsWith("audio/")) {
+        // Audio Processing with AssemblyAI
+        response = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) throw new Error("Failed to transcribe the audio file.");
+
+        data = await response.json();
+        navigate("/extracted-text", { state: { extractedText: data.text || "No transcription available." } });
+      } else {
+        setError("Unsupported file type.");
       }
-  
-      const { extracted_text } = await response.json(); // ✅ Correct key
-      navigate("/extracted-text", { state: { extractedText: extracted_text || "No text extracted." } });
-      
+
     } catch (err) {
       console.error("Error:", err);
-      setError("Failed to extract text from image.");
+      setError("Failed to process the file.");
     } finally {
       setIsProcessing(false);
     }
   };
-  
+
   return (
     <div className="upload-page">
       <SubNavbar

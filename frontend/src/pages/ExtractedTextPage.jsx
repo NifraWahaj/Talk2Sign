@@ -6,7 +6,8 @@ import "react-toastify/dist/ReactToastify.css";
 
 const ExtractedTextPage = () => {
   const location = useLocation();
-  const { extractedText } = location.state || {};
+  console.log("🛠 ExtractedTextPage received location.state:", location.state); // Debugging log
+  const extractedText = location.state?.extractedText || "";
 
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -25,9 +26,7 @@ const ExtractedTextPage = () => {
       });
 
       const data = await response.json();
-      if (response.ok) {
-        toast.success("Extracted text sent to backend successfully!", { position: "top-center" });
-      } else {
+      if (!response.ok) {
         toast.error(data.error || "Failed to store text in backend.", { position: "top-center" });
       }
     } catch (err) {
@@ -49,7 +48,7 @@ const ExtractedTextPage = () => {
     <div className="extracted-text-page">
       <div className="extracted-text-container">
         <div className="extracted-text-content">
-          {extractedText || "No text extracted or an error occurred."}
+          {extractedText ? extractedText : "No text extracted or an error occurred."}
         </div>
 
         <div className="animation-placeholder">

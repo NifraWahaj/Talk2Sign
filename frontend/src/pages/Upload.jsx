@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SubNavbar from "../components/SubNavbar";
 import "./Upload.css";
 import { useNavigate } from "react-router-dom";
-import Tesseract from "tesseract.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,56 +32,36 @@ const Upload = () => {
   };
 
   const handleConvert = async () => {
-  if (!selectedFile) {
-    setError("No file selected.");
-    return;
-  }
-
-  setIsProcessing(true);
-
-  if (selectedFile.type.startsWith("image/")) {
-    // Process Image Files with Tesseract.js
+    if (!selectedFile) {
+      setError("No file selected.");
+      return;
+    }
+  
+    setIsProcessing(true);
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+  
     try {
-      const { data: { text } } = await Tesseract.recognize(selectedFile, "eng", {
-        logger: (m) => console.log(m),
+      const response = await fetch("http://127.0.0.1:5000/api/extract-text", {
+        method: "POST",
+        body: formData,
       });
-      navigate("/extracted-text", { state: { extractedText: text } });
+  
+      if (!response.ok) {
+        throw new Error("Failed to process the image.");
+      }
+  
+      const { extracted_text } = await response.json(); // ✅ Correct key
+      navigate("/extracted-text", { state: { extractedText: extracted_text || "No text extracted." } });
+      
     } catch (err) {
-      console.error("Error during OCR:", err);
+      console.error("Error:", err);
       setError("Failed to extract text from image.");
     } finally {
       setIsProcessing(false);
     }
-  } else if (selectedFile.type.startsWith("audio/")) {
-    // Process Audio Files with AssemblyAI via Flask Backend
-    try {
-      const formData = new FormData();
-      formData.append("file", selectedFile);
-
-      const response = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to process the audio file.");
-      }
-
-      const { text } = await response.json();
-      navigate("/extracted-text", { state: { extractedText: text } });
-    } catch (err) {
-      console.error(err);
-      setError("Failed to extract text from audio.");
-    } finally {
-      setIsProcessing(false);
-    }
-  } else {
-    setError("Unsupported file type.");
-    setIsProcessing(false);
-  }
-};
-
-
+  };
+  
   return (
     <div className="upload-page">
       <SubNavbar

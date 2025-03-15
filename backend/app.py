@@ -4,6 +4,8 @@ from flask import Flask, request, jsonify
 from dotenv import load_dotenv
 import os
 from flask_cors import CORS
+from google.cloud import vision
+import io
 
 # Load environment variables
 load_dotenv()
@@ -12,13 +14,27 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Get AssemblyAI API Key
+# Load AssemblyAI API Key
 API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 
 if not API_KEY:
     print("❌ Error: ASSEMBLYAI_API_KEY is missing! Add it in .env file.")
 else:
     print("✅ ASSEMBLYAI_API_KEY loaded successfully.")
+
+# Set up Google Cloud Vision API
+GOOGLE_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+
+if not GOOGLE_CREDENTIALS or not os.path.exists(GOOGLE_CREDENTIALS):
+    print("❌ Error: GOOGLE_APPLICATION_CREDENTIALS is missing or incorrect! Check .env file.")
+else:
+    print("✅ GOOGLE_APPLICATION_CREDENTIALS loaded successfully.")
+
+# Ensure the Google Application Credentials are set
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_CREDENTIALS
+
+# Initialize Google Cloud Vision API client
+client = vision.ImageAnnotatorClient()
 
 stored_text = ""  # Global variable to store text from frontend
 
@@ -90,6 +106,37 @@ def transcribe_audio():
     except requests.exceptions.RequestException as e:
         return jsonify({'error': str(e)}), 500
 
+# --- Extract Text from Image using Google Cloud Vision ---
+@app.route('/api/extract-text', methods=['POST'])
+def extract_text():
+    if 'file' not in request.files:
+        return jsonify({'error': 'No file provided'}), 400
+
+    file = request.files['file']
+
+    if file.filename == '':
+        return jsonify({'error': 'No selected file'}), 400
+
+    try:
+        # Read image file
+        content = file.read()
+        image = vision.Image(content=content)
+
+        # Request text detection
+        response = client.text_detection(image=image)
+        
+        if response.error.message:
+            return jsonify({'error': f"Google Vision API Error: {response.error.message}"}), 500
+
+        texts = response.text_annotations
+        extracted_text = texts[0].description if texts else "No text found"
+
+        print(f"✅ Extracted Text: {extracted_text}")  # Debugging
+        return jsonify({'extracted_text': extracted_text})
+
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
 # --- Run the Flask App ---
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)  # Change port if needed
+    app.run(debug=True, port=5000)  # Change port if needed.

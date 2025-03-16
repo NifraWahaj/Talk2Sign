@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SubNavbar from "../components/SubNavbar";
 import "./Upload.css";
 import { useNavigate } from "react-router-dom";
-import Tesseract from "tesseract.js";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -33,55 +32,52 @@ const Upload = () => {
   };
 
   const handleConvert = async () => {
-  if (!selectedFile) {
-    setError("No file selected.");
-    return;
-  }
-
-  setIsProcessing(true);
-
-  if (selectedFile.type.startsWith("image/")) {
-    // Process Image Files with Tesseract.js
-    try {
-      const { data: { text } } = await Tesseract.recognize(selectedFile, "eng", {
-        logger: (m) => console.log(m),
-      });
-      navigate("/extracted-text", { state: { extractedText: text } });
-    } catch (err) {
-      console.error("Error during OCR:", err);
-      setError("Failed to extract text from image.");
-    } finally {
-      setIsProcessing(false);
+    if (!selectedFile) {
+      setError("No file selected.");
+      return;
     }
-  } else if (selectedFile.type.startsWith("audio/")) {
-    // Process Audio Files with AssemblyAI via Flask Backend
+
+    setIsProcessing(true);
+    const formData = new FormData();
+    formData.append("file", selectedFile);
+
     try {
-      const formData = new FormData();
-      formData.append("file", selectedFile);
+      let response, data;
 
-      const response = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
-        method: "POST",
-        body: formData,
-      });
+      if (selectedFile.type.startsWith("image/")) {
+        // Image Processing with Google Cloud Vision
+        response = await fetch("http://127.0.0.1:5000/api/extract-text", {
+          method: "POST",
+          body: formData,
+        });
 
-      if (!response.ok) {
-        throw new Error("Failed to process the audio file.");
+        if (!response.ok) throw new Error("Failed to process the image.");
+
+        data = await response.json();
+        navigate("/extracted-text", { state: { extractedText: data.extracted_text || "No text extracted." } });
+
+      } else if (selectedFile.type.startsWith("audio/")) {
+        // Audio Processing with AssemblyAI
+        response = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
+          method: "POST",
+          body: formData,
+        });
+
+        if (!response.ok) throw new Error("Failed to transcribe the audio file.");
+
+        data = await response.json();
+        navigate("/extracted-text", { state: { extractedText: data.text || "No transcription available." } });
+      } else {
+        setError("Unsupported file type.");
       }
 
-      const { text } = await response.json();
-      navigate("/extracted-text", { state: { extractedText: text } });
     } catch (err) {
-      console.error(err);
-      setError("Failed to extract text from audio.");
+      console.error("Error:", err);
+      setError("Failed to process the file.");
     } finally {
       setIsProcessing(false);
     }
-  } else {
-    setError("Unsupported file type.");
-    setIsProcessing(false);
-  }
-};
-
+  };
 
   return (
     <div className="upload-page">

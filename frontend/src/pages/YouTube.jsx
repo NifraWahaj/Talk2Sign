@@ -15,34 +15,44 @@ const YouTube = () => {
         setActiveTab(tab);
     };
 
-    const handleConvert = () => {
+    const [subtitles, setSubtitles] = useState("");  // Store subtitles in state
+
+    const handleConvert = async () => {
         if (videoURL.trim() === "") {
-            toast.error("Please enter a YouTube link.", {
-                position: "top-center",
-                autoClose: 2000, // Toast disappears after 3 seconds
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-           });
+            toast.error("Please enter a YouTube link.", { position: "top-center", autoClose: 2000 });
             return;
         }
-
+    
         if (!videoURL.includes("youtube.com") && !videoURL.includes("youtu.be")) {
-            toast.error("Please enter a valid YouTube link.", {
-                position: "top-center",
-                autoClose: 2000, // Toast disappears after 3 seconds
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: false,
-           });
+            toast.error("Please enter a valid YouTube link.", { position: "top-center", autoClose: 2000 });
             return;
         }
-
+    
+        try {
+            const response = await fetch("http://localhost:5000/api/get-youtube-subtitles", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ video_url: videoURL }),
+            });
+    
+            const data = await response.json();
+            if (response.ok) {
+                console.log("✅ Subtitles:", data.subtitles);
+                setSubtitles(data.subtitles);  // Store subtitles in state
+                toast.success("Subtitles fetched successfully!", { position: "top-center", autoClose: 2000 });
+            } else {
+                toast.error(data.error || "Failed to fetch subtitles.", { position: "top-center", autoClose: 2000 });
+            }
+        } catch (error) {
+            console.error("Error fetching subtitles:", error);
+            toast.error("Something went wrong.", { position: "top-center", autoClose: 2000 });
+        }
+    
         setIsConverted(true);
-        console.log("YouTube video converted and playing...");
     };
+    
+         
+    
 
     const getVideoId = (url) => {
         const regExp = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;

@@ -6,7 +6,9 @@ import os
 from flask_cors import CORS
 from google.cloud import vision
 import io
-
+import youtube_transcript_api
+from youtube_transcript_api import YouTubeTranscriptApi
+import json
 # Load environment variables
 load_dotenv()
 
@@ -22,14 +24,14 @@ if not ASSEMBLYAI_API_KEY:
     print("❌ Error: ASSEMBLYAI_API_KEY is missing! Add it in .env file.")
 else:
     print("✅ ASSEMBLYAI_API_KEY loaded successfully.")
-
+    
 # Get Google Cloud Credentials
 GOOGLE_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 if not GOOGLE_CREDENTIALS or not os.path.exists(GOOGLE_CREDENTIALS):
-    print("❌ Error: GOOGLE_APPLICATION_CREDENTIALS is missing or incorrect! Check .env file.")
+    print("\u274c Error: GOOGLE_APPLICATION_CREDENTIALS is missing or incorrect! Check .env file.")
 else:
-    print("✅ GOOGLE_APPLICATION_CREDENTIALS loaded successfully.")
+    print("\u2705 GOOGLE_APPLICATION_CREDENTIALS loaded successfully.")
 
 # Ensure Google Application Credentials are set
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_CREDENTIALS
@@ -42,7 +44,11 @@ stored_text = ""  # Global variable to store text from frontend
 # --- Home Route ---
 @app.route('/')
 def home():
-    return jsonify({'message': 'Welcome to the Translator API!', "stored_text": stored_text})
+    return jsonify({
+        'message': 'Welcome to the Translator API!',
+        "stored_text": stored_text,
+        "latest_subtitles": stored_subtitles  # Show the latest fetched subtitles
+    })
 
 # --- Store Text from Frontend ---
 @app.route('/api/store-text', methods=['POST'])
@@ -54,9 +60,10 @@ def store_text():
         return jsonify({"error": "No text provided"}), 400
 
     stored_text = data["text"]
-    print(f"✅ Received Text from Frontend: {stored_text}")  # Debugging
+    print(f"\u2705 Received Text from Frontend: {stored_text}")  # Debugging
 
     return jsonify({"message": "Text stored successfully", "stored_text": stored_text})
+
 
 # --- Transcribe Audio File ---
 @app.route('/api/transcribe-audio', methods=['POST'])
@@ -124,7 +131,11 @@ def extract_text():
 
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
+    
+    if file_name not in ground_truth:
+        return jsonify({'error': 'No ground truth available for this file'}), 400
 
+    
     try:
         # Read image file
         content = file.read()
@@ -138,13 +149,76 @@ def extract_text():
 
         texts = response.text_annotations
         extracted_text = texts[0].description if texts else "No text found"
-
         print(f"✅ Extracted Text: {extracted_text}")  # Debugging
         return jsonify({'extracted_text': extracted_text})
 
     except Exception as e:
         print(f"❌ Google Cloud Vision Error: {e}")
         return jsonify({'error': str(e)}), 500
+        
+        
+    
+# --- Extract YouTube Video Subtitles ---
+# Add this at the top of the file
+stored_subtitles = ""  # Global variable to store subtitles
+
+@app.route('/api/get-youtube-subtitles', methods=['POST'])
+def get_youtube_subtitles():
+    global stored_subtitles
+    data = request.get_json()
+    if not data or "video_url" not in data:
+        return jsonify({"error": "No video URL provided"}), 400
+    
+    video_url = data["video_url"]
+    video_id = extract_video_id(video_url)
+    if not video_id:
+        return jsonify({"error": "Invalid YouTube URL"}), 400
+    
+    try:
+        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        subtitles = " ".join([entry['text'] for entry in transcript])
+        
+        stored_subtitles = subtitles  # Store subtitles globally
+        print(f"\u2705 Extracted Subtitles:\n{subtitles}")  
+
+        return jsonify({"subtitles": subtitles})
+    except youtube_transcript_api._errors.TranscriptsDisabled:
+        return jsonify({"error": "Subtitles are disabled for this video"}), 400
+    except youtube_transcript_api._errors.NoTranscriptFound:
+        return jsonify({"error": "No subtitles found for this video"}), 404
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+# Helper function to extract video ID from YouTube URL
+def extract_video_id(url):
+    import re
+    pattern = r"(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
+    match = re.search(pattern, url)
+    return match.group(1) if match else None
+
+# ================= TESTING OCR =================
+
+GROUND_TRUTH_FILE = "ground_truth.json"
+
+if os.path.exists(GROUND_TRUTH_FILE):
+    with open(GROUND_TRUTH_FILE, "r") as f:
+        ground_truth = json.load(f)
+else:
+    ground_truth = {}
+
+@app.route('/api/store-ground-truth', methods=['POST'])
+def store_ground_truth():
+    data = request.get_json()
+    if "file_name" not in data or "expected_text" not in data:
+        return jsonify({"error": "Provide file_name and expected_text"}), 400
+
+    ground_truth[data["file_name"]] = data["expected_text"]
+
+    with open(GROUND_TRUTH_FILE, "w") as f:
+        json.dump(ground_truth, f)
+
+    return jsonify({"message": "Ground truth stored successfully!"})
 
 # --- Run the Flask App ---
 if __name__ == '__main__':

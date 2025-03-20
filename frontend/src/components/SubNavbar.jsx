@@ -1,28 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 import "./SubNavbar.css";
 
 const SubNavbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
-  };
-
   return (
     <div className="sub-navbar">
-      <div className="sub-navbar-header">
-        <button className="hamburger-menu" onClick={toggleMenu}>
-          ☰
-        </button>
-      </div>
-      <div className={`sub-navbar-links ${isMenuOpen ? "show" : ""}`}>
+      <div className="sub-navbar-links">
         <NavLink
           to="/translator"
           className={({ isActive }) =>
             isActive ? "sub-nav-tab active-sub-tab" : "sub-nav-tab"
           }
-          onClick={() => setIsMenuOpen(false)} // Close menu on click
         >
           Audio/Text
         </NavLink>
@@ -31,7 +19,6 @@ const SubNavbar = () => {
           className={({ isActive }) =>
             isActive ? "sub-nav-tab active-sub-tab" : "sub-nav-tab"
           }
-          onClick={() => setIsMenuOpen(false)} // Close menu on click
         >
           Upload
         </NavLink>
@@ -40,9 +27,8 @@ const SubNavbar = () => {
           className={({ isActive }) =>
             isActive ? "sub-nav-tab active-sub-tab" : "sub-nav-tab"
           }
-          onClick={() => setIsMenuOpen(false)} // Close menu on click
         >
-          Youtube
+          YouTube
         </NavLink>
       </div>
     </div>

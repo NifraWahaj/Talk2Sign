@@ -1,4 +1,3 @@
-# test_backend.py
 import requests
 
 # Define the backend URL

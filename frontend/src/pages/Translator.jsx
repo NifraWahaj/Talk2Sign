@@ -152,14 +152,14 @@ const Translator = () => {
                 </button>
               )}
               <button className="translator-convert-button" onClick={handleConvert}>
-                Convert & Send to Backend
+                Convert 
               </button>
             </div>
           </div>
 
            {/* RigÇht Section: File Upload */}
            <div className="animation-placeholder">
-            <p className="placeholder-text">Avatar animation goes here</p>
+            <p className="placeholder-text">ASL video goes here</p>
           </div>
        
         </div>

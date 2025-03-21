@@ -37,7 +37,7 @@ if __name__ == "__main__":
     model.to(device)
     
     # Example input text
-    input_text = "I am going home"
+    input_text = "Hello how are you doing"
     
     # Generate ASL gloss
     asl_gloss = generate_asl_gloss(tokenizer, model, input_text, device)

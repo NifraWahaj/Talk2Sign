@@ -52,7 +52,7 @@ const ExtractedTextPage = () => {
         </div>
 
         <div className="animation-placeholder">
-          <p className="placeholder-text">Avatar animation goes here</p>
+          <p className="placeholder-text">ASL Video goes here</p>
         </div>
       </div>
 

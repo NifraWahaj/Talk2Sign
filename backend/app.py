@@ -9,6 +9,8 @@ import io
 from youtube_transcript_api import YouTubeTranscriptApi
 import json
 from deep_translator import GoogleTranslator
+from transformers import T5ForConditionalGeneration, T5Tokenizer
+import torch
 
 # Load environment variables
 load_dotenv()
@@ -105,6 +107,35 @@ def home():
         "latest_subtitles": stored_subtitles
     })
 
+
+# Load the model and tokenizer
+model_path = "final_text_to_gloss_model"
+tokenizer = T5Tokenizer.from_pretrained(model_path)
+model = T5ForConditionalGeneration.from_pretrained(model_path)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model.to(device)
+
+def generate_asl_gloss(tokenizer, model, input_text, device):
+    # Add task prefix
+    input_text = f"translate English to ASL: {input_text}"
+    
+    # Preprocess the input text
+    input_ids = tokenizer.encode(input_text, return_tensors="pt").to(device)
+    
+    # Generate the ASL gloss with improved parameters
+    output = model.generate(
+        input_ids,
+        max_length=64,
+        num_beams=4,
+        early_stopping=True,
+        no_repeat_ngram_size=2,
+        repetition_penalty=2.0,
+    )
+    
+    asl_gloss = tokenizer.decode(output[0], skip_special_tokens=True)
+    return asl_gloss
+
+
 @app.route('/api/store-text', methods=['POST'])
 def store_text():
     global stored_text
@@ -115,6 +146,15 @@ def store_text():
     translated_text = translator.translate(original_text)
     stored_text = translated_text
     print(f"🔤 Translated Text: {translated_text}")
+
+
+    # Generate ASL gloss
+    asl_gloss = generate_asl_gloss(tokenizer, model, original_text, device)
+    
+    # Print the gloss to the console
+    print(f"Input Text: {original_text}")
+    print(f"ASL Gloss: {asl_gloss}")
+    
     return jsonify({"message": "Text stored successfully", "original_text": original_text, "translated_text": translated_text})
 
 # --- Extract Text from Image using Google Cloud Vision ---

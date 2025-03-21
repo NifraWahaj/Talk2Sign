@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa"; // Profile icon
-import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Navbar.css";
@@ -20,19 +20,6 @@ const Navbar = () => {
     });
     return () => unsubscribe();
   }, [auth]);
-
-  // Handle logout
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      setIsLoggedIn(false); // Update state
-      toast.success("You have been logged out successfully!"); // Show success toast
-      navigate("/login"); // Redirect to login page
-    } catch (error) {
-      console.error("Error logging out:", error);
-      toast.error("Failed to log out. Please try again.");
-    }
-  };
 
   // Handle convert button click
   const handleConvert = () => {
@@ -76,27 +63,6 @@ const Navbar = () => {
         >
           Convert
         </button>
-        {isLoggedIn ? (
-          <button
-            className="navbar-link logout-button"
-            onClick={() => {
-              handleLogout();
-              setMenuOpen(false);
-            }}
-          >
-            Logout
-          </button>
-        ) : (
-          <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              isActive ? "navbar-link active" : "navbar-link"
-            }
-            onClick={() => setMenuOpen(false)}
-          >
-            Login
-          </NavLink>
-        )}
         {menuOpen ? (
           <NavLink
             to="/profile"

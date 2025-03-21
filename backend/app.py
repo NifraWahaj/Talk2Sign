@@ -6,9 +6,10 @@ import os
 from flask_cors import CORS
 from google.cloud import vision
 import io
-import youtube_transcript_api
 from youtube_transcript_api import YouTubeTranscriptApi
 import json
+from deep_translator import GoogleTranslator
+
 # Load environment variables
 load_dotenv()
 
@@ -24,45 +25,7 @@ if not ASSEMBLYAI_API_KEY:
     print("❌ Error: ASSEMBLYAI_API_KEY is missing! Add it in .env file.")
 else:
     print("✅ ASSEMBLYAI_API_KEY loaded successfully.")
-    
-# Get Google Cloud Credentials
-GOOGLE_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
-if not GOOGLE_CREDENTIALS or not os.path.exists(GOOGLE_CREDENTIALS):
-    print("\u274c Error: GOOGLE_APPLICATION_CREDENTIALS is missing or incorrect! Check .env file.")
-else:
-    print("\u2705 GOOGLE_APPLICATION_CREDENTIALS loaded successfully.")
-
-# Ensure Google Application Credentials are set
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_CREDENTIALS
-
-# Initialize Google Cloud Vision API client
-vision_client = vision.ImageAnnotatorClient()
-
-stored_text = ""  # Global variable to store text from frontend
-
-# --- Home Route ---
-@app.route('/')
-def home():
-    return jsonify({
-        'message': 'Welcome to the Translator API!',
-        "stored_text": stored_text,
-        "latest_subtitles": stored_subtitles  # Show the latest fetched subtitles
-    })
-
-# --- Store Text from Frontend ---
-@app.route('/api/store-text', methods=['POST'])
-def store_text():
-    global stored_text
-    data = request.get_json()
-
-    if not data or "text" not in data:
-        return jsonify({"error": "No text provided"}), 400
-
-    stored_text = data["text"]
-    print(f"\u2705 Received Text from Frontend: {stored_text}")  # Debugging
-
-    return jsonify({"message": "Text stored successfully", "stored_text": stored_text})
 
 
 # --- Transcribe Audio File ---
@@ -121,84 +84,88 @@ def transcribe_audio():
         print(f"❌ Error during transcription: {e}")
         return jsonify({'error': str(e)}), 500
 
+
+# Get Google Cloud Credentials
+GOOGLE_CREDENTIALS = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+if GOOGLE_CREDENTIALS:
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = GOOGLE_CREDENTIALS
+
+# Initialize Google Cloud Vision API client
+vision_client = vision.ImageAnnotatorClient()
+translator = GoogleTranslator(source='auto', target='en')
+
+stored_text = ""
+stored_subtitles = ""
+
+@app.route('/')
+def home():
+    return jsonify({
+        'message': 'Welcome to the Translator API!',
+        "stored_text": stored_text,
+        "latest_subtitles": stored_subtitles
+    })
+
+@app.route('/api/store-text', methods=['POST'])
+def store_text():
+    global stored_text
+    data = request.get_json()
+    if not data or "text" not in data:
+        return jsonify({"error": "No text provided"}), 400
+    original_text = data["text"]
+    translated_text = translator.translate(original_text)
+    stored_text = translated_text
+    print(f"🔤 Translated Text: {translated_text}")
+    return jsonify({"message": "Text stored successfully", "original_text": original_text, "translated_text": translated_text})
+
 # --- Extract Text from Image using Google Cloud Vision ---
 @app.route('/api/extract-text', methods=['POST'])
 def extract_text():
+    global stored_text
     if 'file' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
-
     file = request.files['file']
-
     if file.filename == '':
         return jsonify({'error': 'No selected file'}), 400
-    
-    if file_name not in ground_truth:
-        return jsonify({'error': 'No ground truth available for this file'}), 400
 
-    
     try:
-        # Read image file
         content = file.read()
         image = vision.Image(content=content)
-
-        # Request text detection
         response = vision_client.text_detection(image=image)
-
         if response.error.message:
             return jsonify({'error': f"Google Vision API Error: {response.error.message}"}), 500
-
         texts = response.text_annotations
         extracted_text = texts[0].description if texts else "No text found"
-        print(f"✅ Extracted Text: {extracted_text}")  # Debugging
-        return jsonify({'extracted_text': extracted_text})
-
+        translated_text = translator.translate(extracted_text)
+        stored_text = translated_text
+        print(f"🔤 Translated Text: {translated_text}")
+        return jsonify({'extracted_text': extracted_text, 'translated_text': translated_text, 'stored_text': stored_text})
     except Exception as e:
-        print(f"❌ Google Cloud Vision Error: {e}")
         return jsonify({'error': str(e)}), 500
-        
-        
+    
     
 # --- Extract YouTube Video Subtitles ---
-# Add this at the top of the file
-stored_subtitles = ""  # Global variable to store subtitles
-
 @app.route('/api/get-youtube-subtitles', methods=['POST'])
 def get_youtube_subtitles():
     global stored_subtitles
     data = request.get_json()
     if not data or "video_url" not in data:
         return jsonify({"error": "No video URL provided"}), 400
-    
-    video_url = data["video_url"]
-    video_id = extract_video_id(video_url)
+
+    video_id = extract_video_id(data["video_url"])
     if not video_id:
         return jsonify({"error": "Invalid YouTube URL"}), 400
-    
+
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
         subtitles = " ".join([entry['text'] for entry in transcript])
-        
-        stored_subtitles = subtitles  # Store subtitles globally
-        print(f"\u2705 Extracted Subtitles:\n{subtitles}")  
-
-        return jsonify({"subtitles": subtitles})
-    except youtube_transcript_api._errors.TranscriptsDisabled:
-        return jsonify({"error": "Subtitles are disabled for this video"}), 400
-    except youtube_transcript_api._errors.NoTranscriptFound:
-        return jsonify({"error": "No subtitles found for this video"}), 404
+        stored_subtitles = subtitles
+        translated_subtitles = translator.translate(subtitles)
+        print(f"🔤 Translated Subtitles: {translated_subtitles}")
+        return jsonify({"subtitles": subtitles, "translated_subtitles": translated_subtitles, 'stored_subtitles': stored_subtitles})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-
-# Helper function to extract video ID from YouTube URL
-def extract_video_id(url):
-    import re
-    pattern = r"(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})"
-    match = re.search(pattern, url)
-    return match.group(1) if match else None
-
 # ================= TESTING OCR =================
-
 GROUND_TRUTH_FILE = "ground_truth.json"
 
 if os.path.exists(GROUND_TRUTH_FILE):
@@ -220,6 +187,5 @@ def store_ground_truth():
 
     return jsonify({"message": "Ground truth stored successfully!"})
 
-# --- Run the Flask App ---
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)  # Change port if needed.
+    app.run(debug=True, port=5000)

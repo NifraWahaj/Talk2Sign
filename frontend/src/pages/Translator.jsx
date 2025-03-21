@@ -9,6 +9,7 @@ import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognitio
 const Translator = () => {
   const [isConverted, setIsConverted] = useState(false);
   const [convertedText, setConvertedText] = useState("");
+  const [translatedText, setTranslatedText] = useState("");
   const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
   const [activeTab, setActiveTab] = useState("Audio/Text");
   const [file, setFile] = useState(null);
@@ -40,7 +41,7 @@ const Translator = () => {
 
   const handleConvert = async () => {
     const textToSend = transcript.trim() || convertedText.trim();
-    
+
     if (!textToSend) {
       toast.error("Please record audio or type some text before converting.", { position: "top-center" });
       return;
@@ -59,9 +60,10 @@ const Translator = () => {
 
       const data = await response.json();
       if (response.ok) {
-        toast.success("Text sent successfully to backend.", { position: "top-center" });
+        setTranslatedText(data.translated_text); // Store translated text
+        toast.success("Text translated successfully.", { position: "top-center" });
       } else {
-        toast.error(data.error || "Failed to send text.", { position: "top-center" });
+        toast.error(data.error || "Failed to translate text.", { position: "top-center" });
       }
     } catch (err) {
       toast.error("Error connecting to server. Ensure backend is running.", { position: "top-center" });
@@ -91,6 +93,7 @@ const Translator = () => {
       const data = await response.json();
       if (response.ok) {
         setConvertedText(data.text);
+        setTranslatedText(data.translated_text); // Store translated text
         setIsConverted(true);
       } else {
         toast.error(data.error || "Transcription failed.", { position: "top-center" });
@@ -114,49 +117,45 @@ const Translator = () => {
         <div className="translator-content-wrapper">
           {/* Left Section */}
           <div className="translator-text-container">
-            {isConverted ? (
-              <div className="translator-converted-text">{convertedText}</div>
-            ) : (
-              <textarea
-                className="translator-text-input"
-                placeholder="Start recording or type your message"
-                value={listening ? transcript : convertedText}
-                readOnly={listening}
-                disabled={isTextareaDisabled}
-                onChange={(e) => setConvertedText(e.target.value)}
-              ></textarea>
+            <textarea
+              className="translator-text-input"
+              placeholder="Start recording or type your message"
+              value={listening ? transcript : convertedText}
+              readOnly={listening}
+              disabled={isTextareaDisabled}
+              onChange={(e) => setConvertedText(e.target.value)}
+            ></textarea>
+
+            {/* Display Translated Text */}
+            {translatedText && (
+              <div className="translator-output">
+                <strong>Translated Text:</strong>
+                <p>{translatedText}</p>
+              </div>
             )}
 
             {/* Action Buttons */}
             <div className="translator-action-buttons">
-              {isConverted ? (
-                <button className="translator-convert-button">Converted Output</button>
+              {listening ? (
+                <button className="translator-record-button" onClick={handleStopRecording}>
+                  Stop Recording
+                </button>
               ) : (
-                <>
-                  {listening ? (
-                    <button className="translator-record-button" onClick={handleStopRecording}>
-                      Stop Recording
-                    </button>
-                  ) : (
-                    <button className="translator-record-button" onClick={handleStartRecording}>
-                      Start Recording
-                    </button>
-                  )}
-                  <button className="translator-convert-button" onClick={handleConvert}>
-                    Convert & Send to Backend
-                  </button>
-                </>
+                <button className="translator-record-button" onClick={handleStartRecording}>
+                  Start Recording
+                </button>
               )}
+              <button className="translator-convert-button" onClick={handleConvert}>
+                Convert & Send to Backend
+              </button>
             </div>
           </div>
 
-          {/* Right Section: File Upload */}
-          <div className="translator-upload-section">
-            <input type="file" accept="audio/*" onChange={handleFileChange} />
-            <button className="translator-upload-button" onClick={handleUpload} disabled={isUploading}>
-              {isUploading ? "Uploading..." : "Upload & Transcribe"}
-            </button>
+           {/* RigÇht Section: File Upload */}
+           <div className="animation-placeholder">
+            <p className="placeholder-text">Avatar animation goes here</p>
           </div>
+       
         </div>
 
         <ToastContainer />

@@ -5,12 +5,17 @@ import { auth } from "../services/firebase"; // Ensure the path matches your pro
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import googleLogo from "../assets/google-logo.png"; // Import the Google logo
+import eyeIcon from "../assets/icons8-eye-48.png"; // Import your custom eye icon
+import eyeSlashIcon from "../assets/icons8-eye-slash-48.png"; // Import your custom eye-slash icon
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -40,10 +45,29 @@ const Login = () => {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+  
+    try {
+      const result = await signInWithPopup(auth, provider);
+      toast.success("Logged in with Google successfully!");
+      navigate("/upload"); // Redirect to the upload page
+    } catch (err) {
+      console.error("Error during Google login:", err);
+      toast.error("Failed to login with Google. Please try again.");
+    }
+  };
   return (
     <div className="login-container">
       <ToastContainer /> {/* Toast container for notifications */}
       <h2 className="login-title">Login</h2>
+      <button className="google-login-button" onClick={handleGoogleLogin}>
+        <img src={googleLogo} alt="Google Logo" className="google-logo" />
+        Continue with Google
+      </button>
+      <div className="or-divider">
+        <span className="or-text">OR</span>
+      </div>
       <form className="login-form" onSubmit={handleLogin}>
         <input
           type="email"
@@ -52,13 +76,21 @@ const Login = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          type="password"
-          placeholder="Enter your password"
-          className="login-input"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+      <div className="password-input-container">
+          <input
+            type={showPassword ? "text" : "password"} // Toggle password visibility
+            placeholder="Enter your password"
+            className="login-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <img
+            src={showPassword ? eyeSlashIcon : eyeIcon} // Toggle between eye and eye-slash icons
+            alt="Toggle Password Visibility"
+            className="password-toggle-icon"
+            onClick={() => setShowPassword(!showPassword)} // Toggle show/hide password
+          />
+        </div>
         {error && <p style={{ color: "red" }}>{error}</p>} {/* Display error messages */}
         <div className="login-forgot">
           <a href="/forgot-password" className="forgot-password-link">

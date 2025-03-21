@@ -4,12 +4,17 @@ import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Toast notifications
 import "./Signup.css"; // Import the CSS file
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import googleLogo from "../assets/google-logo.png"; // Import the Google logo
+import eyeIcon from "../assets/icons8-eye-48.png"; // Import your custom eye icon
+import eyeSlashIcon from "../assets/icons8-eye-slash-48.png"; // Import your custom eye-slash icon
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   const navigate = useNavigate();
   const auth = getAuth();
 
@@ -53,11 +58,31 @@ const Signup = () => {
       toast.error(err.message);
     }
   };
+  const handleGoogleSignup = async () => {
+    const provider = new GoogleAuthProvider();
+
+    try {
+      const result = await signInWithPopup(auth, provider);
+      toast.success("Signed up with Google successfully!");
+      navigate("/upload");
+    } catch (err) {
+      console.error("Error during Google signup:", err);
+      toast.error("Failed to sign up with Google. Please try again.");
+    }
+  };
 
   return (
     <div className="signup-container">
       <ToastContainer /> {/* Toast notifications */}
       <h2 className="signup-title">Sign Up</h2>
+      <button className="google-signup-button" onClick={handleGoogleSignup}>
+        <img src={googleLogo} alt="Google Logo" className="google-logo" />
+        Sign Up with Google
+      </button>
+      <div className="or-divider">
+        <span className="or-text">OR</span>
+      </div>
+      
       <form className="signup-form" onSubmit={handleSignup}>
         <input
           type="text"
@@ -73,13 +98,22 @@ const Signup = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
-          type="password"
-          placeholder="Enter your password"
-          className="signup-input"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+      <div className="password-input-container">
+          <input
+            type={showPassword ? "text" : "password"} // Toggle password visibility
+            placeholder="Enter your password"
+            className="signup-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <img
+            src={showPassword ? eyeSlashIcon : eyeIcon} // Toggle between eye and eye-slash icons
+            alt="Toggle Password Visibility"
+            className="password-toggle-icon"
+            onClick={() => setShowPassword(!showPassword)} // Toggle show/hide password
+          />
+        </div>
+
         {error && <p style={{ color: "red" }}>{error}</p>} {/* Display errors */}
         <button type="submit" className="signup-button">
           Sign Up

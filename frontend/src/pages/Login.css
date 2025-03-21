@@ -114,4 +114,72 @@
       font-size: 0.85rem; /* Slightly smaller font for mobile */
     }
   }
+  .login-title {
+    margin-bottom: 20px;
+  }
   
+  .google-login-button {
+    background-color: transparent;
+    color: black;
+    border:none;
+    border-color: #5ca7de;
+    outline: none;
+    box-shadow: 0 0 5px #5ca7de;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  
+  .google-login-button:hover {
+    background-color: #5ca7de;
+    color: white;
+  }
+  
+  .google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .or-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .or-divider::before,
+  .or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .or-text {
+    padding: 0 10px;
+    color: #666;
+  }
+  .password-input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+  }
+  
+  .password-toggle-icon:hover {
+    opacity: 0.8; /* Add hover effect */
+  }

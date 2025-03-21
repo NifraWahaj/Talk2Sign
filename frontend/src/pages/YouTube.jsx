@@ -196,7 +196,7 @@ const YouTube = () => {
                         <div className="youtube-player" id="youtube-player"></div>
                         {/* Translation Avatar */}
                         <div className="youtube-avatar-placeholder">
-                            <p className="youtube-placeholder-text">Avatar animation goes here</p>
+                            <p className="youtube-placeholder-text">ASL Video goes here</p>
                         </div>
                     </div>
                 ) : (

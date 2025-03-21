@@ -35,7 +35,7 @@ const FileProcessing = () => {
                 <p>MP4 Video Player Placeholder</p>
               </div>
               <div className="file-processing-avatar-placeholder">
-                <p>Avatar Animation Goes Here</p>
+                <p>ASL Video goes here</p>
               </div>
             </div>
           ) : (
@@ -44,7 +44,7 @@ const FileProcessing = () => {
                 <p>{`Converted content from the ${type} file will appear here.`}</p>
               </div>
               <div className="file-processing-avatar-placeholder">
-                <p>Avatar Animation Goes Here</p>
+                <p>ASL Video goes here</p>
               </div>
             </div>
           )}

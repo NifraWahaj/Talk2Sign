@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "regenerator-runtime/runtime"; // Fixes regeneratorRuntime error
+import "regenerator-runtime/runtime"; // Fix regeneratorRuntime error
 import "./Translator.css";
 import SubNavbar from "../components/SubNavbar";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
@@ -12,31 +12,37 @@ const Translator = () => {
   const [translatedText, setTranslatedText] = useState("");
   const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
   const [activeTab, setActiveTab] = useState("Audio/Text");
-  const [file, setFile] = useState(null);
-  const [isUploading, setIsUploading] = useState(false);
 
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
 
+  // Check browser support
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-    toast.error("Speech Recognition is not supported in this browser.", { position: "top-center" });
+    toast.error("Speech Recognition Whisper API is not supported in this browser.", {
+      position: "top-center",
+    });
+    console.error("Browser does not support speech recognition.");
     return <p>Your browser does not support speech recognition.</p>;
   }
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
+    console.log(`Active tab changed to: ${tab}`);
   };
 
   const handleStartRecording = () => {
-    resetTranscript();
+    console.log("Starting recording...");
+    resetTranscript(); // Clear previous transcription
     SpeechRecognition.startListening({ continuous: true });
     setIsTextareaDisabled(true);
     toast.info("Recording started...", { position: "top-center" });
   };
 
   const handleStopRecording = () => {
+    console.log("Stopping recording...");
     SpeechRecognition.stopListening();
     setIsTextareaDisabled(false);
     toast.info("Recording stopped.", { position: "top-center" });
+    console.log("Final transcript:", transcript);
   };
 
   const handleConvert = async () => {
@@ -158,6 +164,7 @@ const Translator = () => {
        
         </div>
 
+        {/* Toast Container */}
         <ToastContainer />
       </div>
     </div>

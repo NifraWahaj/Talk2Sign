@@ -35,7 +35,6 @@ image_count = 0
 
 # Process each image in the directory
 for image_file in os.listdir(IMAGES_DIR):
-    if image_file.endswith(".png"):
         image_path = os.path.join(IMAGES_DIR, image_file)
         with open(image_path, "rb") as image_file_obj:
             content = image_file_obj.read()
@@ -53,6 +52,10 @@ for image_file in os.listdir(IMAGES_DIR):
             if not expected_text:
                 print(f"Ground truth data not found for {image_file}.")
                 continue
+
+            # Normalize text for comparison
+            extracted_text = extracted_text.lower().replace("\n", " ").strip()
+            expected_text = expected_text.lower().replace("\n", " ").strip()
 
             # Calculate accuracy
             similarity_ratio = SequenceMatcher(None, extracted_text, expected_text).ratio()

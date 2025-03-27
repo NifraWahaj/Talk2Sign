@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth } from "firebase/auth"; // Import Firebase auth
 import { getAuth, signOut, updateEmail, updatePassword, updateProfile, verifyBeforeUpdateEmail } from "firebase/auth";
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import "./Profile.css";

@@ -1,4 +1,9 @@
 /* Main container */
+button, a, input {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .landing-container {
     text-align: center;
     padding: 2rem;

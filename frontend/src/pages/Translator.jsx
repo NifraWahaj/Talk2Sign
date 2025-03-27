@@ -157,10 +157,7 @@ const Translator = () => {
             </div>
           </div>
 
-           {/* RigÇht Section: File Upload */}
-           <div className="animation-placeholder">
-            <p className="placeholder-text">ASL video goes here</p>
-          </div>
+
        
         </div>
 

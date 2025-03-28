@@ -106,22 +106,22 @@
 
 /* Save button styles */
 .profile-save-button {
-  background-color: #2aa146;
-  color: white;
-}
-
-.profile-save-button:hover {
-  background-color: #177b2f;
-}
-
-/* Delete button styles */
-.profile-delete-button {
   background-color: #d24a69;
   color: white;
 }
 
-.profile-delete-button:hover {
+.profile-save-button:hover {
   background-color: #a72644;
+}
+
+/* Delete button styles */
+.profile-delete-button {
+  background-color: #b4242c;
+  color: white;
+}
+
+.profile-delete-button:hover {
+  background-color: #88181d;
 }
 
 /* Logout button styles */

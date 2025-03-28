@@ -47,7 +47,7 @@
   /* Button styles */
   .delete-account-button {
     padding: 0.8rem 1.5rem;
-    background-color: #d24a69;
+    background-color: #bc2b32;
     color: white;
     font-size: 1rem;
     border: none;
@@ -57,7 +57,7 @@
   }
   
   .delete-account-button:hover {
-    background-color: #a72644;
+    background-color: #991e24;
   }
   
   /* Modal overlay styles */
@@ -109,12 +109,12 @@
   
   /* Confirm button */
   .modal-button.confirm {
-    background-color: #d24a69;
+    background-color: #bc2b32;
     color: white;
   }
   
   .modal-button.confirm:hover {
-    background-color: #a72644;
+    background-color: #991e24;
   }
   
   /* Cancel button */

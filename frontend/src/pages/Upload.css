@@ -29,6 +29,9 @@
     text-align: center;
   }
   
+  body {
+    background-color: #f9f9f9 !important;
+  }
   
   .browse-button {
     background-color: #d24a69;

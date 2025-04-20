@@ -30,6 +30,9 @@
   align-items: center;
   gap: 1rem;
 }
+body {
+  background-color: #f9f9f9 !important;
+}
 
 /* Input fields */
 .verify-code-inputs {

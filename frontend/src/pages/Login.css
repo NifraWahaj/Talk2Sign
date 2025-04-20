@@ -117,6 +117,9 @@
   .login-title {
     margin-bottom: 20px;
   }
+  body {
+    background-color: #f9f9f9 !important;
+  }
   
   .google-login-button {
     background-color: transparent;

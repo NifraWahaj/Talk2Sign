@@ -1,57 +1,57 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { getAuth, signOut, updateEmail, updatePassword, updateProfile, verifyBeforeUpdateEmail } from "firebase/auth";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import {
+  getAuth,
+  signOut,
+  updateEmail,
+  updatePassword,
+  updateProfile,
+  verifyBeforeUpdateEmail,
+} from "firebase/auth";
 import "./Profile.css";
 
 const Profile = () => {
-  const [userEmail, setUserEmail] = useState(""); // State to store the user's email
-  const [username, setUsername] = useState(""); // State to store the user's username
-  const [dateOfJoin, setDateOfJoin] = useState(""); // State to store the date of join
-  const [editMode, setEditMode] = useState(false); // State to toggle edit mode
-  const [newEmail, setNewEmail] = useState(""); // State for new email input
-  const [newPassword, setNewPassword] = useState(""); // State for new password input
-  const [newUsername, setNewUsername] = useState(""); // State for new username input
-  const [profilePhotoURL, setProfilePhotoURL] = useState(""); // State for profile photo URL
-  const [newProfilePhoto, setNewProfilePhoto] = useState(null); // State for new profile photo file
+  const [userEmail, setUserEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [dateOfJoin, setDateOfJoin] = useState("");
+  const [editMode, setEditMode] = useState(false);
+  const [newEmail, setNewEmail] = useState("");
+  const [newPassword, setNewPassword] = useState("");
+  const [newUsername, setNewUsername] = useState("");
+
   const navigate = useNavigate();
   const auth = getAuth();
-  const storage = getStorage();
 
-  // Fetch the logged-in user's details
   useEffect(() => {
     const user = auth.currentUser;
     if (user) {
-      setUserEmail(user.email); // Set the email of the logged-in user
-      setUsername(user.displayName || user.email.split('@')[0]); // Set the username or fallback to email prefix
-      setDateOfJoin(new Date(user.metadata.creationTime).toLocaleDateString()); // Format the date of join
-      setProfilePhotoURL(user.photoURL || ""); // Set the profile photo URL
+      setUserEmail(user.email);
+      setUsername(user.displayName || user.email.split('@')[0]);
+      setDateOfJoin(new Date(user.metadata.creationTime).toLocaleDateString());
     } else {
-      navigate("/login"); // Redirect to login if no user is logged in
+      navigate("/login");
     }
   }, [auth, navigate]);
 
-  const handleDeleteRedirect = () => {
-    navigate("/delete-account");
-  };
-
   const handleLogout = async () => {
     try {
-      await signOut(auth); // Sign out the user
-      navigate("/login"); // Redirect to login page after logout
+      await signOut(auth);
+      navigate("/login");
     } catch (error) {
       console.error("Logout failed:", error);
     }
   };
 
+  const handleDeleteRedirect = () => {
+    navigate("/delete-account");
+  };
+
   const toggleEditMode = () => {
     setEditMode(!editMode);
     if (!editMode) {
-      // Pre-fill the form with current values when entering edit mode
       setNewEmail(userEmail);
-      setNewPassword(""); // Password should be empty initially
+      setNewPassword("");
       setNewUsername(username);
-      setNewProfilePhoto(null); // Clear new profile photo
     }
   };
 
@@ -84,89 +84,102 @@ const Profile = () => {
         setUsername(newUsername);
       }
 
-      // Update profile photo
-      if (newProfilePhoto) {
-        const storageRef = ref(storage, `profilePhotos/${user.uid}`);
-        const uploadTask = uploadBytesResumable(storageRef, newProfilePhoto);
-
-        uploadTask.on(
-          "state_changed",
-          (snapshot) => {
-            // Handle upload progress if needed
-          },
-          (error) => {
-            console.error("Profile photo upload failed:", error);
-          },
-          async () => {
-            const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-            await updateProfile(user, { photoURL: downloadURL });
-            setProfilePhotoURL(downloadURL);
-          }
-        );
-      }
-
-      setEditMode(false); // Exit edit mode after update
+      setEditMode(false);
     } catch (error) {
       console.error("Profile update failed:", error);
       alert("Failed to update profile. Please try again.");
     }
   };
 
-  const handleProfilePhotoChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setNewProfilePhoto(event.target.files[0]);
-    }
-  };
-
   return (
-    <div className="profile-container">
-      <h2 className="profile-title">Your Profile</h2>
-      <div className="profile-info">
-        <div className="profile-item">
-          <span className="profile-label">Email:</span>
-          <span className="profile-value">{editMode ? <input type="email" value={newEmail} onChange={(e) => setNewEmail(e.target.value)} /> : userEmail || "loading..."}</span>
-        </div>
-        <div className="profile-item">
-          <span className="profile-label">Username:</span>
-          <span className="profile-value">{editMode ? <input type="text" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} /> : username || "loading..."}</span>
-        </div>
-        <div className="profile-item">
-          <span className="profile-label">Password:</span>
-          <span className="profile-value">{editMode ? <input type="password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} /> : "********"}</span>
-        </div>
-        <div className="profile-item">
-          <span className="profile-label">Profile Photo:</span>
-          <span className="profile-value">
+    <div className="profile-wrapper">
+      <h2 className="page-title">Your Profile</h2>
+      
+      <div className="profile-grid">
+        {/* Left Column: Profile Details */}
+        <section className="profile-section">
+          <h3 className="section-title">Profile Details</h3>
+          <div className="profile-item">
+            <label className="profile-label">Email</label>
             {editMode ? (
-              <input type="file" accept="image/*" onChange={handleProfilePhotoChange} />
+              <input
+                type="email"
+                value={newEmail}
+                onChange={(e) => setNewEmail(e.target.value)}
+                className="profile-input"
+              />
             ) : (
-              profilePhotoURL ? (
-                <img src={profilePhotoURL} alt="Profile" style={{ width: "50px", height: "50px", borderRadius: "50%" }} />
-              ) : (
-                "No photo"
-              )
+              <div className="profile-text">{userEmail || "loading..."}</div>
             )}
-          </span>
-        </div>
-        <div className="profile-item">
-          <span className="profile-label">Date of Join:</span>
-          <span className="profile-value">{dateOfJoin || "loading..."}</span>
-        </div>
+          </div>
+
+          <div className="profile-item">
+            <label className="profile-label">Username</label>
+            {editMode ? (
+              <input
+                type="text"
+                value={newUsername}
+                onChange={(e) => setNewUsername(e.target.value)}
+                className="profile-input"
+              />
+            ) : (
+              <div className="profile-text">{username || "loading..."}</div>
+            )}
+          </div>
+
+          <div className="profile-item">
+            <label className="profile-label">Password</label>
+            {editMode ? (
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                className="profile-input"
+              />
+            ) : (
+              <div className="profile-text">********</div>
+            )}
+          </div>
+
+          <div className="profile-item">
+            <label className="profile-label">Date Joined</label>
+            <div className="profile-text">{dateOfJoin || "loading..."}</div>
+          </div>
+        </section>
+
+        {/* Right Column: Account Settings & Danger Zone */}
+        <section className="settings-section">
+          <div className="account-settings">
+            <h3 className="section-title">Account Settings</h3>
+            <p className="section-desc">
+              Update your account information or log out.
+            </p>
+            <div className="settings-buttons">
+              <button className="edit-button" onClick={toggleEditMode}>
+                {editMode ? "Cancel" : "Edit Profile"}
+              </button>
+              {editMode && (
+                <button className="save-button" onClick={handleUpdateProfile}>
+                  Save Changes
+                </button>
+              )}
+              <button className="logout-button" onClick={handleLogout}>
+                Logout
+              </button>
+            </div>
+          </div>
+
+          <div className="danger-zone">
+            <h3 className="danger-title">Danger Zone</h3>
+            <p className="danger-desc">
+              Deleting your account is irreversible. Proceed with caution.
+            </p>
+            <button className="delete-button" onClick={handleDeleteRedirect}>
+              Delete Account
+            </button>
+          </div>
+        </section>
       </div>
-      <button className="profile-edit-button" onClick={toggleEditMode}>
-        {editMode ? "Cancel" : "Edit"}
-      </button>
-      {editMode && (
-        <button className="profile-save-button" onClick={handleUpdateProfile}>
-          Save
-        </button>
-      )}
-      <button className="profile-delete-button" onClick={handleDeleteRedirect}>
-        Delete Account
-      </button>
-      <button className="profile-logout-button" onClick={handleLogout}>
-        Logout
-      </button>
     </div>
   );
 };

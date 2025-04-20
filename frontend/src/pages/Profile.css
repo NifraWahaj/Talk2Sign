@@ -1,135 +1,174 @@
-/* Container styles */
-.profile-container {
-  max-width: 500px;
-  margin: 3rem auto;
-  padding: 2rem;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*****************************
+  Layout & Container
+*****************************/
+.profile-wrapper {
+  width: 80%;              /* Wider container */
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 
-/* Title styles */
-.profile-title {
+.page-title {
+  text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
   color: #d24a69;
 }
 
-/* Profile information styles */
-.profile-info {
-  margin-bottom: 2rem;
+/* Use CSS Grid for two-column layout */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
-.profile-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/*****************************
+  Sections
+*****************************/
+.profile-section,
+.settings-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #555;
 }
 
-/* Label styles */
+.section-desc {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/*****************************
+  Profile Details Items
+*****************************/
+.profile-item {
+  margin-bottom: 1.2rem;
+}
+
 .profile-label {
+  display: block;
   font-weight: bold;
-  color: #333;
-  flex-shrink: 0;
-  margin-right: 10px; /* Space between label and input */
+  margin-bottom: 0.3rem;
 }
 
-/* Input field common styles */
 .profile-input {
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
-  background-color: white;
+  border-radius: 4px;
 }
 
-/* Specific styles for each input */
-.profile-email-input {
-  border-color: black;
-}
-
-.profile-username-input {
-  border-color: black;
-}
-
-.profile-password-input {
-  border-color: black;
-}
-
-/* Updated Date to Join input to match others */
-.profile-date-input {
-  border-color: black;
-  background-color: white;
-  cursor: default; /* Allows normal text selection */
-}
-
-/* Focus effect */
 .profile-input:focus {
-  box-shadow: 0 0 5px rgba(92, 167, 222, 0.5);
+  outline: none;
+  border-color: #5ca7de;
+  box-shadow: 0 0 3px rgba(92, 167, 222, 0.5);
 }
 
-/* Button container for Edit & Save buttons */
-.profile-buttons {
+.profile-text {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/*****************************
+  Settings Buttons
+*****************************/
+.settings-buttons {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* Common button styles */
-.profile-container button {
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
+.settings-buttons button {
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
+  padding: 0.7rem 1.2rem;
   cursor: pointer;
+  font-size: 0.95rem;
   transition: background-color 0.3s;
 }
 
-/* Edit button styles */
-.profile-edit-button {
+/* Edit & Save Buttons */
+.edit-button {
   background-color: #5ca7de;
-  color: white;
+  color: #fff;
 }
-
-.profile-edit-button:hover {
+.edit-button:hover {
   background-color: #358cca;
 }
-
-/* Save button styles */
-.profile-save-button {
-  background-color: #d24a69;
-  color: white;
+body {
+  background-color: #f9f9f9 !important;
 }
 
-.profile-save-button:hover {
+.save-button {
+  background-color: #d24a69;
+  color: #fff;
+}
+.save-button:hover {
   background-color: #a72644;
 }
 
-/* Delete button styles */
-.profile-delete-button {
-  background-color: #b4242c;
-  color: white;
+/* Logout Button */
+.logout-button {
+  background-color: #555;
+  color: #fff;
+}
+.logout-button:hover {
+  background-color: #333;
 }
 
-.profile-delete-button:hover {
+/*****************************
+  Danger Zone
+*****************************/
+.danger-zone {
+  margin-top: 2rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.danger-title {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #b4242c;
+}
+
+.danger-desc {
+  font-size: 0.9rem;
+  color: #b4242c;
+  margin: 0.5rem 0 1rem;
+}
+
+.delete-button {
+  background-color: #b4242c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 1.2rem;
+}
+.delete-button:hover {
   background-color: #88181d;
 }
-
-/* Logout button styles */
-.profile-logout-button {
-  background-color: #d24a69;
-  color: white;
+body {
+  background-color: #f9f9f9 !important;
 }
 
-.profile-logout-button:hover {
-  background-color: #a72644;
+/*****************************
+  Responsive (for small screens)
+*****************************/
+@media (max-width: 768px) {
+  .profile-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+  }
 }

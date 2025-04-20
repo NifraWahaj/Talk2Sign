@@ -32,6 +32,9 @@ body, html {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
+body {
+  background-color: #f9f9f9 !important;
+}
 
 .sub-nav-tab:hover {
   background-color: #d24a69;

@@ -53,9 +53,12 @@
 
 
 }
+body {
+  background-color: #f9f9f9 !important;
+}
 
-/* Animation Placeholder */
-.animation-placeholder {
+/* asl-video Placeholder */
+.asl-video-placeholder {
   flex: 1;
   background-color: #000;
   height: 33rem;
@@ -129,8 +132,8 @@
     width: 97%;
   }
 
-  /* Adjust animation box for smaller screens */
-  .animation-placeholder {
+  /* Adjust asl-video box for smaller screens */
+  .asl-video-placeholder {
     height: 33rem !important;
     min-height: 33rem;
     max-height: 33rem;

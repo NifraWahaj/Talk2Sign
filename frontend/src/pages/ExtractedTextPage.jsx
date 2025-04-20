@@ -82,7 +82,7 @@ const ExtractedTextPage = () => {
         </div>
         </div>
                   {/* Right Section: File Upload */}
-          <div className="animation-placeholder">
+          <div className="asl-video-placeholder">
             <p className="placeholder-text">ASL video goes here</p>
           </div>
        

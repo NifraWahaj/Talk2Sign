@@ -1,92 +1,215 @@
-/* Container styles */
+/* AboutUs.css */
+
+/* 1. Variables */
+:root {
+  --primary: #d24a69;
+  --light:   #f9f9f9;
+  --text:    #212121;
+  --accent:  rgba(210,74,105,0.15);
+}
+
+/* 2. Fade‑in keyframe */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 3. Container + background accent */
 .about-us-container {
-    max-width: 1300px; /* Increased width */
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: transparent;
-  }
-  
-  /* Grid layout */
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 2rem;
+  position: relative;
+  background: transparent;
+}
+.about-us-container::before {
+  content: "";
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--accent), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+body {
+  background: var(--light) !important;
+}
+
+/* 4. Two‑column grid */
+.about-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* 5. Hero image */
+.about-us-hero {
+  text-align: center;
+}
+.about-us-image {
+  max-width: 100%;
+  height: auto;
+  animation: fadeInUp 1s ease-out both;
+}
+
+/* 6. Text block */
+.about-us-content {
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+.about-us-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  position: relative;
+}
+.about-us-title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; left: 0;
+  width: 60px; height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+.about-us-text {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* 7. Flex features (no empty cells) */
+.about-us-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.about-us-feature {
+  flex: 1 1 200px;
+  max-width: 280px;
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  animation: fadeInUp 0.8s ease-out both;
+}
+.about-us-feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.about-us-icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+.about-us-feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.about-us-feature-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 8. Team */
+.about-us-team {
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+.team-heading {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 2rem;
+}/* Team Members Container (unchanged) */
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Rectangular “card” style for each member */
+.team-member {
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  text-align: center;
+  width: 200px;        /* fixed width for each card */
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Icon styling */
+.member-avatar {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+/* Name & role */
+.member-name {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+.member-role {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* 9. Call‑to‑Action */
+.about-us-cta {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+.about-us-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cta-button {
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.cta-button:hover {
+  background: #f2f2f2;
+}
+
+/* 10. Responsive */
+@media (max-width: 768px) {
   .about-us-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem; /* Added more spacing */
-    align-items: center;
-  }
-  
-  .about-us-hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .about-us-image {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Content styles */
-  .about-us-content {
-    text-align: left;
-  }
-  
-  .about-us-title {
-    font-size: 2.2rem; /* Slightly larger */
-    margin-bottom: 1rem;
-    color: #d24a69;
-  }
-  
-  .about-us-text {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-  }
-  
-  /* Features layout */
-  .about-us-features {
-    display: flex;
-    margin-top: 3rem;
-    justify-content: space-between;
+    grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+  .about-us-features {
+    flex-direction: column;
+    align-items: center;
+  }
   .about-us-feature {
-    max-width: 180px; /* Slightly larger for readability */
-    text-align: center;
+    max-width: 300px;
   }
-  
-  .about-us-icon {
-    font-size: 3rem;
-    color: #d24a69;
-    margin-bottom: 0.5rem;
+  .team-members {
+    gap: 1.5rem;
   }
-  
-  .about-us-feature-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+  .member-avatar {
+    font-size: 2.5rem;
   }
-  
-  .about-us-feature-text {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .about-us-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    .about-us-features {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .about-us-feature {
-      max-width: 200px;
-    }
-  }
-  
+}

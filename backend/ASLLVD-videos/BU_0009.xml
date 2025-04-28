@@ -1,0 +1,3084 @@
+<?xml version='1.0' encoding='utf-8'?>
+<SIGNSTREAM_DAI AUTHOR='BOSTON UNIVERSITY' DOWNLOAD_DATE='Sat Jan 07 22:05:27 EST 2023'>
+  <COLLECTIONS>
+  <COLLECTION ID='1034831' NAME='9-Ben-Sensory-Politics'>
+    <CREATE-DATE>'2022-11-02 06:29:16.0'</CREATE-DATE>
+    <MODIFIED-DATE>'2022-11-02 10:31:12.0'</MODIFIED-DATE>
+    <MEDIA-FILES>
+      <MEDIA-FILE ID='1034866' FILE-NAME='9-Sensory-Politics.mov'/>
+    </MEDIA-FILES>
+    <TEMPORAL-PARTITIONS>
+      <TEMPORAL-PARTITION ID='1' NAME='Temporal Partition 1'>
+        <SEGMENT-TIERS>
+          <SEGMENT-TIER ID='1' NAME='Segment 1'>
+            <PARTICIPANT>'No User'</PARTICIPANT>
+            <DOMINANT-HAND>'R'</DOMINANT-HAND>
+            <UTTERANCES>
+              <UTTERANCE ID='10216984' START_FRAME='472' END_FRAME='524'>
+                <TRANSLATION>'It's not necessary for the ranges considered to be acceptable to be the same all over the the world.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U3'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100685'>
+                    <LABEL>'IX-loc:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='474' END_FRAME='476'/>
+                  </SIGN>
+                  <SIGN ID='100686'>
+                    <LABEL>'(2h)SAME_2'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'T'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'Y'</D_START_HS>
+                    <ND_START_HS>'Y'</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>'Y'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='481' END_FRAME='494'/>
+                    <NON_DOMINANT_HAND START_FRAME='481' END_FRAME='494'/>
+                  </SIGN>
+                  <SIGN ID='100687'>
+                    <LABEL>'WORLD'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'W'</D_START_HS>
+                    <ND_START_HS>'W'</ND_START_HS>
+                    <D_END_HS>'W'</D_END_HS>
+                    <ND_END_HS>'W'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='500' END_FRAME='506'/>
+                    <NON_DOMINANT_HAND START_FRAME='500' END_FRAME='506'/>
+                  </SIGN>
+                  <SIGN ID='100688'>
+                    <LABEL>'NOT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'10'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'10'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='512' END_FRAME='513'/>
+                  </SIGN>
+                  <SIGN ID='100689'>
+                    <LABEL>'MUST+'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'X'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'X'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='515' END_FRAME='523'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91346' START_FRAME='499' END_FRAME='524'>
+                    <LABEL>'head mvmt: shake'</LABEL>
+                    <VALUE>'rapid'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91347' START_FRAME='480' END_FRAME='495'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91348' START_FRAME='495' END_FRAME='508'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91349' START_FRAME='509' END_FRAME='523'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='508' END_FRAME='509'/>
+                    <OFFSET START_FRAME='523' END_FRAME='524'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91350' START_FRAME='482' END_FRAME='487'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91351' START_FRAME='479' END_FRAME='495'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='474' END_FRAME='479'/>
+                    <OFFSET START_FRAME='495' END_FRAME='497'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91352' START_FRAME='498' END_FRAME='499'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91353' START_FRAME='500' END_FRAME='508'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further lowered'</VALUE>
+                    <OFFSET START_FRAME='508' END_FRAME='514'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91354' START_FRAME='499' END_FRAME='524'>
+                    <LABEL>'negative'</LABEL>
+                    <VALUE>'negation'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91355' START_FRAME='473' END_FRAME='495'>
+                    <LABEL>'topic/focus'</LABEL>
+                    <VALUE>'topic'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10168352' START_FRAME='37' END_FRAME='315'>
+                <TRANSLATION>'In the field of audiovocal orientation, they have their own way of viewing the role of voice range...'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U1'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100642'>
+                    <LABEL>'fs-AUDIOVOCAL'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'A'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'L'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='48' END_FRAME='97'/>
+                  </SIGN>
+                  <SIGN ID='100643'>
+                    <LABEL>'fs-ORIENTATION'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'T'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='107' END_FRAME='130'/>
+                  </SIGN>
+                  <SIGN ID='100644'>
+                    <LABEL>'MAJOR:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-xd'</D_START_HS>
+                    <ND_START_HS>'B-xd'</ND_START_HS>
+                    <D_END_HS>'B-xd'</D_END_HS>
+                    <ND_END_HS>'B-xd'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='141' END_FRAME='151'/>
+                    <NON_DOMINANT_HAND START_FRAME='141' END_FRAME='151'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='151' END_FRAME='165'/>
+                  </SIGN>
+                  <SIGN ID='100645'>
+                    <LABEL>'IX-loc-line'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='157' END_FRAME='164'/>
+                  </SIGN>
+                  <SIGN ID='100646'>
+                    <LABEL>'HAVE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'bent-B-L'</D_START_HS>
+                    <ND_START_HS>'bent-B-L'</ND_START_HS>
+                    <D_END_HS>'bent-B-L'</D_END_HS>
+                    <ND_END_HS>'bent-B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='171' END_FRAME='172'/>
+                    <NON_DOMINANT_HAND START_FRAME='171' END_FRAME='172'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='172' END_FRAME='175'/>
+                  </SIGN>
+                  <SIGN ID='100647'>
+                    <LABEL>'POSS-3p:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='179' END_FRAME='179'/>
+                  </SIGN>
+                  <SIGN ID='100648'>
+                    <LABEL>'SET-UP:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'T'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'10'</D_START_HS>
+                    <ND_START_HS>'Rlxd'</ND_START_HS>
+                    <D_END_HS>'10'</D_END_HS>
+                    <ND_END_HS>'Rlxd'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='189' END_FRAME='191'/>
+                    <NON_DOMINANT_HAND START_FRAME='189' END_FRAME='191'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='191' END_FRAME='200'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='191' END_FRAME='200'/>
+                  </SIGN>
+                  <SIGN ID='100649'>
+                    <LABEL>'VISUALIZE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>'5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='212' END_FRAME='223'/>
+                    <NON_DOMINANT_HAND START_FRAME='212' END_FRAME='223'/>
+                  </SIGN>
+                  <SIGN ID='100650'>
+                    <LABEL>'RULE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'R'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'R'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='237' END_FRAME='246'/>
+                    <NON_DOMINANT_HAND START_FRAME='237' END_FRAME='246'/>
+                  </SIGN>
+                  <SIGN ID='100651'>
+                    <LABEL>'COOPERATE/UNITE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'F'</D_START_HS>
+                    <ND_START_HS>'F'</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>'F'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='253' END_FRAME='261'/>
+                    <NON_DOMINANT_HAND START_FRAME='253' END_FRAME='261'/>
+                  </SIGN>
+                  <SIGN ID='100652'>
+                    <LABEL>'WITH'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'A'</D_START_HS>
+                    <ND_START_HS>'A'</ND_START_HS>
+                    <D_END_HS>'A'</D_END_HS>
+                    <ND_END_HS>'A'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='266' END_FRAME='270'/>
+                    <NON_DOMINANT_HAND START_FRAME='266' END_FRAME='270'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='270' END_FRAME='275'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='270' END_FRAME='275'/>
+                  </SIGN>
+                  <SIGN ID='100653'>
+                    <LABEL>'VOICE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='289' END_FRAME='296'/>
+                  </SIGN>
+                  <SIGN ID='100654'>
+                    <LABEL>'RANGE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='303' END_FRAME='315'/>
+                    <NON_DOMINANT_HAND START_FRAME='303' END_FRAME='315'/>
+                  </SIGN>
+                  <SIGN ID='100662'>
+                    <LABEL>'BUOY'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>''</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>''</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <NON_DOMINANT_HAND START_FRAME='289' END_FRAME='296'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91314' START_FRAME='183' END_FRAME='204'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91315' START_FRAME='240' END_FRAME='290'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91316' START_FRAME='39' END_FRAME='137'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91317' START_FRAME='181' END_FRAME='314'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91318' START_FRAME='39' END_FRAME='156'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91319' START_FRAME='166' END_FRAME='202'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='156' END_FRAME='166'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91320' START_FRAME='259' END_FRAME='313'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='202' END_FRAME='259'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91321' START_FRAME='131' END_FRAME='137'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'into space'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91322' START_FRAME='148' END_FRAME='153'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'into space'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91323' START_FRAME='203' END_FRAME='245'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91324' START_FRAME='279' END_FRAME='296'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91325' START_FRAME='40' END_FRAME='79'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly lowered'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91326' START_FRAME='100' END_FRAME='154'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='79' END_FRAME='100'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91327' START_FRAME='161' END_FRAME='162'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91328' START_FRAME='165' END_FRAME='199'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91329' START_FRAME='202' END_FRAME='203'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91330' START_FRAME='245' END_FRAME='314'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='213' END_FRAME='245'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91331' START_FRAME='39' END_FRAME='154'>
+                    <LABEL>'topic/focus'</LABEL>
+                    <VALUE>'focus'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10505807' START_FRAME='528' END_FRAME='705'>
+                <TRANSLATION>'Some cultures have more expanded range norms than others, but all of them have range expectations.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U4'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100692'>
+                    <LABEL>'SOME'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='530' END_FRAME='533'/>
+                    <NON_DOMINANT_HAND START_FRAME='530' END_FRAME='533'/>
+                  </SIGN>
+                  <SIGN ID='100693'>
+                    <LABEL>'IX-3p:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='539' END_FRAME='539'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='539' END_FRAME='548'/>
+                  </SIGN>
+                  <SIGN ID='100694'>
+                    <LABEL>'CULTURE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'C'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'C'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='553' END_FRAME='557'/>
+                    <NON_DOMINANT_HAND START_FRAME='553' END_FRAME='557'/>
+                  </SIGN>
+                  <SIGN ID='100695'>
+                    <LABEL>'MORE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'flat-O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'flat-O'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='562' END_FRAME='564'/>
+                  </SIGN>
+                  <SIGN ID='100696'>
+                    <LABEL>'DCL:B-L"above the range"'</LABEL>
+                    <SIGN_TYPE>'Classifiers'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='572' END_FRAME='592'/>
+                    <NON_DOMINANT_HAND START_FRAME='572' END_FRAME='592'/>
+                  </SIGN>
+                  <SIGN ID='100697'>
+                    <LABEL>'OTHER'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'10'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'10'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='599' END_FRAME='603'/>
+                  </SIGN>
+                  <SIGN ID='100698'>
+                    <LABEL>'BUT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='609' END_FRAME='611'/>
+                    <NON_DOMINANT_HAND START_FRAME='609' END_FRAME='611'/>
+                  </SIGN>
+                  <SIGN ID='100699'>
+                    <LABEL>'#ALL_2'</LABEL>
+                    <SIGN_TYPE>'Loan Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'A'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'L'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='615' END_FRAME='632'/>
+                  </SIGN>
+                  <SIGN ID='100700'>
+                    <LABEL>'HAVE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'bent-B-L'</D_START_HS>
+                    <ND_START_HS>'bent-B-L'</ND_START_HS>
+                    <D_END_HS>'bent-B-L'</D_END_HS>
+                    <ND_END_HS>'bent-B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='638' END_FRAME='646'/>
+                    <NON_DOMINANT_HAND START_FRAME='638' END_FRAME='646'/>
+                  </SIGN>
+                  <SIGN ID='100701'>
+                    <LABEL>'RANGE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='655' END_FRAME='675'/>
+                    <NON_DOMINANT_HAND START_FRAME='655' END_FRAME='675'/>
+                  </SIGN>
+                  <SIGN ID='100702'>
+                    <LABEL>'RANGE-arc'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='675' END_FRAME='704'/>
+                    <NON_DOMINANT_HAND START_FRAME='675' END_FRAME='704'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91356' START_FRAME='534' END_FRAME='571'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91357' START_FRAME='571' END_FRAME='592'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91358' START_FRAME='642' END_FRAME='702'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91359' START_FRAME='538' END_FRAME='603'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='529' END_FRAME='538'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91360' START_FRAME='618' END_FRAME='702'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='603' END_FRAME='618'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91361' START_FRAME='535' END_FRAME='594'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91362' START_FRAME='651' END_FRAME='660'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'watch hands'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91363' START_FRAME='539' END_FRAME='556'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='530' END_FRAME='539'/>
+                    <OFFSET START_FRAME='556' END_FRAME='564'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91364' START_FRAME='614' END_FRAME='629'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                    <ONSET START_FRAME='607' END_FRAME='614'/>
+                    <OFFSET START_FRAME='629' END_FRAME='644'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91365' START_FRAME='652' END_FRAME='659'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'lowered lid'</VALUE>
+                    <ONSET START_FRAME='645' END_FRAME='652'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91366' START_FRAME='663' END_FRAME='699'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                    <ONSET START_FRAME='660' END_FRAME='663'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91367' START_FRAME='701' END_FRAME='702'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91368' START_FRAME='538' END_FRAME='603'>
+                    <LABEL>'topic/focus'</LABEL>
+                    <VALUE>'focus'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10201202' START_FRAME='319' END_FRAME='465'>
+                <TRANSLATION>'and noise range. There are more things on the list, but I am focusing here on those two, with respect to acceptable ranges.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U2'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100664'>
+                    <LABEL>'AND'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'crvd-sprd-B'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'flat-O'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='319' END_FRAME='321'/>
+                  </SIGN>
+                  <SIGN ID='100665'>
+                    <LABEL>'NOISE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>'5'</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>'5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='328' END_FRAME='334'/>
+                    <NON_DOMINANT_HAND START_FRAME='328' END_FRAME='334'/>
+                  </SIGN>
+                  <SIGN ID='100666'>
+                    <LABEL>'RANGE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='340' END_FRAME='351'/>
+                    <NON_DOMINANT_HAND START_FRAME='340' END_FRAME='351'/>
+                  </SIGN>
+                  <SIGN ID='100667'>
+                    <LABEL>'MORE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'flat-O'</D_START_HS>
+                    <ND_START_HS>'flat-O'</ND_START_HS>
+                    <D_END_HS>'flat-O'</D_END_HS>
+                    <ND_END_HS>'flat-O'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='357' END_FRAME='361'/>
+                    <NON_DOMINANT_HAND START_FRAME='357' END_FRAME='361'/>
+                  </SIGN>
+                  <SIGN ID='100668'>
+                    <LABEL>'LONG-LIST'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'4'</D_START_HS>
+                    <ND_START_HS>'4'</ND_START_HS>
+                    <D_END_HS>'4'</D_END_HS>
+                    <ND_END_HS>'4'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='367' END_FRAME='378'/>
+                    <NON_DOMINANT_HAND START_FRAME='367' END_FRAME='378'/>
+                  </SIGN>
+                  <SIGN ID='100669'>
+                    <LABEL>'BUT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='387' END_FRAME='388'/>
+                    <NON_DOMINANT_HAND START_FRAME='387' END_FRAME='388'/>
+                  </SIGN>
+                  <SIGN ID='100670'>
+                    <LABEL>'IX-1p'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='390' END_FRAME='390'/>
+                  </SIGN>
+                  <SIGN ID='100671'>
+                    <LABEL>'FOCUS/NARROW'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B'</D_START_HS>
+                    <ND_START_HS>'B'</ND_START_HS>
+                    <D_END_HS>'B'</D_END_HS>
+                    <ND_END_HS>'B'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='397' END_FRAME='405'/>
+                    <NON_DOMINANT_HAND START_FRAME='397' END_FRAME='405'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='405' END_FRAME='407'/>
+                  </SIGN>
+                  <SIGN ID='100672'>
+                    <LABEL>'ON'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'U/H'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'U/H'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='406' END_FRAME='407'/>
+                  </SIGN>
+                  <SIGN ID='100673'>
+                    <LABEL>'THOSE-TWO'</LABEL>
+                    <SIGN_TYPE>'Number Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'V'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'V'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='415' END_FRAME='430'/>
+                    <NON_DOMINANT_HAND START_FRAME='415' END_FRAME='430'/>
+                  </SIGN>
+                  <SIGN ID='100674'>
+                    <LABEL>'RANGE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='436' END_FRAME='449'/>
+                    <NON_DOMINANT_HAND START_FRAME='436' END_FRAME='449'/>
+                  </SIGN>
+                  <SIGN ID='100675'>
+                    <LABEL>'ACCEPT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>'5'</ND_START_HS>
+                    <D_END_HS>'flat-O'</D_END_HS>
+                    <ND_END_HS>'flat-O'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='454' END_FRAME='464'/>
+                    <NON_DOMINANT_HAND START_FRAME='454' END_FRAME='464'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91332' START_FRAME='400' END_FRAME='427'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91333' START_FRAME='339' END_FRAME='372'>
+                    <LABEL>'head mvmt: nod'</LABEL>
+                    <VALUE>'rapid'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91334' START_FRAME='320' END_FRAME='343'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91335' START_FRAME='357' END_FRAME='429'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='343' END_FRAME='357'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91336' START_FRAME='437' END_FRAME='463'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='429' END_FRAME='437'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91337' START_FRAME='319' END_FRAME='335'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91338' START_FRAME='434' END_FRAME='451'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91339' START_FRAME='320' END_FRAME='345'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91340' START_FRAME='348' END_FRAME='349'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91341' START_FRAME='354' END_FRAME='384'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly squinted'</VALUE>
+                    <ONSET START_FRAME='351' END_FRAME='354'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91342' START_FRAME='389' END_FRAME='413'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                    <ONSET START_FRAME='384' END_FRAME='389'/>
+                    <OFFSET START_FRAME='413' END_FRAME='428'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91343' START_FRAME='430' END_FRAME='431'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91344' START_FRAME='436' END_FRAME='458'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='432' END_FRAME='436'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91345' START_FRAME='460' END_FRAME='462'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10615937' START_FRAME='1461' END_FRAME='1570'>
+                <TRANSLATION>'If there's no voice, that means there's no identity.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U9'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100773'>
+                    <LABEL>'NONE/NOTHING'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>'O'</ND_START_HS>
+                    <D_END_HS>'O'</D_END_HS>
+                    <ND_END_HS>'O'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1462' END_FRAME='1471'/>
+                    <NON_DOMINANT_HAND START_FRAME='1462' END_FRAME='1471'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='1471' END_FRAME='1482'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='1471' END_FRAME='1482'/>
+                  </SIGN>
+                  <SIGN ID='100774'>
+                    <LABEL>'VOICE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1489' END_FRAME='1495'/>
+                  </SIGN>
+                  <SIGN ID='100775'>
+                    <LABEL>'5"I don't know"'</LABEL>
+                    <SIGN_TYPE>'Gestures'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'crvd-5'</D_START_HS>
+                    <ND_START_HS>'crvd-5'</ND_START_HS>
+                    <D_END_HS>'crvd-5'</D_END_HS>
+                    <ND_END_HS>'crvd-5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1499' END_FRAME='1503'/>
+                    <NON_DOMINANT_HAND START_FRAME='1499' END_FRAME='1503'/>
+                  </SIGN>
+                  <SIGN ID='100776'>
+                    <LABEL>'(2h)KNOW+NEG'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1511' END_FRAME='1518'/>
+                    <NON_DOMINANT_HAND START_FRAME='1511' END_FRAME='1513'/>
+                  </SIGN>
+                  <SIGN ID='100777'>
+                    <LABEL>'(2h)KNOW+NEG'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1511' END_FRAME='1518'/>
+                    <NON_DOMINANT_HAND START_FRAME='1515' END_FRAME='1518'/>
+                  </SIGN>
+                  <SIGN ID='100778'>
+                    <LABEL>'IDENTIFY'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'I'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'I'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1527' END_FRAME='1538'/>
+                    <NON_DOMINANT_HAND START_FRAME='1527' END_FRAME='1538'/>
+                  </SIGN>
+                  <SIGN ID='100779'>
+                    <LABEL>'(2h)alt.LOOK-OVER'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'T'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>'V'</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>'V'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1544' END_FRAME='1568'/>
+                    <NON_DOMINANT_HAND START_FRAME='1544' END_FRAME='1568'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91447' START_FRAME='1462' END_FRAME='1499'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91448' START_FRAME='1542' END_FRAME='1570'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91449' START_FRAME='1519' END_FRAME='1534'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91450' START_FRAME='1462' END_FRAME='1507'>
+                    <LABEL>'body lean'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91451' START_FRAME='1543' END_FRAME='1568'>
+                    <LABEL>'body lean'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91452' START_FRAME='1471' END_FRAME='1568'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91453' START_FRAME='1461' END_FRAME='1479'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91454' START_FRAME='1485' END_FRAME='1503'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91455' START_FRAME='1541' END_FRAME='1563'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91456' START_FRAME='1495' END_FRAME='1507'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly wide'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91457' START_FRAME='1515' END_FRAME='1539'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='1507' END_FRAME='1515'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91458' START_FRAME='1556' END_FRAME='1562'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='1539' END_FRAME='1556'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91459' START_FRAME='1462' END_FRAME='1503'>
+                    <LABEL>'negative'</LABEL>
+                    <VALUE>'negation'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91460' START_FRAME='1510' END_FRAME='1538'>
+                    <LABEL>'negative'</LABEL>
+                    <VALUE>'negation'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10554515' START_FRAME='1179' END_FRAME='1325'>
+                <TRANSLATION>'When it's loud, it can be seen as a lack of politeness, as barbaric.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U7'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100753'>
+                    <LABEL>'LOUD'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>'5'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1182' END_FRAME='1192'/>
+                    <NON_DOMINANT_HAND START_FRAME='1182' END_FRAME='1192'/>
+                  </SIGN>
+                  <SIGN ID='100754'>
+                    <LABEL>'(Y)WOW'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'Y'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1197' END_FRAME='1208'/>
+                  </SIGN>
+                  <SIGN ID='100755'>
+                    <LABEL>'POLITE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1222' END_FRAME='1227'/>
+                  </SIGN>
+                  <SIGN ID='100756'>
+                    <LABEL>'NONE/NOTHING'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>'O'</ND_START_HS>
+                    <D_END_HS>'O'</D_END_HS>
+                    <ND_END_HS>'O'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1233' END_FRAME='1238'/>
+                    <NON_DOMINANT_HAND START_FRAME='1233' END_FRAME='1238'/>
+                  </SIGN>
+                  <SIGN ID='100757'>
+                    <LABEL>'fs-BARBARIC'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'5-C'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1245' END_FRAME='1274'/>
+                  </SIGN>
+                  <SIGN ID='100758'>
+                    <LABEL>'WOW'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1279' END_FRAME='1284'/>
+                  </SIGN>
+                  <SIGN ID='100759'>
+                    <LABEL>'LOOK-OVER'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1289' END_FRAME='1307'/>
+                  </SIGN>
+                  <SIGN ID='100760'>
+                    <LABEL>'LONG-LIST'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'4'</D_START_HS>
+                    <ND_START_HS>'4'</ND_START_HS>
+                    <D_END_HS>'4'</D_END_HS>
+                    <ND_END_HS>'4'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1318' END_FRAME='1324'/>
+                    <NON_DOMINANT_HAND START_FRAME='1318' END_FRAME='1324'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91425' START_FRAME='1179' END_FRAME='1215'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91426' START_FRAME='1245' END_FRAME='1302'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91427' START_FRAME='1179' END_FRAME='1197'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91428' START_FRAME='1226' END_FRAME='1237'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91429' START_FRAME='1311' END_FRAME='1324'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91430' START_FRAME='1180' END_FRAME='1324'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'lowered'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91431' START_FRAME='1180' END_FRAME='1212'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91432' START_FRAME='1245' END_FRAME='1302'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91433' START_FRAME='1179' END_FRAME='1323'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91434' START_FRAME='1221' END_FRAME='1239'>
+                    <LABEL>'negative'</LABEL>
+                    <VALUE>'negation'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10531750' START_FRAME='1032' END_FRAME='1172'>
+                <TRANSLATION>'They exceed normal voice ranges, which gives rise to various interpretations.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U6'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100742'>
+                    <LABEL>'fs-RANGE'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'R'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'E'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1034' END_FRAME='1043'/>
+                  </SIGN>
+                  <SIGN ID='100743'>
+                    <LABEL>'DCL:B-L"overgoing with the range"'</LABEL>
+                    <SIGN_TYPE>'Classifiers'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1046' END_FRAME='1077'/>
+                    <NON_DOMINANT_HAND START_FRAME='1046' END_FRAME='1077'/>
+                  </SIGN>
+                  <SIGN ID='100744'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1084' END_FRAME='1093'/>
+                    <NON_DOMINANT_HAND START_FRAME='1084' END_FRAME='1093'/>
+                  </SIGN>
+                  <SIGN ID='100745'>
+                    <LABEL>'LONG-LIST'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'4'</D_START_HS>
+                    <ND_START_HS>'4'</ND_START_HS>
+                    <D_END_HS>'4'</D_END_HS>
+                    <ND_END_HS>'4'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1101' END_FRAME='1114'/>
+                    <NON_DOMINANT_HAND START_FRAME='1101' END_FRAME='1114'/>
+                  </SIGN>
+                  <SIGN ID='100746'>
+                    <LABEL>'VISUALIZE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'C'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1127' END_FRAME='1135'/>
+                    <NON_DOMINANT_HAND START_FRAME='1127' END_FRAME='1135'/>
+                  </SIGN>
+                  <SIGN ID='100747'>
+                    <LABEL>'MEANING-LIST'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1142' END_FRAME='1172'/>
+                    <NON_DOMINANT_HAND START_FRAME='1142' END_FRAME='1172'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91403' START_FRAME='1100' END_FRAME='1121'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91404' START_FRAME='1121' END_FRAME='1165'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91405' START_FRAME='1165' END_FRAME='1172'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'further right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91406' START_FRAME='1089' END_FRAME='1116'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91407' START_FRAME='1033' END_FRAME='1042'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91408' START_FRAME='1049' END_FRAME='1070'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='1042' END_FRAME='1049'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91409' START_FRAME='1077' END_FRAME='1133'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further lowered'</VALUE>
+                    <ONSET START_FRAME='1070' END_FRAME='1077'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91410' START_FRAME='1139' END_FRAME='1165'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'lowered'</VALUE>
+                    <ONSET START_FRAME='1133' END_FRAME='1139'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91411' START_FRAME='1169' END_FRAME='1172'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further lowered'</VALUE>
+                    <ONSET START_FRAME='1165' END_FRAME='1169'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91412' START_FRAME='1046' END_FRAME='1052'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91413' START_FRAME='1066' END_FRAME='1072'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'into space'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91414' START_FRAME='1076' END_FRAME='1080'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91415' START_FRAME='1130' END_FRAME='1131'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'up'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91416' START_FRAME='1169' END_FRAME='1172'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91417' START_FRAME='1032' END_FRAME='1041'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly squinted'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91418' START_FRAME='1042' END_FRAME='1044'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91419' START_FRAME='1048' END_FRAME='1060'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91420' START_FRAME='1062' END_FRAME='1063'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91421' START_FRAME='1072' END_FRAME='1074'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91422' START_FRAME='1078' END_FRAME='1123'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91423' START_FRAME='1124' END_FRAME='1164'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91424' START_FRAME='1165' END_FRAME='1172'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='11087530' START_FRAME='2049' END_FRAME='2257'>
+                <TRANSLATION>'People make different judgments that are in conflict, giving rise to sensory politics.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U12'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100825'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2057' END_FRAME='2060'/>
+                    <NON_DOMINANT_HAND START_FRAME='2057' END_FRAME='2060'/>
+                  </SIGN>
+                  <SIGN ID='100826'>
+                    <LABEL>'COURT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'F'</D_START_HS>
+                    <ND_START_HS>'F'</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>'F'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2064' END_FRAME='2071'/>
+                    <NON_DOMINANT_HAND START_FRAME='2064' END_FRAME='2071'/>
+                  </SIGN>
+                  <SIGN ID='100827'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2077' END_FRAME='2079'/>
+                    <NON_DOMINANT_HAND START_FRAME='2077' END_FRAME='2079'/>
+                  </SIGN>
+                  <SIGN ID='100828'>
+                    <LABEL>'COURT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'F'</D_START_HS>
+                    <ND_START_HS>'F'</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>'F'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2083' END_FRAME='2095'/>
+                    <NON_DOMINANT_HAND START_FRAME='2083' END_FRAME='2095'/>
+                  </SIGN>
+                  <SIGN ID='100829'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2114' END_FRAME='2118'/>
+                    <NON_DOMINANT_HAND START_FRAME='2114' END_FRAME='2118'/>
+                  </SIGN>
+                  <SIGN ID='100830'>
+                    <LABEL>'KIND'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>'P/K'</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>'P/K'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2123' END_FRAME='2140'/>
+                    <NON_DOMINANT_HAND START_FRAME='2123' END_FRAME='2140'/>
+                  </SIGN>
+                  <SIGN ID='100831'>
+                    <LABEL>'fs-OF'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2143' END_FRAME='2151'/>
+                  </SIGN>
+                  <SIGN ID='100832'>
+                    <LABEL>'5"you see"'</LABEL>
+                    <SIGN_TYPE>'Gestures'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'crvd-5'</D_START_HS>
+                    <ND_START_HS>'crvd-5'</ND_START_HS>
+                    <D_END_HS>'crvd-5'</D_END_HS>
+                    <ND_END_HS>'crvd-5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2156' END_FRAME='2161'/>
+                    <NON_DOMINANT_HAND START_FRAME='2156' END_FRAME='2161'/>
+                  </SIGN>
+                  <SIGN ID='100833'>
+                    <LABEL>'STRUGGLE-continuative'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2165' END_FRAME='2189'/>
+                    <NON_DOMINANT_HAND START_FRAME='2165' END_FRAME='2189'/>
+                  </SIGN>
+                  <SIGN ID='100834'>
+                    <LABEL>'fs-SENSORY'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2200' END_FRAME='2221'/>
+                  </SIGN>
+                  <SIGN ID='100835'>
+                    <LABEL>'POLITICS'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2227' END_FRAME='2237'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91491' START_FRAME='2050' END_FRAME='2069'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91492' START_FRAME='2076' END_FRAME='2087'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91493' START_FRAME='2124' END_FRAME='2139'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91494' START_FRAME='2155' END_FRAME='2171'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91495' START_FRAME='2133' END_FRAME='2151'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91496' START_FRAME='2193' END_FRAME='2257'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91497' START_FRAME='2195' END_FRAME='2242'>
+                    <LABEL>'head mvmt: nod'</LABEL>
+                    <VALUE>'rapid'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91498' START_FRAME='2050' END_FRAME='2081'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91499' START_FRAME='2103' END_FRAME='2116'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='2081' END_FRAME='2103'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91500' START_FRAME='2145' END_FRAME='2222'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='2116' END_FRAME='2145'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91501' START_FRAME='2233' END_FRAME='2256'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='2222' END_FRAME='2233'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91502' START_FRAME='2050' END_FRAME='2068'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91503' START_FRAME='2072' END_FRAME='2088'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91504' START_FRAME='2153' END_FRAME='2172'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91505' START_FRAME='2052' END_FRAME='2083'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                    <OFFSET START_FRAME='2083' END_FRAME='2086'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91506' START_FRAME='2090' END_FRAME='2092'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91507' START_FRAME='2116' END_FRAME='2134'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'lowered lid'</VALUE>
+                    <ONSET START_FRAME='2111' END_FRAME='2116'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91508' START_FRAME='2151' END_FRAME='2167'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further lowered'</VALUE>
+                    <ONSET START_FRAME='2134' END_FRAME='2151'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91509' START_FRAME='2177' END_FRAME='2189'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                    <ONSET START_FRAME='2167' END_FRAME='2177'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91510' START_FRAME='2193' END_FRAME='2223'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly squinted'</VALUE>
+                    <ONSET START_FRAME='2189' END_FRAME='2193'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91511' START_FRAME='2231' END_FRAME='2242'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='2223' END_FRAME='2231'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91512' START_FRAME='2244' END_FRAME='2252'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'closed'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10687420' START_FRAME='1573' END_FRAME='1845'>
+                <TRANSLATION>'Whoever makes this kind of judgment enters into sensory politics.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U10'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100786'>
+                    <LABEL>'WHO'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'L'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'alt-G/bent-L'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1574' END_FRAME='1576'/>
+                  </SIGN>
+                  <SIGN ID='100787'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1578' END_FRAME='1596'/>
+                    <NON_DOMINANT_HAND START_FRAME='1578' END_FRAME='1596'/>
+                  </SIGN>
+                  <SIGN ID='100788'>
+                    <LABEL>'COURT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'F'</D_START_HS>
+                    <ND_START_HS>'F'</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>'F'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1604' END_FRAME='1625'/>
+                    <NON_DOMINANT_HAND START_FRAME='1604' END_FRAME='1625'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='1625' END_FRAME='1629'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='1625' END_FRAME='1638'/>
+                  </SIGN>
+                  <SIGN ID='100789'>
+                    <LABEL>'THAT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'Y'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1635' END_FRAME='1636'/>
+                  </SIGN>
+                  <SIGN ID='100790'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1644' END_FRAME='1645'/>
+                    <NON_DOMINANT_HAND START_FRAME='1644' END_FRAME='1645'/>
+                  </SIGN>
+                  <SIGN ID='100791'>
+                    <LABEL>'fs-BY'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1649' END_FRAME='1652'/>
+                  </SIGN>
+                  <SIGN ID='100792'>
+                    <LABEL>'MAKE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1657' END_FRAME='1662'/>
+                    <NON_DOMINANT_HAND START_FRAME='1657' END_FRAME='1662'/>
+                  </SIGN>
+                  <SIGN ID='100793'>
+                    <LABEL>'COURT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'F'</D_START_HS>
+                    <ND_START_HS>'F'</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>'F'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1667' END_FRAME='1678'/>
+                    <NON_DOMINANT_HAND START_FRAME='1667' END_FRAME='1678'/>
+                  </SIGN>
+                  <SIGN ID='100794'>
+                    <LABEL>'IX-3p:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'D'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'D'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1685' END_FRAME='1685'/>
+                  </SIGN>
+                  <SIGN ID='100795'>
+                    <LABEL>'ENTER'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'DIFFERENT'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-xd'</D_START_HS>
+                    <ND_START_HS>'bent-B'</ND_START_HS>
+                    <D_END_HS>'B-xd'</D_END_HS>
+                    <ND_END_HS>'bent-B'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1692' END_FRAME='1702'/>
+                    <NON_DOMINANT_HAND START_FRAME='1692' END_FRAME='1702'/>
+                  </SIGN>
+                  <SIGN ID='100796'>
+                    <LABEL>'KIND'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>'P/K'</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>'P/K'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1708' END_FRAME='1726'/>
+                    <NON_DOMINANT_HAND START_FRAME='1708' END_FRAME='1726'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='1726' END_FRAME='1731'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='1726' END_FRAME='1731'/>
+                  </SIGN>
+                  <SIGN ID='100797'>
+                    <LABEL>'part:indef'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>'5'</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>'5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1737' END_FRAME='1739'/>
+                    <NON_DOMINANT_HAND START_FRAME='1737' END_FRAME='1739'/>
+                  </SIGN>
+                  <SIGN ID='100798'>
+                    <LABEL>'MENTION'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'U/H'</D_START_HS>
+                    <ND_START_HS>'U/H'</ND_START_HS>
+                    <D_END_HS>'U/H'</D_END_HS>
+                    <ND_END_HS>'U/H'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1746' END_FRAME='1753'/>
+                    <NON_DOMINANT_HAND START_FRAME='1746' END_FRAME='1753'/>
+                  </SIGN>
+                  <SIGN ID='100799'>
+                    <LABEL>'fs-SENSORY'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1763' END_FRAME='1804'/>
+                  </SIGN>
+                  <SIGN ID='100800'>
+                    <LABEL>'POLITICS'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1808' END_FRAME='1818'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='1818' END_FRAME='1830'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91461' START_FRAME='1580' END_FRAME='1683'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91462' START_FRAME='1684' END_FRAME='1810'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91463' START_FRAME='1807' END_FRAME='1832'>
+                    <LABEL>'head mvmt: nod'</LABEL>
+                    <VALUE>'rapid'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91464' START_FRAME='1573' END_FRAME='1599'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'lowered'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91465' START_FRAME='1612' END_FRAME='1672'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='1599' END_FRAME='1612'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91466' START_FRAME='1684' END_FRAME='1799'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'lowered'</VALUE>
+                    <ONSET START_FRAME='1672' END_FRAME='1684'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91467' START_FRAME='1810' END_FRAME='1844'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='1799' END_FRAME='1810'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91468' START_FRAME='1628' END_FRAME='1643'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91469' START_FRAME='1643' END_FRAME='1648'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91470' START_FRAME='1610' END_FRAME='1625'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='1601' END_FRAME='1610'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91471' START_FRAME='1645' END_FRAME='1667'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='1625' END_FRAME='1645'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91472' START_FRAME='1683' END_FRAME='1699'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                    <ONSET START_FRAME='1667' END_FRAME='1683'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91473' START_FRAME='1764' END_FRAME='1801'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                    <ONSET START_FRAME='1753' END_FRAME='1764'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91474' START_FRAME='1810' END_FRAME='1829'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wide'</VALUE>
+                    <ONSET START_FRAME='1801' END_FRAME='1810'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91475' START_FRAME='1833' END_FRAME='1835'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91476' START_FRAME='1574' END_FRAME='1625'>
+                    <LABEL>'topic/focus'</LABEL>
+                    <VALUE>'focus'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10519239' START_FRAME='707' END_FRAME='1030'>
+                <TRANSLATION>'What happens in groups of people who have a visual-tactile oriented way of life is that they have their own habits, but they break many voice range rules when they join different groups.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U5'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100710'>
+                    <LABEL>'HAPPEN'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='709' END_FRAME='712'/>
+                    <NON_DOMINANT_HAND START_FRAME='709' END_FRAME='712'/>
+                  </SIGN>
+                  <SIGN ID='100711'>
+                    <LABEL>'WITH'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'A'</D_START_HS>
+                    <ND_START_HS>'A'</ND_START_HS>
+                    <D_END_HS>'A'</D_END_HS>
+                    <ND_END_HS>'A'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='715' END_FRAME='719'/>
+                    <NON_DOMINANT_HAND START_FRAME='715' END_FRAME='719'/>
+                  </SIGN>
+                  <SIGN ID='100712'>
+                    <LABEL>'PEOPLE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>'P/K'</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>'P/K'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='729' END_FRAME='735'/>
+                    <NON_DOMINANT_HAND START_FRAME='729' END_FRAME='735'/>
+                  </SIGN>
+                  <SIGN ID='100713'>
+                    <LABEL>'GROUP/TOGETHER'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'crvd-5'</D_START_HS>
+                    <ND_START_HS>'crvd-5'</ND_START_HS>
+                    <D_END_HS>'crvd-5'</D_END_HS>
+                    <ND_END_HS>'crvd-5'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='740' END_FRAME='743'/>
+                    <NON_DOMINANT_HAND START_FRAME='740' END_FRAME='743'/>
+                  </SIGN>
+                  <SIGN ID='100714'>
+                    <LABEL>'SPECIALTY'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='751' END_FRAME='758'/>
+                    <NON_DOMINANT_HAND START_FRAME='751' END_FRAME='758'/>
+                  </SIGN>
+                  <SIGN ID='100715'>
+                    <LABEL>'IN'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'flat-O'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'flat-O'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='771' END_FRAME='778'/>
+                    <NON_DOMINANT_HAND START_FRAME='771' END_FRAME='778'/>
+                  </SIGN>
+                  <SIGN ID='100716'>
+                    <LABEL>'(2h)alt.SEE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'T'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>'V'</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>'V'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'ALTERNATING'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='790' END_FRAME='799'/>
+                    <NON_DOMINANT_HAND START_FRAME='790' END_FRAME='799'/>
+                  </SIGN>
+                  <SIGN ID='100717'>
+                    <LABEL>'fs-TACTILE'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'T'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'E'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='806' END_FRAME='834'/>
+                  </SIGN>
+                  <SIGN ID='100718'>
+                    <LABEL>'fs-ORIENTED'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'D'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='838' END_FRAME='855'/>
+                  </SIGN>
+                  <SIGN ID='100719'>
+                    <LABEL>'(W)WAY'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'6'</D_START_HS>
+                    <ND_START_HS>'6'</ND_START_HS>
+                    <D_END_HS>'6'</D_END_HS>
+                    <ND_END_HS>'6'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='860' END_FRAME='862'/>
+                    <NON_DOMINANT_HAND START_FRAME='860' END_FRAME='862'/>
+                  </SIGN>
+                  <SIGN ID='100720'>
+                    <LABEL>'LIVE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'10'</D_START_HS>
+                    <ND_START_HS>'10'</ND_START_HS>
+                    <D_END_HS>'10'</D_END_HS>
+                    <ND_END_HS>'10'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='867' END_FRAME='870'/>
+                    <NON_DOMINANT_HAND START_FRAME='867' END_FRAME='870'/>
+                  </SIGN>
+                  <SIGN ID='100721'>
+                    <LABEL>'IX-loc-line'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='876' END_FRAME='885'/>
+                  </SIGN>
+                  <SIGN ID='100722'>
+                    <LABEL>'HABIT_3'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'crvd-5'</D_START_HS>
+                    <ND_START_HS>'crvd-5'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='910' END_FRAME='921'/>
+                    <NON_DOMINANT_HAND START_FRAME='910' END_FRAME='921'/>
+                  </SIGN>
+                  <SIGN ID='100723'>
+                    <LABEL>'WHEN'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='924' END_FRAME='933'/>
+                    <NON_DOMINANT_HAND START_FRAME='924' END_FRAME='933'/>
+                  </SIGN>
+                  <SIGN ID='100724'>
+                    <LABEL>'JOIN'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'DIFFERENT'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'U/H'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'U/H'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='949' END_FRAME='960'/>
+                    <NON_DOMINANT_HAND START_FRAME='949' END_FRAME='960'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='960' END_FRAME='970'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='960' END_FRAME='970'/>
+                  </SIGN>
+                  <SIGN ID='100725'>
+                    <LABEL>'BREAK++'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'S'</D_START_HS>
+                    <ND_START_HS>'S'</ND_START_HS>
+                    <D_END_HS>'S'</D_END_HS>
+                    <ND_END_HS>'S'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='980' END_FRAME='1001'/>
+                    <NON_DOMINANT_HAND START_FRAME='980' END_FRAME='1001'/>
+                  </SIGN>
+                  <SIGN ID='100726'>
+                    <LABEL>'POSS-3p:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'5'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'5'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1008' END_FRAME='1010'/>
+                  </SIGN>
+                  <SIGN ID='100727'>
+                    <LABEL>'RANGE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>''</START_END_HS>
+                    <START_END_LEFT_HS>'SAME'</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>'SAME'</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'C'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'C'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'DIFFERENT'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1022' END_FRAME='1029'/>
+                    <NON_DOMINANT_HAND START_FRAME='1022' END_FRAME='1029'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91369' START_FRAME='708' END_FRAME='758'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91370' START_FRAME='891' END_FRAME='945'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91371' START_FRAME='957' END_FRAME='968'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91372' START_FRAME='981' END_FRAME='999'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91373' START_FRAME='1010' END_FRAME='1015'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91374' START_FRAME='768' END_FRAME='890'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91375' START_FRAME='911' END_FRAME='933'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91376' START_FRAME='729' END_FRAME='776'>
+                    <LABEL>'body lean'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91377' START_FRAME='708' END_FRAME='813'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91378' START_FRAME='835' END_FRAME='890'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='813' END_FRAME='835'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91379' START_FRAME='899' END_FRAME='964'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='890' END_FRAME='899'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91380' START_FRAME='970' END_FRAME='972'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='964' END_FRAME='970'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91381' START_FRAME='981' END_FRAME='1029'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='972' END_FRAME='981'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91382' START_FRAME='709' END_FRAME='710'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91383' START_FRAME='713' END_FRAME='720'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91384' START_FRAME='725' END_FRAME='760'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91385' START_FRAME='897' END_FRAME='906'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91386' START_FRAME='908' END_FRAME='918'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91387' START_FRAME='925' END_FRAME='945'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91388' START_FRAME='950' END_FRAME='964'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91389' START_FRAME='971' END_FRAME='972'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'into space'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91390' START_FRAME='1006' END_FRAME='1011'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'left'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91391' START_FRAME='707' END_FRAME='728'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly lowered'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91392' START_FRAME='759' END_FRAME='815'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly squinted'</VALUE>
+                    <ONSET START_FRAME='728' END_FRAME='759'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91393' START_FRAME='826' END_FRAME='889'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'wider'</VALUE>
+                    <ONSET START_FRAME='815' END_FRAME='826'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91394' START_FRAME='893' END_FRAME='895'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91395' START_FRAME='900' END_FRAME='918'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91396' START_FRAME='920' END_FRAME='923'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91397' START_FRAME='927' END_FRAME='964'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91398' START_FRAME='967' END_FRAME='969'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91399' START_FRAME='974' END_FRAME='975'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91400' START_FRAME='983' END_FRAME='985'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91401' START_FRAME='991' END_FRAME='992'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91402' START_FRAME='1012' END_FRAME='1014'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10596830' START_FRAME='1332' END_FRAME='1448'>
+                <TRANSLATION>'Or perhaps there's something wrong with the voice, or the person will be thought to be slow-minded.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U8'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100764'>
+                    <LABEL>'#OR'</LABEL>
+                    <SIGN_TYPE>'Loan Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'R'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1332' END_FRAME='1334'/>
+                  </SIGN>
+                  <SIGN ID='100765'>
+                    <LABEL>'VOICE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'V'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'V'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1341' END_FRAME='1353'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='1353' END_FRAME='1374'/>
+                  </SIGN>
+                  <SIGN ID='100766'>
+                    <LABEL>'SOMETHING/ONE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1379' END_FRAME='1381'/>
+                  </SIGN>
+                  <SIGN ID='100767'>
+                    <LABEL>'WRONG'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'Y'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'Y'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1385' END_FRAME='1391'/>
+                  </SIGN>
+                  <SIGN ID='100768'>
+                    <LABEL>'SLOW'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B-L'</D_START_HS>
+                    <ND_START_HS>'B-L'</ND_START_HS>
+                    <D_END_HS>'B-L'</D_END_HS>
+                    <ND_END_HS>'B-L'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1410' END_FRAME='1416'/>
+                    <NON_DOMINANT_HAND START_FRAME='1410' END_FRAME='1416'/>
+                  </SIGN>
+                  <SIGN ID='100769'>
+                    <LABEL>'THINK'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1424' END_FRAME='1427'/>
+                  </SIGN>
+                  <SIGN ID='100770'>
+                    <LABEL>'SOMETHING/ONE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1432' END_FRAME='1439'/>
+                  </SIGN>
+                  <SIGN ID='100771'>
+                    <LABEL>'fs-OH'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'U/H'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1442' END_FRAME='1446'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91435' START_FRAME='1333' END_FRAME='1369'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91436' START_FRAME='1398' END_FRAME='1402'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91437' START_FRAME='1442' END_FRAME='1447'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91438' START_FRAME='1377' END_FRAME='1389'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91439' START_FRAME='1332' END_FRAME='1353'>
+                    <LABEL>'head mvmt: shake'</LABEL>
+                    <VALUE>'slow'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91440' START_FRAME='1332' END_FRAME='1448'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91441' START_FRAME='1332' END_FRAME='1371'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91442' START_FRAME='1394' END_FRAME='1440'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91443' START_FRAME='1443' END_FRAME='1447'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91444' START_FRAME='1332' END_FRAME='1347'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'squint'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91445' START_FRAME='1348' END_FRAME='1439'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'further squinted'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91446' START_FRAME='1441' END_FRAME='1442'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              <UTTERANCE ID='10705400' START_FRAME='1853' END_FRAME='2044'>
+                <TRANSLATION>'This happens when people don't know about the differences in sensory orientation.'</TRANSLATION>
+                <UTTERANCE-NUMBER>'U11'</UTTERANCE-NUMBER>
+                <MANUALS>
+                  <SIGN ID='100810'>
+                    <LABEL>'IX-3p:i'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'D'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'D'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1866' END_FRAME='1866'/>
+                  </SIGN>
+                  <SIGN ID='100811'>
+                    <LABEL>'HAPPEN'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1870' END_FRAME='1880'/>
+                    <NON_DOMINANT_HAND START_FRAME='1870' END_FRAME='1880'/>
+                  </SIGN>
+                  <SIGN ID='100812'>
+                    <LABEL>'ABOUT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1882' END_FRAME='1887'/>
+                    <NON_DOMINANT_HAND START_FRAME='1882' END_FRAME='1887'/>
+                  </SIGN>
+                  <SIGN ID='100813'>
+                    <LABEL>'PEOPLE'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'P/K'</D_START_HS>
+                    <ND_START_HS>'P/K'</ND_START_HS>
+                    <D_END_HS>'P/K'</D_END_HS>
+                    <ND_END_HS>'P/K'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1893' END_FRAME='1906'/>
+                    <NON_DOMINANT_HAND START_FRAME='1893' END_FRAME='1906'/>
+                  </SIGN>
+                  <SIGN ID='100814'>
+                    <LABEL>'NOT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'10'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'10'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1912' END_FRAME='1915'/>
+                  </SIGN>
+                  <SIGN ID='100815'>
+                    <LABEL>'KNOW'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'bent-B'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'bent-B'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1921' END_FRAME='1930'/>
+                  </SIGN>
+                  <SIGN ID='100816'>
+                    <LABEL>'fs-OF'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'I'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'F'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1937' END_FRAME='1950'/>
+                  </SIGN>
+                  <SIGN ID='100817'>
+                    <LABEL>'fs-ORIENTATION'</LABEL>
+                    <SIGN_TYPE>'Fingerspelled Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'DIFFERENT'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'O'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'N'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1959' END_FRAME='1986'/>
+                  </SIGN>
+                  <SIGN ID='100818'>
+                    <LABEL>'DIFFERENT'</LABEL>
+                    <SIGN_TYPE>'Lexical Signs'</SIGN_TYPE>
+                    <TWO_HANDED>'T'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'1'</D_START_HS>
+                    <ND_START_HS>'1'</ND_START_HS>
+                    <D_END_HS>'1'</D_END_HS>
+                    <ND_END_HS>'1'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>'SAME'</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='1992' END_FRAME='1996'/>
+                    <NON_DOMINANT_HAND START_FRAME='1992' END_FRAME='1996'/>
+                  </SIGN>
+                  <SIGN ID='100819'>
+                    <LABEL>'LCL:B"pathway":i'</LABEL>
+                    <SIGN_TYPE>'Classifiers'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>'B'</D_START_HS>
+                    <ND_START_HS>''</ND_START_HS>
+                    <D_END_HS>'B-xd'</D_END_HS>
+                    <ND_END_HS>''</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <DOMINANT_HAND START_FRAME='2000' END_FRAME='2010'/>
+                    <DOMINANT_HAND_FINAL_HOLD START_FRAME='2010' END_FRAME='2043'/>
+                  </SIGN>
+                  <SIGN ID='100824'>
+                    <LABEL>'LCL:B"pathway":j'</LABEL>
+                    <SIGN_TYPE>'Classifiers'</SIGN_TYPE>
+                    <TWO_HANDED>'F'</TWO_HANDED>
+                    <PASSIVE_BASE_ARM>'F'</PASSIVE_BASE_ARM>
+                    <MARKED_HANDS>'F'</MARKED_HANDS>
+                    <START_END_HS>'SAME'</START_END_HS>
+                    <START_END_LEFT_HS>''</START_END_LEFT_HS>
+                    <START_END_RIGHT_HS>''</START_END_RIGHT_HS>
+                    <D_START_HS>''</D_START_HS>
+                    <ND_START_HS>'B'</ND_START_HS>
+                    <D_END_HS>''</D_END_HS>
+                    <ND_END_HS>'B'</ND_END_HS>
+                    <TWOHANDED_HANDSHAPES>''</TWOHANDED_HANDSHAPES>
+                    <NON_DOMINANT_HAND START_FRAME='2015' END_FRAME='2032'/>
+                    <NON_DOMINANT_HAND_FINAL_HOLD START_FRAME='2032' END_FRAME='2043'/>
+                  </SIGN>
+                </MANUALS>
+                <NON_MANUALS>
+                  <NON_MANUAL ID='91477' START_FRAME='1997' END_FRAME='2009'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91478' START_FRAME='2034' END_FRAME='2043'>
+                    <LABEL>'head pos: turn'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91479' START_FRAME='1853' END_FRAME='1930'>
+                    <LABEL>'head pos: tilt side'</LABEL>
+                    <VALUE>'slightly right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91480' START_FRAME='1907' END_FRAME='1932'>
+                    <LABEL>'head mvmt: shake'</LABEL>
+                    <VALUE>'slight rapid head shake'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91481' START_FRAME='1870' END_FRAME='1873'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'further raised'</VALUE>
+                    <ONSET START_FRAME='1863' END_FRAME='1870'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91482' START_FRAME='1876' END_FRAME='2042'>
+                    <LABEL>'eye brows'</LABEL>
+                    <VALUE>'raised-furrowed'</VALUE>
+                    <ONSET START_FRAME='1873' END_FRAME='1876'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91483' START_FRAME='1863' END_FRAME='1878'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'down/right'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91484' START_FRAME='1997' END_FRAME='2009'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91485' START_FRAME='2039' END_FRAME='2043'>
+                    <LABEL>'eye gaze'</LABEL>
+                    <VALUE>'other'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91486' START_FRAME='1853' END_FRAME='1921'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'lowered lid'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91487' START_FRAME='1946' END_FRAME='2006'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'slightly squinted'</VALUE>
+                    <ONSET START_FRAME='1921' END_FRAME='1946'/>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91488' START_FRAME='2035' END_FRAME='2037'>
+                    <LABEL>'eye aperture'</LABEL>
+                    <VALUE>'blink'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91489' START_FRAME='1910' END_FRAME='1917'>
+                    <LABEL>'negative'</LABEL>
+                    <VALUE>'negation'</VALUE>
+                  </NON_MANUAL>
+                  <NON_MANUAL ID='91490' START_FRAME='1869' END_FRAME='1880'>
+                    <LABEL>'topic/focus'</LABEL>
+                    <VALUE>'focus'</VALUE>
+                  </NON_MANUAL>
+                </NON_MANUALS>
+              </UTTERANCE>
+              </UTTERANCES>
+            </SEGMENT-TIER>
+          </SEGMENT-TIERS>
+        </TEMPORAL-PARTITION>
+      </TEMPORAL-PARTITIONS>
+    </COLLECTION>
+  </COLLECTIONS>
+</SIGNSTREAM_DAI>
+

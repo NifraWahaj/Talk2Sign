@@ -97,7 +97,7 @@ body {
   overflow-y: auto;
 }
 
-.translator-avatar-placeholder {
+.asl-video-placeholder {
   flex: 1;
   background-color: #000;
   height: 33rem !important; /* Default height for larger screens */
@@ -175,7 +175,7 @@ body {
   }
 
   .translator-text-container,
-  .translator-avatar-placeholder {
+  .asl-video-placeholder {
     width: 100%;
   }
 
@@ -186,8 +186,7 @@ body {
     overflow-y: auto; /* Enable scrolling for larger text */
   }
 
-  /* Make the avatar box equal in size to the text box */
-  .translator-avatar-placeholder {
+  .asl-video-placeholder {
     height: 33rem !important; 
     min-height: 33rem;
     max-height: 33rem;

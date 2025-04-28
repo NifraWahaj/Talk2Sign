@@ -27,6 +27,16 @@ def generate_asl_gloss(tokenizer, model, input_text, device):
     asl_gloss = tokenizer.decode(output[0], skip_special_tokens=True)
     return asl_gloss
 
+# Global model setup for reuse
+model_path = "final_text_to_gloss_model"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+tokenizer, model = load_model_and_tokenizer(model_path)
+model.to(device)
+
+def predict_gloss(text):
+    return generate_asl_gloss(tokenizer, model, text, device)
+
+
 if __name__ == "__main__":
     # Path to the directory containing the model files
     model_path = "final_text_to_gloss_model"  # Adjust this path if necessary

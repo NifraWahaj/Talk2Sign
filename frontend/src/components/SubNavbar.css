@@ -1,9 +1,7 @@
 /* Sub-navbar container */
 .sub-navbar {
   width: 100%;
-
-
-  background-color: #e6e6e6;
+  background: linear-gradient(135deg, #d24a69 0%, #e6e6e6 50%, #5ca7de 100%);
   border-bottom: 2px solid #e6e6e6;
   padding: 0.5rem 1rem;
   display: flex;

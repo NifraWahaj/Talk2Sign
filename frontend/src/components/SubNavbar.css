@@ -1,14 +1,17 @@
 /* Sub-navbar container */
 .sub-navbar {
   width: 100%;
-  background-color: #ffffff;
+
+
+  background-color: #e6e6e6;
   border-bottom: 2px solid #e6e6e6;
   padding: 0.5rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: center; /* Center align items */
+  justify-content: center;
   position: relative;
 }
+
 
 /* Sub-navbar links */
 .sub-navbar-links {
@@ -23,7 +26,7 @@
 .sub-nav-tab {
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
-  color: #333;
+  color: black;
   text-decoration: none;
   background-color: transparent;
   border: none;

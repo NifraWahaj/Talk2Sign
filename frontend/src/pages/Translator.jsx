@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "regenerator-runtime/runtime"; // Fix regeneratorRuntime error
+import "regenerator-runtime/runtime";
 import "./Translator.css";
 import SubNavbar from "../components/SubNavbar";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
@@ -13,61 +13,56 @@ const Translator = () => {
   const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
   const [activeTab, setActiveTab] = useState("Audio/Text");
 
-// at top of Translator component
-const [videoUrl, setVideoUrl] = useState("");
-const [isVideoLoading, setIsVideoLoading] = useState(false);
-const generateVideo = async (text) => {
-  setIsVideoLoading(true);
-  try {
-    const res = await fetch("http://127.0.0.1:5000/api/generate-video", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text })
-    });
-    const data = await res.json();
-    if (res.ok) {
-      // prepend host for video src
-      setVideoUrl(`http://127.0.0.1:5000${data.video_url}`);
-    } else {
-      toast.error(data.error || "Video generation failed");
+  const [videoUrl, setVideoUrl] = useState("");
+  const [isVideoLoading, setIsVideoLoading] = useState(false);
+  const [file, setFile] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
+
+  const generateVideo = async (text) => {
+    setIsVideoLoading(true);
+    try {
+      const res = await fetch("http://127.0.0.1:5000/api/generate-video", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setVideoUrl(`http://127.0.0.1:5000${data.video_url}`);
+      } else {
+        toast.error(data.error || "Video generation failed");
+      }
+    } catch (err) {
+      toast.error("Cannot connect to server");
+    } finally {
+      setIsVideoLoading(false);
     }
-  } catch (err) {
-    toast.error("Cannot connect to server");
-  } finally {
-    setIsVideoLoading(false);
-  }
-};
+  };
 
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
 
-  // Check browser support
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
     toast.error("Speech Recognition Whisper API is not supported in this browser.", {
       position: "top-center",
     });
-    console.error("Browser does not support speech recognition.");
     return <p>Your browser does not support speech recognition.</p>;
   }
 
   const handleTabChange = (tab) => {
     setActiveTab(tab);
-    console.log(`Active tab changed to: ${tab}`);
   };
 
   const handleStartRecording = () => {
-    console.log("Starting recording...");
-    resetTranscript(); // Clear previous transcription
+    resetTranscript();
     SpeechRecognition.startListening({ continuous: true });
     setIsTextareaDisabled(true);
     toast.info("Recording started...", { position: "top-center" });
   };
 
   const handleStopRecording = () => {
-    console.log("Stopping recording...");
     SpeechRecognition.stopListening();
     setIsTextareaDisabled(false);
     toast.info("Recording stopped.", { position: "top-center" });
-    console.log("Final transcript:", transcript);
   };
 
   const handleConvert = async () => {
@@ -76,23 +71,21 @@ const generateVideo = async (text) => {
       toast.error("Please record audio or type some text before converting.");
       return;
     }
-  
+
     setConvertedText(textToSend);
     setIsConverted(true);
-  
+
     try {
-      // use “response” here…
       const response = await fetch("http://127.0.0.1:5000/api/store-text", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: textToSend }),
       });
       const data = await response.json();
-  
+
       if (response.ok) {
         setTranslatedText(data.translated_text);
         toast.success("Text translated successfully.");
-        // …then trigger video gen
         await generateVideo(textToSend);
       } else {
         toast.error(data.error || "Failed to translate text.");
@@ -101,7 +94,6 @@ const generateVideo = async (text) => {
       toast.error("Error connecting to server. Ensure backend is running.");
     }
   };
-  
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -126,7 +118,7 @@ const generateVideo = async (text) => {
       const data = await response.json();
       if (response.ok) {
         setConvertedText(data.text);
-        setTranslatedText(data.translated_text); // Store translated text
+        setTranslatedText(data.translated_text);
         setIsConverted(true);
       } else {
         toast.error(data.error || "Transcription failed.", { position: "top-center" });
@@ -148,7 +140,35 @@ const generateVideo = async (text) => {
 
       <div className="translator-container">
         <div className="translator-content-wrapper">
-          {/* Left Section */}
+          
+   {/* Make changes for video url over here */}
+
+          {/* Video at top (mobile first) */}
+          {isConverted && (
+            <div className="asl-video-wrapper">
+              <video
+                className="asl-video"
+                controls
+                autoPlay
+                muted
+                loop
+              >
+                <source src={videoUrl || "/miaa.mp4"} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+
+ {/* {isVideoLoading
+      ? <p>Loading video…</p>
+      : videoUrl && <video controls autoPlay>
+          <source src={videoUrl} type="video/mp4" />
+        </video>
+    } */}
+
+
+            </div>
+          )}
+
+          {/* Text Input and Buttons */}
           <div className="translator-text-container">
             <textarea
               className="translator-text-input"
@@ -159,15 +179,6 @@ const generateVideo = async (text) => {
               onChange={(e) => setConvertedText(e.target.value)}
             ></textarea>
 
-            {/* Display Translated Text */}
-            {translatedText && (
-              <div className="translator-output">
-                <strong>Translated Text:</strong>
-                <p>{translatedText}</p>
-              </div>
-            )}
-
-            {/* Action Buttons */}
             <div className="translator-action-buttons">
               {listening ? (
                 <button className="translator-record-button" onClick={handleStopRecording}>
@@ -179,32 +190,14 @@ const generateVideo = async (text) => {
                 </button>
               )}
               <button className="translator-convert-button" onClick={handleConvert}>
-                Convert 
+                Convert
               </button>
             </div>
           </div>
-           {/* Right Section */}
-      
-{/* after translator-content-wrapper */}
-{isConverted && (
-  <div className="video-wrapper">
-    {isVideoLoading
-      ? <p>Loading video…</p>
-      : videoUrl && <video controls autoPlay>
-          <source src={videoUrl} type="video/mp4" />
-        </video>
-    }
-  </div>
-)}
-
-
-
         </div>
 
-        </div>
-
-        {/* Toast Container */}
         <ToastContainer />
+      </div>
     </div>
   );
 };

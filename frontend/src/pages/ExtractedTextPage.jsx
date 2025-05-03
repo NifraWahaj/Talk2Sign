@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import "./ExtractedTextPage.css";
 import { toast, ToastContainer } from "react-toastify";
-import SubNavbar from "../components/SubNavbar";
 import "react-toastify/dist/ReactToastify.css";
 
 const ExtractedTextPage = () => {
   const location = useLocation();
-  console.log("🛠 ExtractedTextPage received location.state:", location.state);
-
   const extractedTextFromState = location.state?.extractedText || "";
 
-  const [activeTab, setActiveTab] = useState("Audio/Text");
   const [isPlaying, setIsPlaying] = useState(false);
   const [extractedText, setExtractedText] = useState(extractedTextFromState);
   const [translatedText, setTranslatedText] = useState("");
+
+  const videoRef = useRef(null);
 
   useEffect(() => {
     if (extractedText && extractedText.trim()) {
@@ -32,62 +30,67 @@ const ExtractedTextPage = () => {
 
       const data = await response.json();
       if (response.ok) {
-        setTranslatedText(data.translated_text); // ✅ Update state with translated text
+        setTranslatedText(data.translated_text);
       } else {
-        toast.error(data.error || "Failed to fetch translation.", { position: "top-center" });
+        toast.error(data.error || "Failed to fetch translation.", {
+          position: "top-center",
+        });
       }
     } catch (err) {
-      toast.error("Error fetching translated text.", { position: "top-center" });
+      toast.error("Error fetching translated text.", {
+        position: "top-center",
+      });
     }
   };
 
   const handlePlay = () => {
     setIsPlaying(true);
-    console.log("Playing extracted text...");
+    videoRef.current?.play();
   };
 
   const handlePause = () => {
     setIsPlaying(false);
-    console.log("Paused.");
+    videoRef.current?.pause();
   };
 
   return (
     <div className="extracted-text-page">
-   
       <div className="extracted-text-container">
-        <div className="extracted-content-wrapper">
-          {/* Display Extracted Text */}
+        {/* Video Area */}
+        <div className="asl-video-placeholder">
+        <video
+          className="asl-video"
+          controls
+          autoPlay
+          muted
+          loop
+        >
+             {/* Make changes for video url over here */}
+             
+  <source src="/miaa.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+        </div>
+
+        {/* Text and Buttons */}
+        <div className="extracted-right-content">
           <div className="extracted-text-content">
             <strong>Extracted Text:</strong>
             <p>{extractedText ? extractedText : "No text extracted."}</p>
           </div>
 
-          {/* Display Translated Text */}
-          {translatedText && (
-            <div className="translator-output">
-              <strong>Translated Text:</strong>
-              <p>{translatedText}</p>
-            </div>
-          )}
- <div className="extracted-text-buttons">
-          {!isPlaying ? (
-            <button className="extracted-play-button" onClick={handlePlay}>
-              Play
-            </button>
-          ) : (
-            <button className="extracted-pause-button" onClick={handlePause}>
-              Pause
-            </button>
-          )}
-        </div>
-        </div>
-                  {/* Right Section: File Upload */}
-          <div className="asl-video-placeholder">
-            <p className="placeholder-text">ASL video goes here</p>
+          <div className="extracted-text-buttons">
+            {!isPlaying ? (
+              <button className="extracted-play-button" onClick={handlePlay}>
+                Play
+              </button>
+            ) : (
+              <button className="extracted-pause-button" onClick={handlePause}>
+                Pause
+              </button>
+            )}
           </div>
-       
-
-       
+        </div>
       </div>
       <ToastContainer />
     </div>

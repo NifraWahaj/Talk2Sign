@@ -140,7 +140,7 @@ const Translator = () => {
 
       <div className="translator-container">
         <div className="translator-content-wrapper">
-          
+
    {/* Make changes for video url over here */}
 
           {/* Video at top (mobile first) */}

@@ -80,6 +80,8 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 600px;
+    flex: 2;
 }
 
 .asl-video {

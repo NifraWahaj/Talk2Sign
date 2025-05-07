@@ -12,6 +12,13 @@
   gap: 2rem;
 }
 
+/* Translator page */
+.translator-page {
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+
 /* Container */
 .extracted-text-container {
   width: 100%;

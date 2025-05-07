@@ -1,4 +1,3 @@
-// src/pages/ExtractedTextPage.jsx
 
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
@@ -10,8 +9,6 @@ import SubNavbar from "../components/SubNavbar";
 const ExtractedTextPage = () => {
   const location = useLocation();
   const initialText = location.state?.extractedText || "";
-// Missing this in your ExtractedTextPage
-const [activeTab, setActiveTab] = useState("Audio/Text");
 
   // OCR → translation → ASL state
   const [extractedText, setExtractedText] = useState(initialText);
@@ -71,23 +68,17 @@ const [activeTab, setActiveTab] = useState("Audio/Text");
 
   // genASL AWS call: only SignURL
   const generateASL = async (text) => {
-    console.log("genASL: requesting SignURL for:", text);
     setIsVideoLoading(true);
     setSignUrl("");
     setVideoError("");
-  
     try {
       const res = await fetch(
         `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(
           text
         )}`
       );
-      console.log("genASL response status:", res.status);
-  
       if (!res.ok) throw new Error(`Status ${res.status}`);
       const { SignURL } = await res.json();
-      console.log("genASL received SignURL:", SignURL);
-  
       setSignUrl(SignURL);
     } catch (err) {
       console.error("genASL error:", err);
@@ -98,7 +89,6 @@ const [activeTab, setActiveTab] = useState("Audio/Text");
       setPlayDisabled(false);
     }
   };
-  
 
   // Play / Pause controls
   const handlePlay = () => {
@@ -112,12 +102,6 @@ const [activeTab, setActiveTab] = useState("Audio/Text");
 
   return (
     <div className="extracted-text-page">
-       <SubNavbar
-        tabs={["Audio/Text", "Upload", "Youtube"]}
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-      />
-
       <div className="extracted-text-container">
 
         {/* ASL Video */}
@@ -147,12 +131,26 @@ const [activeTab, setActiveTab] = useState("Audio/Text");
               {extractedText || "No text extracted."}
             </p>
           </div>
-    
+          <div className="extracted-text-buttons">
+            <button
+              className="extracted-play-button"
+              onClick={handlePlay}
+              disabled={playDisabled || isVideoLoading}
+            >
+              Play
+            </button>
+            <button
+              className="extracted-pause-button"
+              onClick={handlePause}
+              disabled={!playDisabled}
+            >
+              Pause
+            </button>
+          </div>
         </div>
       </div>
       <ToastContainer />
     </div>
   );
 };
-
 export default ExtractedTextPage;

@@ -1,110 +1,190 @@
-// src/pages/YouTube.jsx
+import React, { useState, useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import SubNavbar from "../components/SubNavbar";
+import "./YouTube.css";
+import ReactPlayer from 'react-player';
 
-import React, { useState } from 'react';
-import axios from 'axios';
-import YouTubePlayer from 'react-youtube';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import SubNavbar from '../components/SubNavbar';
-import './YouTube.css';
+const YouTube = () => {
+  const [activeTab, setActiveTab] = useState("YouTube");
+  const [urlInput, setUrlInput] = useState("");
+  const [submittedUrl, setSubmittedUrl] = useState(null);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [conversionProgress, setConversionProgress] = useState(0);
+  const [aslVideoUrl, setAslVideoUrl] = useState(null);
+  const videoRef = useRef(null);
 
-export default function YouTube() {
-  const [activeTab, setActiveTab]   = useState("YouTube");
-  const [url, setUrl]               = useState("");
-  const [videoId, setVideoId]       = useState("");
-  const [loading, setLoading]       = useState(false);
-  const [aslUrl, setAslUrl]         = useState("");
-
-  // extract 11-char video ID
-  const extractVideoId = u => {
-    const m = u.match(/(?:youtube\.com\/.*[?&]v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
-    return m ? m[1] : null;
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
   };
 
-  const handleFetch = async e => {
-    e.preventDefault();
-    setLoading(true);
-    toast.info("Fetching transcript…");
+  const handleCancel = () => {
+    setSubmittedUrl(null);
+    setUrlInput("");
+    setAslVideoUrl(null);
+    setConversionProgress(0);
+    setIsProcessing(false);
+  };
 
-    const vid = extractVideoId(url.trim());
-    if (!vid) {
-      toast.error("Invalid YouTube URL");
-      setLoading(false);
+  // 1) get the transcript from your backend
+  const fetchTranscript = async (youTubeUrl) => {
+    const resp = await fetch("http://127.0.0.1:5000/api/transcript", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url: youTubeUrl }),
+    });
+    if (!resp.ok) throw new Error("Failed to fetch transcript");
+    const data = await resp.json();
+    return data.transcript.map((seg) => seg.text).join(" ");
+  };
+
+  // 2) send first 50 chars of text to GenASL
+  const convertToASL = async (fullText) => {
+    const limited = fullText.slice(0, 50);
+    console.log("Payload to GenASL (first 50 chars):", limited);
+    const resp = await fetch(
+      `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(
+        limited
+      )}`,
+      { method: "GET" }
+    );
+    if (!resp.ok) {
+      const body = await resp.json().catch(() => ({}));
+      console.error("GenASL error body:", body);
+      throw new Error(body.error || body.message || `Status ${resp.status}`);
+    }
+    const { SignURL } = await resp.json();
+    return SignURL;
+  };
+
+  // Main “Convert” handler
+  const handleConvert = async () => {
+    if (!urlInput.trim()) {
+      toast.error("Please paste a YouTube URL.", { position: "top-center" });
       return;
     }
+    setSubmittedUrl(urlInput.trim());
+    setIsProcessing(true);
+    setConversionProgress(0);
+    setAslVideoUrl(null);
+
     try {
-      // 1) get transcript [{start,duration,text},…]
-      const { data } = await axios.post('http://localhost:5000/api/transcript', { url });
-      setVideoId(data.videoId);
+      // step 1: transcript
+      const fullText = await fetchTranscript(urlInput.trim());
+      console.log("Transcript from backend:", fullText);
+      setConversionProgress(50);
 
-      // 2) join all text segments
-      const fullText = data.transcript.map(s => s.text).join(" ");
-
-      // 3) translate full text
-      const transRes = await axios.post(
-        'http://localhost:5000/api/store-text',
-        { text: fullText }
-      );
-      const translated = transRes.data.translated_text;
-
-      // 4) GenASL single video
-      const aslRes = await axios.get(
-        `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(translated)}`
-      );
-      setAslUrl(aslRes.data.SignURL);
-      toast.success("ASL video ready!");
-
+      // step 2: GenASL
+      const videoUrl = await convertToASL(fullText);
+      setAslVideoUrl(videoUrl);
+      setConversionProgress(100);
+      toast.success("ASL video ready!", { position: "top-center" });
     } catch (err) {
       console.error(err);
-      toast.error(err.response?.data?.error || "Failed to generate ASL");
+      toast.error(err.message, { position: "top-center", autoClose: 5000 });
     } finally {
-      setLoading(false);
+      setIsProcessing(false);
     }
   };
 
   return (
     <div className="youtube-page">
       <SubNavbar
-        tabs={["Audio/Text","Upload","YouTube"]}
+        tabs={["Audio/Text", "Upload", "YouTube"]}
         activeTab={activeTab}
-        onTabChange={setActiveTab}
+        onTabChange={handleTabChange}
       />
+      <div className="youtube-container">
+        {/* Instructions and input section */}
+        {!submittedUrl ? (
+          <div className="youtube-input-section">
+            <h1 className="youtube-header">YouTube to ASL Translation</h1>
+            <p className="youtube-description">
+              Talk2Sign allows you to translate YouTube videos to ASL. <br />
+              It is optimized to work on any device. There is no additional software or app needed.
+            </p>
+            <div className="youtube-instructions">
+              <h2>How to Translate YouTube Videos?</h2>
+              <ol>
+                <li>Open YouTube.com and search for the video you would like to translate.</li>
+                <li>
+                  Click on the video and wait until it starts playing. Then, just copy the video URL from your browser address bar.
+                </li>
+                <li>Open Talk2Sign and paste the video URL in the input box above.</li>
+                <li>
+                  Then, simply click on the "Convert" button. The translation will be initiated and may take a few minutes.
+                </li>
+                <li>Note: It is only possible to translate videos that are up to 30 minutes long.</li>
+              </ol>
+            </div>
+            <input
+              type="text"
+              className="youtube-input"
+              placeholder="Paste YouTube URL"
+              value={urlInput}
+              onChange={(e) => setUrlInput(e.target.value)}
+            />
+            <button
+              className="youtube-convert-button"
+              onClick={handleConvert}
+              disabled={isProcessing}
+            >
+              {isProcessing ? "Processing…" : "Convert to ASL"}
+            </button>
+          </div>
+        ) : (
+          // After user has submitted the URL and conversion is happening, display the videos
+          <div className="uploaded-container">
+            <p className="uploaded-filename">{submittedUrl}</p>
+
+            {isProcessing && (
+              <div className="progress-container">
+                <progress value={conversionProgress} max="100" />
+                <span>{conversionProgress}%</span>
+              </div>
+            )}
+
+            <div className="action-buttons">
+              <button className="cancel-button" onClick={handleCancel}>
+                Cancel
+              </button>
+              <button
+                className="convert-button"
+                onClick={handleConvert}
+                disabled={isProcessing}
+              >
+                {isProcessing ? "Processing…" : "Re-convert"}
+              </button>
+            </div>
+
+            <div className="youtube-asl-wrapper">
+              {/* YouTube Player */}
+              <div className="video-column">
+                <ReactPlayer url={submittedUrl} controls />
+              </div>
+
+              {/* ASL video */}
+              {aslVideoUrl && (
+                <div className="video-column">
+                  <video
+                    src={aslVideoUrl}
+                    controls
+                    autoPlay
+                    muted
+                    loop
+                    className="asl-video"
+                  >
+                    Your browser doesn’t support HTML5 video.
+                  </video>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
       <ToastContainer />
-
-      <form onSubmit={handleFetch} className="youtube-form">
-        <input
-          type="text"
-          placeholder="Paste YouTube URL"
-          value={url}
-          onChange={e => setUrl(e.target.value)}
-          required
-        />
-        <button type="submit" disabled={loading}>
-          {loading ? "Loading…" : "Translate to ASL"}
-        </button>
-      </form>
-
-      {videoId && (
-        <div className="youtube-embed">
-          <YouTubePlayer
-            videoId={videoId}
-            opts={{ playerVars: { origin: window.location.origin } }}
-          />
-        </div>
-      )}
-
-      {aslUrl && (
-        <div className="asl-video-wrapper">
-          <h2>ASL Translation</h2>
-          <video
-            src={aslUrl}
-            controls
-            autoPlay
-            muted
-            style={{ width: '100%', marginTop: '1rem' }}
-          />
-        </div>
-      )}
     </div>
   );
-}
+};
+
+export default YouTube;

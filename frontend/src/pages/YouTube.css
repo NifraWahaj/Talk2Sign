@@ -156,3 +156,22 @@ body {
     border: none; /* Remove default border */
     border-radius: 6px; /* Ensure border radius matches the placeholder */
 }
+
+
+.youtube-asl-wrapper {
+    display: flex;                                  /* establish flex container :contentReference[oaicite:1]{index=1} */
+    gap: 1rem;                                      /* space between columns */
+    align-items: flex-start;                        /* align videos at top :contentReference[oaicite:2]{index=2} */
+  }
+  
+  .youtube-asl-wrapper .video-column {
+    flex: 1;                                        /* each takes equal width :contentReference[oaicite:3]{index=3} */
+    max-width: 50%;                                 /* avoid overflow on narrow screens */
+  }
+  
+  .youtube-asl-wrapper .asl-video,
+  .youtube-asl-wrapper iframe {
+    width: 100%;                                    /* fill its column */
+    height: auto;                                   /* maintain aspect ratio */
+  }
+  

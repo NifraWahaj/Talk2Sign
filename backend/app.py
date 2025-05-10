@@ -24,8 +24,13 @@ from flask import send_from_directory
 load_dotenv()
 # Initialize Flask App
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
-
+CORS(app, resources={
+    r"/api/*": {
+        "origins": "*",  # Allow all origins for testing
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["Content-Type"]
+    }
+})
 #  AssemblyAI API Key
 ASSEMBLYAI_API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 print("ASSEMBLYAI_API_KEY:", ASSEMBLYAI_API_KEY)
@@ -198,26 +203,39 @@ def extract_text():
 # ───────────────────────────────────────────────────────────────────────────────
 # ───Extract YouTube Video Subtitles──────────────────────────────────────────────
 # ────────────────────────────────────────────────────────────────────────────────
-@app.route('/api/get-youtube-subtitles', methods=['POST'])
-def get_youtube_subtitles():
-    global stored_subtitles
-    data = request.get_json()
-    if not data or "video_url" not in data:
-        return jsonify({"error": "No video URL provided"}), 400
 
-    video_id = extract_video_id(data["video_url"])
+def extract_video_id(url):
+    # Extract YouTube video ID from URL
+    regex = r'(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})'
+    match = re.search(regex, url)
+    return match.group(1) if match else None
+
+@app.route('/api/transcript', methods=['POST', 'OPTIONS'])
+def get_transcript():
+    if request.method == 'OPTIONS':
+        # Handle preflight request
+        response = jsonify({'status': 'ok'})
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type')
+        return response
+    
+    data = request.json
+    youtube_url = data.get('url')
+    
+    if not youtube_url:
+        return jsonify({'error': 'No URL provided'}), 400
+    
+    video_id = extract_video_id(youtube_url)
     if not video_id:
-        return jsonify({"error": "Invalid YouTube URL"}), 400
-
+        return jsonify({'error': 'Invalid YouTube URL'}), 400
+    
     try:
         transcript = YouTubeTranscriptApi.get_transcript(video_id)
-        subtitles = " ".join([entry['text'] for entry in transcript])
-        stored_subtitles = subtitles
-        translated_subtitles = translator.translate(subtitles)
-        print(f"🔤 Translated Subtitles: {translated_subtitles}")
-        return jsonify({"subtitles": subtitles, "translated_subtitles": translated_subtitles, 'stored_subtitles': stored_subtitles})
+        return jsonify({
+            'videoId': video_id,
+            'transcript': transcript
+        })
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        return jsonify({'error': str(e)}), 500
 
 # ────────────────────────────────────────────────────────────────────────────────
 # ───TEXT TO GLOSS PIPELINE───────────────────────────────────────────────────────
@@ -361,4 +379,4 @@ def get_video(filename):
     return send_from_directory(OUTPUT_DIR, filename)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)  # Add host='0.0.0.0'

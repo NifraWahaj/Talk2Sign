@@ -1,242 +1,110 @@
-import React, { useState, useEffect } from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import SubNavbar from "../components/SubNavbar";
-import "./YouTube.css";
+// src/pages/YouTube.jsx
 
-const YouTube = () => {
-    const [activeTab, setActiveTab] = useState("YouTube");
-    const [videoURL, setVideoURL] = useState("");
-    const [isConverted, setIsConverted] = useState(false);
-    const [player, setPlayer] = useState(null);
-    const [prevTime, setPrevTime] = useState(0); // Track previous time
+import React, { useState } from 'react';
+import axios from 'axios';
+import YouTubePlayer from 'react-youtube';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import SubNavbar from '../components/SubNavbar';
+import './YouTube.css';
 
-    const handleTabChange = (tab) => {
-        setActiveTab(tab);
-    };
+export default function YouTube() {
+  const [activeTab, setActiveTab]   = useState("YouTube");
+  const [url, setUrl]               = useState("");
+  const [videoId, setVideoId]       = useState("");
+  const [loading, setLoading]       = useState(false);
+  const [aslUrl, setAslUrl]         = useState("");
 
-    const [subtitles, setSubtitles] = useState("");  // Store subtitles in state
+  // extract 11-char video ID
+  const extractVideoId = u => {
+    const m = u.match(/(?:youtube\.com\/.*[?&]v=|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+    return m ? m[1] : null;
+  };
 
-    const handleConvert = async () => {
-        if (videoURL.trim() === "") {
-            toast.error("Please enter a YouTube link.", { position: "top-center", autoClose: 2000 });
-            return;
-        }
-    
-        if (!videoURL.includes("youtube.com") && !videoURL.includes("youtu.be")) {
-            toast.error("Please enter a valid YouTube link.", { position: "top-center", autoClose: 2000 });
-            return;
-        }
-    
-        try {
-            const response = await fetch("http://localhost:5000/api/get-youtube-subtitles", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ video_url: videoURL }),
-            });
-    
-            const data = await response.json();
-            if (response.ok) {
-                console.log("✅ Subtitles:", data.subtitles);
-                setSubtitles(data.subtitles);  // Store subtitles in state
-                toast.success("Subtitles fetched successfully!", { position: "top-center", autoClose: 2000 });
-            } else {
-                toast.error(data.error || "Failed to fetch subtitles.", { position: "top-center", autoClose: 2000 });
-            }
-        } catch (error) {
-            console.error("Error fetching subtitles:", error);
-            toast.error("Something went wrong.", { position: "top-center", autoClose: 2000 });
-        }
-    
-        setIsConverted(true);
-    };
-    
-         
-    
+  const handleFetch = async e => {
+    e.preventDefault();
+    setLoading(true);
+    toast.info("Fetching transcript…");
 
-    const getVideoId = (url) => {
-        const regExp = /(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-        const match = url.match(regExp);
-        return match ? match[1] : null;
-    };
+    const vid = extractVideoId(url.trim());
+    if (!vid) {
+      toast.error("Invalid YouTube URL");
+      setLoading(false);
+      return;
+    }
+    try {
+      // 1) get transcript [{start,duration,text},…]
+      const { data } = await axios.post('http://localhost:5000/api/transcript', { url });
+      setVideoId(data.videoId);
 
-    const videoId = getVideoId(videoURL);
+      // 2) join all text segments
+      const fullText = data.transcript.map(s => s.text).join(" ");
 
-    // Load the YouTube IFrame API
-    useEffect(() => {
-        const tag = document.createElement("script");
-        tag.src = "https://www.youtube.com/iframe_api";
-        const firstScriptTag = document.getElementsByTagName("script")[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      // 3) translate full text
+      const transRes = await axios.post(
+        'http://localhost:5000/api/store-text',
+        { text: fullText }
+      );
+      const translated = transRes.data.translated_text;
 
-        window.onYouTubeIframeAPIReady = () => {
-            console.log("YouTube IFrame API loaded");
-        };
-    }, []);
+      // 4) GenASL single video
+      const aslRes = await axios.get(
+        `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(translated)}`
+      );
+      setAslUrl(aslRes.data.SignURL);
+      toast.success("ASL video ready!");
 
-    // Initialize the YouTube player
-    useEffect(() => {
-        if (isConverted && videoId && !player) {
-            window.YT.ready(() => {
-                const newPlayer = new window.YT.Player("youtube-player", {
-                    videoId: videoId,
-                    events: {
-                        onStateChange: onPlayerStateChange,
-                        onReady: onPlayerReady,
-                    },
-                });
-                setPlayer(newPlayer);
-            });
-        }
-    }, [isConverted, videoId, player]);
-    
+    } catch (err) {
+      console.error(err);
+      toast.error(err.response?.data?.error || "Failed to generate ASL");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    const onPlayerReady = () => {
-        console.log("Player is ready");
-    };
+  return (
+    <div className="youtube-page">
+      <SubNavbar
+        tabs={["Audio/Text","Upload","YouTube"]}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
+      />
+      <ToastContainer />
 
-    const onPlayerStateChange = (event) => {
-        if (event.data === window.YT.PlayerState.PLAYING) {
-            // Start tracking time changes
-            const interval = setInterval(() => {
-                if (player) {
-                    const currentTime = player.getCurrentTime();
-    
-                    // Log the current time every 10 seconds
-                    if (Math.floor(currentTime) % 10 === 0) {
-                        console.log(`Timestamp: ${Math.floor(currentTime)} seconds`);
-                    }
-    
-                    // Detect skip forward or backward
-                    if (prevTime !== null) {
-                        if (currentTime - prevTime > 5) {
-                            toast.info("User skipped forward", {
-                                position: "top-center",
-                                autoClose: 2000,
-                            });
-                            setPrevTime(currentTime); // Update prevTime immediately to avoid multiple toasts
-                            return; // Suppress "Video is playing!" toast
-                        } else if (currentTime - prevTime < -5) {
-                            toast.info("User skipped backward", {
-                                position: "top-center",
-                                autoClose: 2000,
-                            });
-                            setPrevTime(currentTime); // Update prevTime immediately to avoid multiple toasts
-                            return; // Suppress "Video is playing!" toast
-                        }
-                    }
-    
-                    // Regular play update
-                    setPrevTime(currentTime);
-                }
-            }, 1000); // Check every second
-    
-            // Display "Video is playing!" toast only if not skipping
-            toast.info("Video is playing!", {
-                position: "top-center",
-                autoClose: 2000,
-            });
-    
-            // Clear interval when video stops playing
-            return () => clearInterval(interval);
-        }
-    
-        // Handle other player states
-        switch (event.data) {
-            case window.YT.PlayerState.PAUSED:
-                toast.info("Video is paused!", {
-                    position: "top-center",
-                    autoClose: 2000,
-                });
-                break;
-    
-            case window.YT.PlayerState.ENDED:
-                toast.info("Video ended.", {
-                    position: "top-center",
-                    autoClose: 2000,
-                });
-                break;
-    
-            case window.YT.PlayerState.BUFFERING:
-                console.log("Video is buffering...");
-                break;
-    
-            case window.YT.PlayerState.CUED:
-                console.log("Video is cued.");
-                break;
+      <form onSubmit={handleFetch} className="youtube-form">
+        <input
+          type="text"
+          placeholder="Paste YouTube URL"
+          value={url}
+          onChange={e => setUrl(e.target.value)}
+          required
+        />
+        <button type="submit" disabled={loading}>
+          {loading ? "Loading…" : "Translate to ASL"}
+        </button>
+      </form>
 
-            case -1: // Unstarted state
-                console.log("Video is unstarted.");
-                break;
-            
-    
-            default:
-                console.log("Unhandled state:", event.data);
-                break;
-        }
-    };
-    
-    
-    
-    
-
-    return (
-        <div className="youtube-page">
-            <SubNavbar
-                tabs={["Audio/Text", "Upload", "YouTube"]}
-                activeTab={activeTab}
-                onTabChange={handleTabChange}
-            />
-            <ToastContainer />
-
-            <div className="youtube-container">
-                {isConverted && videoId ? (
-                    <div className="youtube-converted-content">
-                        {/* YouTube Player */}
-                        <div className="youtube-player" id="youtube-player"></div>
-                        {/* Translation Avatar */}
-                        <div className="youtube-avatar-placeholder">
-                            <p className="youtube-placeholder-text">ASL Video goes here</p>
-                        </div>
-                    </div>
-                ) : (
-                    <>
-                        <h1 className="youtube-header">YouTube to ASL Translation</h1>
-                        <p className="youtube-description">
-                            Talk2Sign allows you to translate YouTube videos to ASL. <br />
-                            It is optimized to work on any device. There is no additional software or app needed.
-                        </p>
-                        <div className="youtube-input-section">
-                            <input
-                                type="text"
-                                className="youtube-input"
-                                placeholder="Enter YouTube link"
-                                value={videoURL}
-                                onChange={(e) => setVideoURL(e.target.value)}
-                            />
-                            <button className="youtube-convert-button" onClick={handleConvert}>
-                                Convert
-                            </button>
-                        </div>
-                        <div className="youtube-instructions">
-                            <h2>How to Translate YouTube Videos?</h2>
-                            <ol>
-                                <li>Open YouTube.com and search for the video you would like to translate.</li>
-                                <li>
-                                    Click on the video and wait until it starts playing. Then, just copy the video URL from your browser address bar.
-                                </li>
-                                <li>Open Talk2Sign and paste the video URL in the input box above.</li>
-                                <li>
-                                    Then, simply click on the "Convert" button. The translation will be initiated and may take a few minutes.
-                                </li>
-                                <li>Note: It is only possible to translate videos that are up to 30 minutes long.</li>
-                            </ol>
-                        </div>
-                    </>
-                )}
-            </div>
+      {videoId && (
+        <div className="youtube-embed">
+          <YouTubePlayer
+            videoId={videoId}
+            opts={{ playerVars: { origin: window.location.origin } }}
+          />
         </div>
-    );
-};
+      )}
 
-export default YouTube;
+      {aslUrl && (
+        <div className="asl-video-wrapper">
+          <h2>ASL Translation</h2>
+          <video
+            src={aslUrl}
+            controls
+            autoPlay
+            muted
+            style={{ width: '100%', marginTop: '1rem' }}
+          />
+        </div>
+      )}
+    </div>
+  );
+}

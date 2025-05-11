@@ -9,96 +9,10 @@ import SubNavbar from "../components/SubNavbar";
 const ExtractedTextPage = () => {
   const location = useLocation();
   const initialText = location.state?.extractedText || "";
+  const initialAslVideoUrl = location.state?.aslVideoUrl || "";
 
-  // OCR → translation → ASL state
   const [extractedText, setExtractedText] = useState(initialText);
-  const [translatedText, setTranslatedText] = useState("");
-  const [signUrl, setSignUrl] = useState("");
-  const [isVideoLoading, setIsVideoLoading] = useState(false);
-  const [videoError, setVideoError] = useState("");
-  const [playDisabled, setPlayDisabled] = useState(false);
-
-  const videoRef = useRef(null);
-
-  // 1. On extractedText change: translate, then generate ASL
-  useEffect(() => {
-    if (!extractedText.trim()) return;
-  
-    const runWorkflow = async () => {
-      console.log("OCR text changed:", extractedText);
-  
-      // 1) Facade backend call (ignored response)
-      await generateBackendVideo(extractedText);
-  
-      // 2) Translate text
-      console.log("Translating:", extractedText);
-      const resp = await fetch("http://127.0.0.1:5000/api/store-text",  {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: extractedText }),
-      });
-      const { translated_text } = await resp.json();
-      console.log("Translated:", translated_text);
-  
-      // 3) Generate ASL
-      await generateASL(translated_text);
-    };
-  
-    runWorkflow();
-  }, [extractedText]);
-  
-
-  // Facade backend (ignored response)
-  const generateBackendVideo = async (text) => {
-    try {
-      console.log("Facade: POST /api/generate-video", text);
-
-      await fetch("http://127.0.0.1:5000/api/generate-video", {
-        
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text }),
-      });
-          console.log("Facade: request sent");
-
-    } catch (err) {
-      console.warn("Facade video error", err);
-    }
-  };
-
-  // genASL AWS call: only SignURL
-  const generateASL = async (text) => {
-    setIsVideoLoading(true);
-    setSignUrl("");
-    setVideoError("");
-    try {
-      const res = await fetch(
-        `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(
-          text
-        )}`
-      );
-      if (!res.ok) throw new Error(`Status ${res.status}`);
-      const { SignURL } = await res.json();
-      setSignUrl(SignURL);
-    } catch (err) {
-      console.error("genASL error:", err);
-      setVideoError("Failed to load ASL video.");
-      toast.error("ASL video generation failed.", { position: "top-center" });
-    } finally {
-      setIsVideoLoading(false);
-      setPlayDisabled(false);
-    }
-  };
-
-  // Play / Pause controls
-  const handlePlay = () => {
-    setPlayDisabled(true);
-    videoRef.current?.play().catch(console.error);
-  };
-  const handlePause = () => {
-    videoRef.current?.pause();
-    setPlayDisabled(false);
-  };
+  const [aslVideoUrl, setAslVideoUrl] = useState(initialAslVideoUrl);
 
   return (
     <div className="extracted-text-page">
@@ -106,20 +20,19 @@ const ExtractedTextPage = () => {
 
         {/* ASL Video */}
         <div className="asl-video-placeholder">
-          {isVideoLoading && <p>Loading video…</p>}
-          {videoError && <p className="error">{videoError}</p>}
-          {!isVideoLoading && signUrl && (
+          {aslVideoUrl ? (
             <video
-              ref={videoRef}
-              className="asl-video"
               controls
               autoPlay
               muted
               loop
+              className="asl-video"
             >
-              <source src={signUrl} type="video/mp4" />
+              <source src={aslVideoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+          ) : (
+            <p>No ASL video available.</p>
           )}
         </div>
 
@@ -131,25 +44,8 @@ const ExtractedTextPage = () => {
               {extractedText || "No text extracted."}
             </p>
           </div>
-          <div className="extracted-text-buttons">
-            <button
-              className="extracted-play-button"
-              onClick={handlePlay}
-              disabled={playDisabled || isVideoLoading}
-            >
-              Play
-            </button>
-            <button
-              className="extracted-pause-button"
-              onClick={handlePause}
-              disabled={!playDisabled}
-            >
-              Pause
-            </button>
-          </div>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };

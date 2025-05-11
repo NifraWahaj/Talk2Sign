@@ -28,7 +28,7 @@ const YouTube = () => {
 
   // 1) get the transcript from your backend
   const fetchTranscript = async (youTubeUrl) => {
-    const resp = await fetch("http://127.0.0.1:5000/api/transcript", {
+    const resp = await fetch("http://127.0.0.1:5555/api/transcript", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: youTubeUrl }),
@@ -43,9 +43,7 @@ const YouTube = () => {
     const limited = fullText.slice(0, 50);
     console.log("Payload to GenASL (first 50 chars):", limited);
     const resp = await fetch(
-      `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(
-        limited
-      )}`,
+      `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(limited)}`,
       { method: "GET" }
     );
     if (!resp.ok) {
@@ -57,7 +55,7 @@ const YouTube = () => {
     return SignURL;
   };
 
-  // Main “Convert” handler
+  // Main "Convert" handler
   const handleConvert = async () => {
     if (!urlInput.trim()) {
       toast.error("Please paste a YouTube URL.", { position: "top-center" });
@@ -81,103 +79,110 @@ const YouTube = () => {
       toast.success("ASL video ready!", { position: "top-center" });
     } catch (err) {
       console.error(err);
-      toast.error(err.message, { position: "top-center", autoClose: 5000 });
+      toast.error(err.message, { position: "top-center", autoClose: 5555 });
     } finally {
       setIsProcessing(false);
     }
   };
 
   return (
-    <div className="youtube-page">
+    <div className="yt-page">
       <SubNavbar
         tabs={["Audio/Text", "Upload", "YouTube"]}
         activeTab={activeTab}
         onTabChange={handleTabChange}
       />
-      <div className="youtube-container">
+      <div className="yt-container">
         {/* Instructions and input section */}
         {!submittedUrl ? (
-          <div className="youtube-input-section">
-            <h1 className="youtube-header">YouTube to ASL Translation</h1>
-            <p className="youtube-description">
-              Talk2Sign allows you to translate YouTube videos to ASL. <br />
-              It is optimized to work on any device. There is no additional software or app needed.
-            </p>
-            <div className="youtube-instructions">
+          <>
+            <div className="yt-input-container">
+              <h1 className="yt-header">YouTube to ASL Translation</h1>
+              <p className="yt-description">
+                Talk2Sign allows you to translate YouTube videos to ASL. <br />
+                It is optimized to work on any device. There is no additional software or app needed.
+              </p>
+              
+              <div className="yt-input-row">
+                <input
+                  type="text"
+                  className="yt-input"
+                  placeholder="Paste YouTube URL"
+                  value={urlInput}
+                  onChange={(e) => setUrlInput(e.target.value)}
+                />
+                <button
+                  className="yt-convert-button"
+                  onClick={handleConvert}
+                  disabled={isProcessing}
+                >
+                  {isProcessing ? "Processing..." : "Convert to ASL"}
+                </button>
+              </div>
+            </div>
+
+            <div className="yt-instructions">
               <h2>How to Translate YouTube Videos?</h2>
               <ol>
                 <li>Open YouTube.com and search for the video you would like to translate.</li>
-                <li>
-                  Click on the video and wait until it starts playing. Then, just copy the video URL from your browser address bar.
-                </li>
+                <li>Click on the video and wait until it starts playing. Then, just copy the video URL from your browser address bar.</li>
                 <li>Open Talk2Sign and paste the video URL in the input box above.</li>
-                <li>
-                  Then, simply click on the "Convert" button. The translation will be initiated and may take a few minutes.
-                </li>
+                <li>Then, simply click on the "Convert" button. The translation will be initiated and may take a few minutes.</li>
                 <li>Note: It is only possible to translate videos that are up to 30 minutes long.</li>
               </ol>
             </div>
-            <input
-              type="text"
-              className="youtube-input"
-              placeholder="Paste YouTube URL"
-              value={urlInput}
-              onChange={(e) => setUrlInput(e.target.value)}
-            />
-            <button
-              className="youtube-convert-button"
-              onClick={handleConvert}
-              disabled={isProcessing}
-            >
-              {isProcessing ? "Processing…" : "Convert to ASL"}
-            </button>
-          </div>
+          </>
         ) : (
           // After user has submitted the URL and conversion is happening, display the videos
-          <div className="uploaded-container">
-            <p className="uploaded-filename">{submittedUrl}</p>
-
+          <div className="yt-uploaded-container">
             {isProcessing && (
-              <div className="progress-container">
+              <div className="yt-progress-container">
                 <progress value={conversionProgress} max="100" />
                 <span>{conversionProgress}%</span>
               </div>
             )}
 
-            <div className="action-buttons">
-              <button className="cancel-button" onClick={handleCancel}>
-                Cancel
-              </button>
-              <button
-                className="convert-button"
-                onClick={handleConvert}
-                disabled={isProcessing}
-              >
-                {isProcessing ? "Processing…" : "Re-convert"}
-              </button>
-            </div>
-
-            <div className="youtube-asl-wrapper">
-              {/* YouTube Player */}
-              <div className="video-column">
-                <ReactPlayer url={submittedUrl} controls />
-              </div>
-
-              {/* ASL video */}
+            <div className="yt-asl-wrapper">
+              {/* ASL video - will appear first on mobile */}
               {aslVideoUrl && (
-                <div className="video-column">
+                <div className="yt-video-column yt-asl-video-column">
                   <video
                     src={aslVideoUrl}
                     controls
                     autoPlay
                     muted
                     loop
-                    className="asl-video"
+                    className="yt-asl-video"
                   >
-                    Your browser doesn’t support HTML5 video.
+                    Your browser doesn't support HTML5 video.
                   </video>
                 </div>
               )}
+
+              {/* YouTube Player - will appear second on mobile */}
+              <div className="yt-video-column yt-youtube-video-column">
+                <div className="yt-youtube-video-container">
+                  <ReactPlayer 
+                    url={submittedUrl} 
+                    controls 
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="yt-action-buttons">
+              <button className="yt-cancel-button" onClick={handleCancel}>
+                Cancel
+              </button>
+              <button
+                className="yt-reconvert-button"
+                onClick={handleConvert}
+                disabled={isProcessing}
+              >
+                {isProcessing ? "Processing..." : "Re-convert"}
+              </button>
             </div>
           </div>
         )}

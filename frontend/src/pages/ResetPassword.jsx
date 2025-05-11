@@ -26,7 +26,7 @@ const ResetPassword = () => {
       // Optionally, display a popup or toast notification
       setTimeout(() => {
         navigate("/login"); // Redirect to login page after a few seconds
-      }, 5000);
+      }, 5555);
     } catch (err) {
       console.error("Error sending password reset email:", err);
       setError("Failed to send password reset email. Please try again.");

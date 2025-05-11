@@ -68,21 +68,19 @@ const Upload = () => {
       setError("No file selected.");
       return;
     }
-
+  
     setIsProcessing(true);
     setConversionProgress(0);
     setAslVideoUrl(null);
-
+  
     try {
       // 1) get text from your backend
       const formData = new FormData();
       formData.append("file", selectedFile);
   
-
       let text;
       if (selectedFile.type.startsWith("image/")) {
-        
-        const resp = await fetch("http://127.0.0.1:5000/api/extract-text", {
+        const resp = await fetch("http://127.0.0.1:5555/api/extract-text", {
           method: "POST",
           body: formData,
         });
@@ -90,7 +88,7 @@ const Upload = () => {
         const data = await resp.json();
         text = data.extracted_text || "No text extracted.";
       } else {
-        const resp = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
+        const resp = await fetch("http://127.0.0.1:5555/api/transcribe-audio", {
           method: "POST",
           body: formData,
         });
@@ -98,25 +96,27 @@ const Upload = () => {
         const data = await resp.json();
         text = data.text || "No transcription available.";
       }
-
+  
       console.log(
         "Transcript from backend:\n",
         JSON.stringify({ text }, null, 2)
       );
-
+  
       setConversionProgress(50);
-
+  
       // 2) convert only the first 50 chars
       const videoUrl = await convertToASL(text);
-      setAslVideoUrl(videoUrl);
-
+  
+      // Navigate to ExtractedTextPage and pass the ASL video URL and extracted text
+      navigate("/extracted-text", { state: { aslVideoUrl: videoUrl, extractedText: text } });
+  
       setConversionProgress(100);
     } catch (err) {
       console.error("Error:", err);
       setError(err.message || "Failed to process the file.");
       toast.error(err.message || "Processing failed", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 5555,
       });
     } finally {
       setIsProcessing(false);

@@ -29,7 +29,7 @@ const Translator = () => {
   // rename your old backend‐facade function
   const generateBackendVideo = async (text) => {
     try {
-      await fetch("http://127.0.0.1:5000/api/generate-video", {
+      await fetch("http://127.0.0.1:5555/api/generate-video", {
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({ text })
@@ -78,7 +78,7 @@ const Translator = () => {
       await generateBackendVideo(raw);
   
       // 2) translate correctly
-      const resp = await fetch("http://127.0.0.1:5000/api/store-text", {
+      const resp = await fetch("http://127.0.0.1:5555/api/store-text", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: raw }),
@@ -113,7 +113,7 @@ const Translator = () => {
     form.append("file", file);
 
     try {
-      const resp = await fetch("http://127.0.0.1:5000/api/transcribe-audio", {
+      const resp = await fetch("http://127.0.0.1:5555/api/transcribe-audio", {
         method: "POST",
         body: form,
       });

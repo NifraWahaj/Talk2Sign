@@ -53,7 +53,7 @@ const Signup = () => {
           setError("Password must be at least 6 characters.");
           break;
         default:
-          setError("Failed to create account. Please try again.");
+          setError("Failed to create account. Check your internet connection.");
       }
       toast.error(err.message);
     }
@@ -67,7 +67,7 @@ const Signup = () => {
       navigate("/upload");
     } catch (err) {
       console.error("Error during Google signup:", err);
-      toast.error("Failed to sign up with Google. Please try again.");
+      toast.error("Failed to sign up with Google. Check your internet connection.");
     }
   };
 

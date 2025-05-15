@@ -29,7 +29,7 @@ const ResetPassword = () => {
       }, 5555);
     } catch (err) {
       console.error("Error sending password reset email:", err);
-      setError("Failed to send password reset email. Please try again.");
+      setError("Failed to send password reset email. Check your internet connection.");
       setSuccess(""); // Clear any success message
     }
   };

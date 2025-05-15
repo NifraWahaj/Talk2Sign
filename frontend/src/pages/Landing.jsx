@@ -5,7 +5,7 @@ import './Landing.css';
 const features = [
   { icon: '🤟', title: 'Instant Translation', desc: 'Text & speech → ASL live.' },
   { icon: '📷', title: 'Image OCR', desc: 'Snap pics, get ASL output.' },
-  { icon: '🎥', title: 'Video Support', desc: 'Upload/share any video link.' },
+  { icon: '🎥', title: 'Media Support', desc: 'Upload YouTube video link.' },
 ];
 
 const steps = [
@@ -15,9 +15,9 @@ const steps = [
 ];
 
 const faqs = [
-  { q: 'Do I need an account?', a: 'No signup required; create one to save your history.' },
-  { q: 'Which file formats?', a: 'Plain text, PNG/JPEG, MP4, YouTube URLs.' },
-  { q: 'Is it free?', a: 'Basic features are free; premium coming soon.' },
+  { q: 'Do I need an account?', a: 'Yes, signup is required.' },
+  { q: 'Which file formats?', a: 'Plain text, PNG/JPEG, MP3, YouTube URLs.' },
+  { q: 'Is it free?', a: 'Yes! All features are free.' },
 ];
 
 export default function Landing() {

@@ -38,7 +38,7 @@ const Profile = () => {
       await signOut(auth);
       navigate("/login");
     } catch (error) {
-      console.error("Logout failed:", error);
+      console.error("Logout failed. Check your internet connection:", error);
     }
   };
 
@@ -86,8 +86,8 @@ const Profile = () => {
 
       setEditMode(false);
     } catch (error) {
-      console.error("Profile update failed:", error);
-      alert("Failed to update profile. Please try again.");
+      console.error("Profile update failed. Check your internet connection:", error);
+      alert("Failed to update profile. Check your internet connection.");
     }
   };
 

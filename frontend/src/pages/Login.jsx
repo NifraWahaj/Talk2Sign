@@ -39,7 +39,7 @@ const Login = () => {
           setError("Invalid email format. Please check and try again.");
           break;
         default:
-          setError("Login failed. Please try again later.");
+          setError("Login failed.Check your internet connection");
       }
       toast.error(error);
     }
@@ -54,7 +54,7 @@ const Login = () => {
       navigate("/upload"); // Redirect to the upload page
     } catch (err) {
       console.error("Error during Google login:", err);
-      toast.error("Failed to login with Google. Please try again.");
+      toast.error("Failed to login with Google. Check your internet connection.");
     }
   };
   return (

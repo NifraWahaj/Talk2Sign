@@ -43,7 +43,7 @@ const DeleteAccount = () => {
         toast.error("Account deletion requires recent login. Please log in again and try.");
         navigate("/login");
       } else {
-        toast.error("Failed to delete account. Please try again.");
+        toast.error("Failed to delete account. Check your internet connection.");
       }
     } finally {
       setShowModal(false);

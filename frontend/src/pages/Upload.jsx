@@ -44,7 +44,7 @@ const Upload = () => {
   const convertToASL = async (text) => {
     const limited = text.slice(0, 50);       // ← changed from 200 to 50
     console.log(
-      "Payload to GenASL (first 50 chars):\n",
+      // "Payload to GenASL (first 50 chars):\n",
       JSON.stringify({ Text: limited }, null, 2)
     );
     const url =
@@ -54,9 +54,9 @@ const Upload = () => {
     const res = await fetch(url);
     if (!res.ok) {
       const body = await res.json().catch(() => ({}));
-      console.error("GenASL error body:", body);
+      // console.error("GenASL error body:", body);
       throw new Error(
-        `GenASL failed ${res.status}: ${body.error || body.message || res.statusText}`
+        `No internet connection. Please check your network settings. ${res.status}: ${body.error || body.message || res.statusText}`
       );
     }
     const { SignURL } = await res.json();
@@ -84,7 +84,7 @@ const Upload = () => {
           method: "POST",
           body: formData,
         });
-        if (!resp.ok) throw new Error("Failed to process the image.");
+        if (!resp.ok) throw new Error("Failed to process the image. Check your internet connection");
         const data = await resp.json();
         text = data.extracted_text || "No text extracted.";
       } else {
@@ -92,7 +92,7 @@ const Upload = () => {
           method: "POST",
           body: formData,
         });
-        if (!resp.ok) throw new Error("Failed to transcribe the audio file.");
+        if (!resp.ok) throw new Error("Failed to transcribe the audio file. Check your internet connection");
         const data = await resp.json();
         text = data.text || "No transcription available.";
       }
@@ -113,8 +113,8 @@ const Upload = () => {
       setConversionProgress(100);
     } catch (err) {
       console.error("Error:", err);
-      setError(err.message || "Failed to process the file.");
-      toast.error(err.message || "Processing failed", {
+      setError(err.message || "Failed to process the file. Check your internet connection.");
+      toast.error(err.message || "Processing failed. Check your internet connection.", {
         position: "top-center",
         autoClose: 5555,
       });

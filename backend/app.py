@@ -97,8 +97,8 @@ def transcribe_audio():
                 print(f"✅ Transcription completed: {status_data['text']}")
                 return jsonify({'text': status_data['text']})
             elif status_data['status'] == 'failed':
-                print("❌ Transcription failed.")
-                return jsonify({'error': 'Transcription failed'}), 500
+                print("❌ Transcription failed. Check your internet connection.")
+                return jsonify({'error': 'Transcription failed. Check your internet connection.'}), 500
 
             time.sleep(5)  # Wait before checking again
             retries -= 1

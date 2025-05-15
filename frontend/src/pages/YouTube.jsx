@@ -33,7 +33,7 @@ const YouTube = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: youTubeUrl }),
     });
-    if (!resp.ok) throw new Error("Failed to fetch transcript");
+    if (!resp.ok) throw new Error("Failed to fetch transcript. Check your internet connection.");
     const data = await resp.json();
     return data.transcript.map((seg) => seg.text).join(" ");
   };
@@ -41,14 +41,14 @@ const YouTube = () => {
   // 2) send first 50 chars of text to GenASL
   const convertToASL = async (fullText) => {
     const limited = fullText.slice(0, 50);
-    console.log("Payload to GenASL (first 50 chars):", limited);
+    // console.log("Payload to GenASL (first 50 chars):", limited);
     const resp = await fetch(
       `https://z9h9o5zceb.execute-api.us-west-2.amazonaws.com/prod/sign?Text=${encodeURIComponent(limited)}`,
       { method: "GET" }
     );
     if (!resp.ok) {
       const body = await resp.json().catch(() => ({}));
-      console.error("GenASL error body:", body);
+      // console.error("GenASL error body:", body);
       throw new Error(body.error || body.message || `Status ${resp.status}`);
     }
     const { SignURL } = await resp.json();

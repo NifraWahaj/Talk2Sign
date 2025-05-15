@@ -28,7 +28,7 @@ const VerifyCode = () => {
       navigate("/new-password", { state: { email, oobCode } });  // Redirect to new password page
     } catch (err) {
       console.error("Error verifying code:", err);
-      setError("Failed to verify code. Please try again.");
+      setError("Failed to verify code. Check your internet connection.");
     }
   };
 

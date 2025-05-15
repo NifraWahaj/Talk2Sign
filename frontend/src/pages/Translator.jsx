@@ -54,9 +54,9 @@ const Translator = () => {
       const { SignURL } = await res.json();
       setSignUrl(SignURL);
     } catch (err) {
-      console.error("genASL error:", err);
-      setVideoError("Failed to load ASL video.");
-      toast.error("ASL video generation failed.", { position: "top-center" });
+     // console.error("genASL error:", err);
+      setVideoError("No internet connection. Please check your network settings.");
+      toast.error("No internet connection. Please check your network settings.", { position: "top-center" });
     } finally {
       setIsVideoLoading(false);
     }
@@ -118,7 +118,7 @@ const Translator = () => {
         body: form,
       });
       const data = await resp.json();
-      if (!resp.ok) throw new Error(data.error || "Transcription failed");
+      if (!resp.ok) throw new Error(data.error || "Transcription failed.Check your internet connection");
       setConvertedText(data.text);
       setTranslatedText(data.translated_text);
       setIsConverted(true);

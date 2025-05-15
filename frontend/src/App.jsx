@@ -16,32 +16,37 @@ import Upload from "./pages/Upload";
 import FileProcessing from "./pages/FileProcessing";
 import ExtractedTextPage from './pages/ExtractedTextPage';
 
+import { Navigate } from 'react-router-dom';
 
 import "./index.css"; // Ensure global styles are included
 
+const PrivateRoute = ({ element: Element }) => {
+  return localStorage.getItem('token')
+    ? <Element />
+    : <Navigate to="/login" replace />;
+};
 
 const App = () => {
   return (
     <Router>
       <Navbar />
       <Routes>
+         {/* public */}
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ResetPassword />} />
-        <Route path="/verify-code" element={<VerifyCode />} />
-        <Route path="/new-password" element={<NewPassword />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/delete-account" element={<DeleteAccount />} />
-        <Route path="/translator" element={<Translator />} />
-        <Route path="/youtube" element={<YouTube />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/file-processing" element={<FileProcessing />} />
-        <Route path="/extracted-text" element={<ExtractedTextPage />} />
-
-        
-
+        <Route path="/about" element={<AboutUs />} />  
+        {/* protected */}
+        <Route path="/profile" element={<PrivateRoute element={Profile} />} />
+        <Route path="/translator" element={<PrivateRoute element={Translator} />} />
+        <Route path="/youtube" element={<PrivateRoute element={YouTube} />} />
+        <Route path="/upload" element={<PrivateRoute element={Upload} />} />
+        <Route path="/file-processing" element={<PrivateRoute element={FileProcessing} />} />
+        <Route path="/extracted-text" element={<PrivateRoute element={ExtractedTextPage} />} />
+        <Route path="/forgot-password" element={<PrivateRoute element={ResetPassword} />} />
+        <Route path="/delete-account" element={<PrivateRoute element={DeleteAccount} />} />
+        <Route path="/translator" element={<PrivateRoute element={VerifyCode} />} />
+        <Route path="/new-password" element={<PrivateRoute element={NewPassword} />} />
 
       </Routes>
     </Router>

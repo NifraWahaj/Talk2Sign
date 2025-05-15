@@ -9,6 +9,7 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import googleLogo from "../assets/google-logo.png"; // Import the Google logo
 import eyeIcon from "../assets/icons8-eye-48.png"; // Import your custom eye icon
 import eyeSlashIcon from "../assets/icons8-eye-slash-48.png"; // Import your custom eye-slash icon
+import axios from 'axios';
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,14 @@ const Login = () => {
       return;
     }
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+     // await signInWithEmailAndPassword(auth, email, password);
+      const userCred = await signInWithEmailAndPassword(auth, email, password);
+          // get Firebase ID token
+      const newToken = await userCred.user.getIdToken();
+      localStorage.setItem("token", newToken);
+      axios.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
+
+    toast.success("Logged in successfully!");
       toast.success("Logged in successfully!");
       navigate("/upload"); // Redirect to the upload page
     } catch (err) {
@@ -49,8 +57,15 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
   
     try {
-      const result = await signInWithPopup(auth, provider);
+     // const result = await signInWithPopup(auth, provider);
+      const userCred = await signInWithPopup(auth, provider);
       toast.success("Logged in with Google successfully!");
+              // get Firebase ID token
+              const newToken = await userCred.user.getIdToken();
+              localStorage.setItem("token", newToken);
+              axios.defaults.headers.common["Authorization"] = `Bearer ${newToken}`;
+
+
       navigate("/upload"); // Redirect to the upload page
     } catch (err) {
       console.error("Error during Google login:", err);

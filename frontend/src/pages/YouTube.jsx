@@ -145,7 +145,7 @@ const YouTube = () => {
             <div className="yt-asl-wrapper">
               {/* ASL video - will appear first on mobile */}
               {aslVideoUrl && (
-                  <div className="yt-video-column yt-asl-video-container">
+                <div className="yt-video-column yt-asl-video-column">
                   <video
                     src={aslVideoUrl}
                     controls
@@ -165,7 +165,8 @@ const YouTube = () => {
                   <ReactPlayer 
                     url={submittedUrl} 
                     controls 
-                  
+                    width="100%"
+                    height="100%"
                   />
                 </div>
               </div>

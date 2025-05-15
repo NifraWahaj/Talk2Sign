@@ -16,11 +16,10 @@ import subprocess
 import math
 import os
 from flask import send_from_directory
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+
 # ───────────────────────────────────────────────────────────────────────────────
 # ───SET UP───────────────────────────────────────────────────────────────────────
 # ────────────────────────────────────────────────────────────────────────────────
-
 # Load environment variables
 load_dotenv()
 # Initialize Flask App
@@ -29,13 +28,9 @@ CORS(app, resources={
     r"/api/*": {
         "origins": "*",  # Allow all origins for testing
         "methods": ["GET", "POST", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
+        "allow_headers": ["Content-Type"]
     }
 })
-
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'super-secret')
-jwt = JWTManager(app)
-
 #  AssemblyAI API Key
 ASSEMBLYAI_API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 print("ASSEMBLYAI_API_KEY:", ASSEMBLYAI_API_KEY)
@@ -56,24 +51,10 @@ translator = GoogleTranslator(source='auto', target='en')
 
 stored_text = ""
 stored_subtitles = ""
-
-# ────────────────────────────────────────────────────────────────────────────────
-# ───LOGIN────────────────────────────────────────────────────────
-# ────────────────────────────────────────────────────────────────────────────────
-@app.route('/api/login', methods=['POST'])
-def login():
-    u = request.json.get('username'); p = request.json.get('password')
-    # validate u/p …
-    token = create_access_token(identity=u)
-    return jsonify(access_token=token)
-
-
-
 # ────────────────────────────────────────────────────────────────────────────────
 # ───Transcribe Audio File────────────────────────────────────────────────────────
 # ────────────────────────────────────────────────────────────────────────────────
 @app.route('/api/transcribe-audio', methods=['POST'])
-@jwt_required()
 def transcribe_audio():
     if 'file' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
@@ -132,7 +113,6 @@ def transcribe_audio():
 # ───home────────────────────────────────────────────────────────
 # ────────────────────────────────────────────────────────────────────────────────
 @app.route('/')
-@jwt_required()
 def home():
     return jsonify({
         'message': 'Welcome to the Translator API!',
@@ -173,7 +153,6 @@ def generate_asl_gloss(tokenizer, model, input_text, device):
 
 
 @app.route('/api/store-text', methods=['POST'])
-@jwt_required()
 def store_text():
     global stored_text
     data = request.get_json()
@@ -201,7 +180,6 @@ def store_text():
 # ───Google Vision API──────────────────────────────────────────────
 # ────────────────────────────────────────────────────────────────────────────────
 @app.route('/api/extract-text', methods=['POST'])
-@jwt_required()
 def extract_text():
     global stored_text
     if 'file' not in request.files:
@@ -236,7 +214,6 @@ def extract_video_id(url):
     return match.group(1) if match else None
 
 @app.route('/api/transcript', methods=['POST', 'OPTIONS'])
-@jwt_required()
 def get_transcript():
     if request.method == 'OPTIONS':
         # Handle preflight request
@@ -324,7 +301,6 @@ def match_glosses(gloss_string):
 import re
 
 @app.route('/api/generate-video', methods=['POST'])
-@jwt_required()
 def generate_video():
     # 1) clear previous clips/output
     for f in os.listdir(CLIP_DIR):
@@ -394,7 +370,6 @@ def generate_video():
     return jsonify({'video_url': f"/video/stitched_slow.mp4"})
 
 @app.route('/video/<filename>')
-@jwt_required()
 def get_video(filename):
     # serve from your OUTPUT_DIR
     return send_from_directory(OUTPUT_DIR, filename)

@@ -9,8 +9,6 @@ import {
   verifyBeforeUpdateEmail,
 } from "firebase/auth";
 import "./Profile.css";
-import axios from 'axios';
-
 
 const Profile = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -38,8 +36,6 @@ const Profile = () => {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      localStorage.removeItem("token");
-      delete axios.defaults.headers.common["Authorization"];
       navigate("/login");
     } catch (error) {
       console.error("Logout failed:", error);

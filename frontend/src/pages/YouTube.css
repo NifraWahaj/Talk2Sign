@@ -197,26 +197,16 @@
 
 /* Video containers and responsive layout */
 .yt-video-column {
-    flex: 1; /* This will make each column take equal space */
-    min-width: 300px; /* Minimum width for each column */
-    max-width: 50%; /* Each column will take up to 50% of the available space */
+    flex: 1;
+    min-width: 300px;
+    max-width: 100%; /* Allow the video container to take full width */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: transparent;
+    /* Remove unnecessary margins and padding */
     margin: 0 !important;
     padding: 0 !important;
-}
-
-@media (max-width: 768px) {
-    .yt-asl-wrapper {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .yt-video-column {
-        max-width: 100%;
-    }
 }
 
 /* YouTube Player Container */
@@ -224,7 +214,7 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: 60.25%; /* 16:9 Aspect Ratio */
 }
 
 .yt-player-container .react-player {
@@ -334,19 +324,3 @@
         max-height: 250px;
     }
 }
-
-/* Large screens: no wrapping, columns share space */
-@media (min-width: 769px) {
-    .yt-asl-wrapper {
-      display: flex;
-      flex-wrap: nowrap;            /* prevent stacking */
-      justify-content: space-between;
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .yt-video-column {
-      flex: 1 1 calc(50% - 1rem);   /* two columns, minus half the gap */
-      max-width: calc(50% - 1rem);
-    }
-  }
-  

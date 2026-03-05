@@ -11,7 +11,7 @@
 
 ## What is Talk2Sign?
 
-Talk2Sign is a Progressive Web App that translates English into American Sign Language in real time. It accepts text, audio, images, and YouTube video as input, converts them to ASL gloss using a fine-tuned T5 model, then stitches together real ASLLVD video clips into a continuous ASL output — all from the browser.
+Talk2Sign is a Progressive Web App that translates English into American Sign Language. It accepts text, audio, images, and YouTube video as input, converts them to ASL gloss using a fine-tuned T5 model, then stitches together real ASLLVD video clips into a continuous ASL output — all from the browser.
 
 Built as a Final Year Project to improve multimedia accessibility for Deaf and Hard-of-Hearing users.
 
